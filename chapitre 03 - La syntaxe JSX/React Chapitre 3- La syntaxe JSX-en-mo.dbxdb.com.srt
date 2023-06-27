@@ -1,0 +1,1593 @@
+1
+00:00:00,000 --> 00:00:00,000
+ Youtube subtitles download by mo.dbxdb.com 
+
+2
+00:00:00,000 --> 00:00:03,560
+bienvenue dans ce nouveau chapitre nous
+
+3
+00:00:01,560 --> 00:00:05,300
+avons parlé ensemble de la syntaxe j ai
+
+4
+00:00:03,300 --> 00:00:07,640
+six donc la syntaxe g6 et une syntaxe
+
+5
+00:00:05,640 --> 00:00:09,710
+qui va nous permettre de décrire du réac
+
+6
+00:00:07,710 --> 00:00:12,900
+un petit peu plus simplement et d'éviter
+
+7
+00:00:09,900 --> 00:00:13,090
+d'avoir à utiliser la méthode react
+
+8
+00:00:12,090 --> 00:00:15,799
+point cru et et les maths à chaque fois
+
+9
+00:00:13,799 --> 00:00:18,990
+alors le problème c'est qu'au logistique
+
+10
+00:00:15,990 --> 00:00:19,090
+c'est une syntaxe qui est propre à react
+
+11
+00:00:18,090 --> 00:00:21,770
+et qui n'est pas forcément supporté par
+
+12
+00:00:19,770 --> 00:00:23,119
+les navigateurs et qui ne le sera
+
+13
+00:00:21,119 --> 00:00:24,100
+probablement jamais donc il nous faut un
+
+14
+00:00:23,100 --> 00:00:26,689
+outil qui va permettre de convertir
+
+15
+00:00:24,689 --> 00:00:29,939
+cette certain que cela en javascript
+
+16
+00:00:26,939 --> 00:00:32,429
+classique donc cet outil là il s'appelle
+
+17
+00:00:29,429 --> 00:00:33,039
+van belle c'est un outil qui est plus
+
+18
+00:00:32,039 --> 00:00:35,540
+générique qui permet tout simplement de
+
+19
+00:00:33,540 --> 00:00:38,760
+convertir du code en écrire un script
+
+20
+00:00:35,760 --> 00:00:39,489
+moderne et de sortir du code qui
+
+21
+00:00:38,489 --> 00:00:41,660
+fonctionnera sur des navigateurs un
+
+22
+00:00:39,660 --> 00:00:43,670
+petit peu plus anciens et il supporte
+
+23
+00:00:41,670 --> 00:00:44,140
+différentes fonctionnalités dont
+
+24
+00:00:43,140 --> 00:00:46,940
+notamment la possibilité d'écrire du g16
+
+25
+00:00:44,940 --> 00:00:48,980
+ou si je prends par exemple un des
+
+26
+00:00:46,980 --> 00:00:49,058
+exemples qui est fourni dans la
+
+27
+00:00:48,058 --> 00:00:52,860
+documentation va prendre cet exemple là
+
+28
+00:00:49,860 --> 00:00:54,350
+et que je me rends sur babel et que je
+
+29
+00:00:52,350 --> 00:00:56,149
+mets ici dans la partie try it up
+
+30
+00:00:54,149 --> 00:00:59,489
+le code je vois que ça me donne bien
+
+31
+00:00:56,489 --> 00:01:01,820
+cette partie cuites les met donc vous
+
+32
+00:00:59,820 --> 00:01:03,829
+utilisez babel on va devoir utiliser un
+
+33
+00:01:01,829 --> 00:01:05,390
+outil que l'on va installer sur notre
+
+34
+00:01:03,390 --> 00:01:07,339
+ordinateur ou temporairement si on veut
+
+35
+00:01:05,339 --> 00:01:08,409
+juste essayer logis et 6 on peut
+
+36
+00:01:07,409 --> 00:01:10,970
+utiliser une version qui a fonctionné
+
+37
+00:01:08,970 --> 00:01:12,909
+directement sur le navigateur
+
+38
+00:01:10,909 --> 00:01:15,659
+donc lorsque vous allez dans la
+
+39
+00:01:12,659 --> 00:01:17,000
+documentation vous allez ici sur ajouter
+
+40
+00:01:15,000 --> 00:01:18,430
+react à un site web et on donne
+
+41
+00:01:17,430 --> 00:01:21,630
+différentes informations
+
+42
+00:01:18,630 --> 00:01:23,030
+et si je descends encore un petit peu en
+
+43
+00:01:21,030 --> 00:01:25,700
+bas on va me parler de babel donc vous
+
+44
+00:01:23,700 --> 00:01:26,229
+avez la possibilité de charger ce
+
+45
+00:01:25,229 --> 00:01:28,700
+javascript qui va permettre de faire
+
+46
+00:01:26,700 --> 00:01:28,110
+fonctionner babel au niveau du
+
+47
+00:01:28,110 --> 00:01:31,700
+navigateur
+
+48
+00:01:28,700 --> 00:01:32,049
+alors attention je tiens vraiment à le
+
+49
+00:01:31,049 --> 00:01:34,610
+préciser cette manière de faire les
+
+50
+00:01:32,610 --> 00:01:36,140
+choses ni utile que pour le
+
+51
+00:01:34,140 --> 00:01:37,270
+développement c'est très très très peu
+
+52
+00:01:36,270 --> 00:01:38,680
+performant et ce n'est pas du tout
+
+53
+00:01:37,680 --> 00:01:41,938
+quelque chose que l'on conseillera
+
+54
+00:01:38,938 --> 00:01:42,459
+d'utiliser en production donc là nous on
+
+55
+00:01:41,459 --> 00:01:45,959
+va l'utiliser parce que notre but c'est
+
+56
+00:01:42,959 --> 00:01:46,149
+juste de découvrir et actes mais à terme
+
+57
+00:01:45,149 --> 00:01:48,560
+ce que l'on fera c'est qu'on installera
+
+58
+00:01:46,560 --> 00:01:50,090
+un outil sur notre machine qui va
+
+59
+00:01:48,090 --> 00:01:51,069
+convertir les fichiers pour qu'il
+
+60
+00:01:50,069 --> 00:01:54,780
+fonctionne avec la fonction cru et
+
+61
+00:01:51,780 --> 00:01:56,360
+éléments que l'on a vu donc je vais
+
+62
+00:01:54,360 --> 00:01:58,009
+prendre ce javascript et le mettre au
+
+63
+00:01:56,009 --> 00:02:02,468
+niveau de mon html au dessus de mon rap
+
+64
+00:01:58,468 --> 00:02:04,340
+coin js on va le mettre ici au niveau de
+
+65
+00:02:02,340 --> 00:02:06,229
+mon script ici je vais rajouter un
+
+66
+00:02:04,229 --> 00:02:10,659
+nouvel attribut ktipp et je vais mettre
+
+67
+00:02:06,659 --> 00:02:12,318
+comme un attribut texte slash babel
+
+68
+00:02:10,318 --> 00:02:15,800
+ça va permettre d'indiquer que ce script
+
+69
+00:02:12,800 --> 00:02:17,710
+devra être convertis avec babel à partir
+
+70
+00:02:15,710 --> 00:02:19,180
+de là je peux maintenant utiliser la
+
+71
+00:02:17,180 --> 00:02:21,190
+syntaxe j ai 6 à l'intérieur de mon
+
+72
+00:02:19,190 --> 00:02:24,830
+fichier javascript de manière générale
+
+73
+00:02:21,830 --> 00:02:26,169
+quand un fichier utilisera la syntaxe j
+
+74
+00:02:24,169 --> 00:02:28,479
+ai 6 on aura tendance à renommer le
+
+75
+00:02:26,479 --> 00:02:30,699
+fichier avec l'extension j ai 6 pour
+
+76
+00:02:28,699 --> 00:02:32,470
+facilement faire la différence et aider
+
+77
+00:02:30,470 --> 00:02:35,690
+aussi notre éditeur à comprendre qu'on
+
+78
+00:02:32,690 --> 00:02:36,449
+ne va utiliser sept cents textes là ici
+
+79
+00:02:35,449 --> 00:02:38,889
+ce n'est pas forcément nécessaire de le
+
+80
+00:02:36,889 --> 00:02:41,419
+faire on peut directement commencé à
+
+81
+00:02:38,419 --> 00:02:43,479
+travailler dessus donc imaginons gervais
+
+82
+00:02:41,479 --> 00:02:44,849
+de convertir cette partie comment ça va
+
+83
+00:02:43,849 --> 00:02:46,270
+se passer
+
+84
+00:02:44,270 --> 00:02:49,940
+donc je vais supprimer ce que j'ai écrit
+
+85
+00:02:46,940 --> 00:02:52,880
+et on va utiliser le j ai 6 donc en fait
+
+86
+00:02:49,880 --> 00:02:53,069
+pour commencer à écrire un élément il
+
+87
+00:02:52,069 --> 00:02:55,840
+suffit d'utiliser une syntaxe qui est
+
+88
+00:02:53,840 --> 00:02:57,880
+assez proche de la chaîne comme par
+
+89
+00:02:55,880 --> 00:03:00,680
+exemple je peux faire un achat avec un
+
+90
+00:02:57,680 --> 00:03:02,680
+intérieur marquer bonjour les gens donc
+
+91
+00:03:00,680 --> 00:03:03,240
+vous voyez mon éditeur souligné pas les
+
+92
+00:03:02,240 --> 00:03:06,680
+choses il comprend tout de suite que je
+
+93
+00:03:03,680 --> 00:03:07,680
+travaille avec du g16 si maintenant je
+
+94
+00:03:06,680 --> 00:03:09,970
+regarde ma page web
+
+95
+00:03:07,970 --> 00:03:11,470
+je vois bien que j'aie marqué bonjour
+
+96
+00:03:09,470 --> 00:03:13,389
+les gens alors le problème dans l'autre
+
+97
+00:03:11,389 --> 00:03:14,130
+cas c'est que a ensuite on voulait une
+
+98
+00:03:13,130 --> 00:03:18,930
+espagne pas de problème vous pouvez
+
+99
+00:03:14,930 --> 00:03:21,380
+simplement aller à la nuit et vous allez
+
+100
+00:03:18,380 --> 00:03:22,050
+mettre votre span comme ceci est à
+
+101
+00:03:21,050 --> 00:03:25,130
+l'intérieur on va y mettre pour
+
+102
+00:03:22,130 --> 00:03:26,370
+l'instant un numéro si je sauvegarde ça
+
+103
+00:03:25,370 --> 00:03:28,330
+me donne bien mon numéro
+
+104
+00:03:26,330 --> 00:03:29,130
+donc je peux même rajouter un petit
+
+105
+00:03:28,130 --> 00:03:30,720
+espace alors attention si vous mettez à
+
+106
+00:03:29,720 --> 00:03:32,709
+l'espace là ça n'aurait pas fonctionné
+
+107
+00:03:30,709 --> 00:03:34,780
+parce que lui il va supprimer les sauts
+
+108
+00:03:32,780 --> 00:03:35,580
+de lignes vous faudra écrire les choses
+
+109
+00:03:34,580 --> 00:03:39,780
+comme ça ou utiliser les espaces
+
+110
+00:03:35,780 --> 00:03:40,080
+insécables maintenant j'aimerais bien
+
+111
+00:03:39,080 --> 00:03:42,819
+ici qu'il interpol la variable
+
+112
+00:03:40,819 --> 00:03:42,169
+c'est-à-dire j'aimerais bien afficher la
+
+113
+00:03:42,169 --> 00:03:44,919
+valeur deux aides
+
+114
+00:03:42,919 --> 00:03:46,419
+donc pour interpeller des choses et
+
+115
+00:03:44,419 --> 00:03:48,220
+utiliser une expression à l'intérieur de
+
+116
+00:03:46,220 --> 00:03:51,650
+notre gsx on va utiliser une accolade
+
+117
+00:03:48,650 --> 00:03:52,199
+rouvrant tu es une accolade fermente ce
+
+118
+00:03:51,199 --> 00:03:54,789
+que l'on mettra à l'intérieur sera une
+
+119
+00:03:52,789 --> 00:03:57,919
+expression qui sera évaluée et qui sera
+
+120
+00:03:54,919 --> 00:04:00,470
+rendu par exemple ici je peux mettre
+
+121
+00:03:57,470 --> 00:04:01,380
+simplement énorme dans ce cas là je vais
+
+122
+00:04:00,380 --> 00:04:03,550
+me retrouver avec le système
+
+123
+00:04:01,550 --> 00:04:05,500
+d'annotation que j'avais la dernière
+
+124
+00:04:03,500 --> 00:04:07,419
+fois alors au niveau de ce que vous
+
+125
+00:04:05,419 --> 00:04:08,009
+mettez au niveau de la parenthèse c'est
+
+126
+00:04:07,009 --> 00:04:10,300
+tout simplement du code javascript
+
+127
+00:04:08,300 --> 00:04:12,069
+valide par exemple ce que vous pouvez
+
+128
+00:04:10,069 --> 00:04:14,650
+faire c'est utiliser une fonction par
+
+129
+00:04:12,650 --> 00:04:19,810
+exemple on va avoir une fonction number
+
+130
+00:04:14,810 --> 00:04:21,250
+formate qui prend à paramètres nantes y
+
+131
+00:04:19,250 --> 00:04:23,410
+est et ce qu'elle fera c'est qu'elle
+
+132
+00:04:21,410 --> 00:04:25,990
+fera un n qui sera en entier on
+
+133
+00:04:23,990 --> 00:04:26,699
+utilisera la méthode tout string et
+
+134
+00:04:25,699 --> 00:04:27,120
+pourquoi
+
+135
+00:04:26,120 --> 00:04:29,440
+perso ça sous forme de chaînes de
+
+136
+00:04:27,440 --> 00:04:35,209
+caractères et on lui demandera de
+
+137
+00:04:29,209 --> 00:04:38,540
+rajouter 1 0 pour avoir de caractère et
+
+138
+00:04:35,540 --> 00:04:40,180
+ça on ne retournera si maintenant j'ai
+
+139
+00:04:38,180 --> 00:04:41,009
+envie de formater mon chiffre mais il me
+
+140
+00:04:40,009 --> 00:04:44,899
+suffit simplement d'utiliser la fonction
+
+141
+00:04:41,899 --> 00:04:45,389
+à l'intérieur de mon expression et dans
+
+142
+00:04:44,389 --> 00:04:48,800
+ce cas là vous le voyez ça mais toujours
+
+143
+00:04:45,800 --> 00:04:49,680
+1 0 initial vous pouvez utiliser des
+
+144
+00:04:48,680 --> 00:04:51,699
+fonctions mais vous pouvez aussi
+
+145
+00:04:49,699 --> 00:04:54,529
+utiliser des conditions par exemple on
+
+146
+00:04:51,529 --> 00:04:56,620
+pourra lui dire par exemple ci n est
+
+147
+00:04:54,620 --> 00:04:58,810
+divisible par deux dans ce cas là je
+
+148
+00:04:56,810 --> 00:05:00,519
+veux que tu affiches le nombre formaté
+
+149
+00:04:58,519 --> 00:05:02,918
+dans le cadre contraire je veux que tu
+
+150
+00:05:00,918 --> 00:05:04,750
+n'affiche rien donc si vous mettez nul
+
+151
+00:05:02,750 --> 00:05:06,610
+c'est comme si vous n'aviez rien mis
+
+152
+00:05:04,610 --> 00:05:08,168
+dans ce cas là il n'émettra rien au
+
+153
+00:05:06,168 --> 00:05:08,209
+niveau de cet élément là si je
+
+154
+00:05:08,209 --> 00:05:10,839
+sauvegarde
+
+155
+00:05:08,839 --> 00:05:12,759
+on voit que ça la fiche rien et tous les
+
+156
+00:05:10,759 --> 00:05:14,800
+nombres impairs vont être affichés
+
+157
+00:05:12,800 --> 00:05:16,300
+vous pouvez avoir des expressions
+
+158
+00:05:14,300 --> 00:05:18,819
+complexe à ce niveau là alors idéalement
+
+159
+00:05:16,819 --> 00:05:19,350
+moi ce que je vous conseille de faire si
+
+160
+00:05:18,350 --> 00:05:21,339
+jamais vous avez des expressions
+
+161
+00:05:19,339 --> 00:05:22,079
+complexe c'est plutôt de créer une
+
+162
+00:05:21,079 --> 00:05:24,668
+variable intermédiaire pour éviter que
+
+163
+00:05:22,668 --> 00:05:25,380
+le gie ainsi que ce soit trop compliqué
+
+164
+00:05:24,380 --> 00:05:27,728
+à lire
+
+165
+00:05:25,728 --> 00:05:29,500
+autre petit détail si vous mettez un
+
+166
+00:05:27,500 --> 00:05:31,959
+tableau il va concat aînés les
+
+167
+00:05:29,959 --> 00:05:33,009
+différents enfants
+
+168
+00:05:31,009 --> 00:05:34,110
+par exemple si vous avez un premier
+
+169
+00:05:33,110 --> 00:05:37,848
+texte et un second texte
+
+170
+00:05:34,848 --> 00:05:39,699
+on va mettre des trains égal pour
+
+171
+00:05:37,699 --> 00:05:42,500
+séparer les deux mains dans ce cas là il
+
+172
+00:05:39,500 --> 00:05:42,259
+va dire baisser comme 6 panne avait deux
+
+173
+00:05:42,259 --> 00:05:44,680
+enfants
+
+174
+00:05:42,680 --> 00:05:46,389
+si vous souvenez tout à l'heure qu'on a
+
+175
+00:05:44,389 --> 00:05:48,490
+parlé du cru et element c'est comme si
+
+176
+00:05:46,490 --> 00:05:52,319
+on avait maintenant deux enfants qui a
+
+177
+00:05:48,319 --> 00:05:54,310
+été enfant de cette spa de la voilà pour
+
+178
+00:05:52,310 --> 00:05:56,319
+un petit aperçu en tout cas du
+
+179
+00:05:54,319 --> 00:05:58,470
+fonctionnement de cette expression là
+
+180
+00:05:56,470 --> 00:06:02,759
+autre petit détail on peut vouloir
+
+181
+00:05:58,759 --> 00:06:03,089
+mettre en place des attributs sur notre
+
+182
+00:06:02,089 --> 00:06:06,978
+html par exemple j'aimerais bien que mon
+
+183
+00:06:03,978 --> 00:06:09,918
+chien ici est une classe spécifique
+
+184
+00:06:06,918 --> 00:06:11,500
+donc si vous voulez gérer ça vous pouvez
+
+185
+00:06:09,500 --> 00:06:13,180
+mettre des attributs et ils seront
+
+186
+00:06:11,180 --> 00:06:16,360
+automatiquement envoyées à la propriété
+
+187
+00:06:13,360 --> 00:06:21,880
+donc par exemple je peux m id égal et je
+
+188
+00:06:16,880 --> 00:06:24,199
+vais m tipl si je sauvegarde mon h1 ici
+
+189
+00:06:21,199 --> 00:06:26,500
+à bien comme heidi titeuf si vous voulez
+
+190
+00:06:24,500 --> 00:06:28,000
+voir ce que ça donne vous pouvez
+
+191
+00:06:26,000 --> 00:06:29,160
+toujours vous référer à babel par
+
+192
+00:06:28,160 --> 00:06:32,870
+exemple je vais aller ici
+
+193
+00:06:29,870 --> 00:06:35,540
+sur la partie pas belle je vais coller
+
+194
+00:06:32,540 --> 00:06:37,060
+mon code et voilà ce que ça donne ça
+
+195
+00:06:35,060 --> 00:06:39,279
+fait un réac point cru est telement h 1
+
+196
+00:06:37,279 --> 00:06:41,980
+ça passe en second paramètre un objet
+
+197
+00:06:39,980 --> 00:06:43,839
+qui contiendra donc notre heidi avec
+
+198
+00:06:41,839 --> 00:06:46,940
+titeuf et en troisième paramètre on a
+
+199
+00:06:43,940 --> 00:06:48,430
+bon jour les gens puis ensuite une span
+
+200
+00:06:46,430 --> 00:06:51,470
+qui va contenir nos enfants vous voyez
+
+201
+00:06:48,470 --> 00:06:53,670
+ça fait simplement une petite traduction
+
+202
+00:06:51,670 --> 00:06:55,990
+petit détail en revanche parce que ça
+
+203
+00:06:53,990 --> 00:06:57,670
+c'est le détail le plus déstabilisant et
+
+204
+00:06:55,670 --> 00:06:59,800
+qui gênent beaucoup en général lorsque
+
+205
+00:06:57,800 --> 00:07:01,660
+vous souhaitez utiliser une classe par
+
+206
+00:06:59,660 --> 00:07:03,160
+exemple on veut rajouter une classe
+
+207
+00:07:01,160 --> 00:07:06,319
+titeuf on n'utilisera pas cette syntaxe
+
+208
+00:07:03,319 --> 00:07:08,440
+là en utilisant a plutôt classe neuilly
+
+209
+00:07:06,440 --> 00:07:11,480
+alors ça c'est une petite particularité
+
+210
+00:07:08,480 --> 00:07:14,600
+qui est lié à react tout simplement
+
+211
+00:07:11,600 --> 00:07:15,420
+classe c'est un mot clé qui est utile au
+
+212
+00:07:14,420 --> 00:07:16,860
+niveau du javascript donc pour éviter
+
+213
+00:07:15,860 --> 00:07:18,880
+tous les problèmes
+
+214
+00:07:16,880 --> 00:07:20,350
+ils ont dit que lorsque l'on
+
+215
+00:07:18,350 --> 00:07:22,149
+souhaiterait mettre une classe on
+
+216
+00:07:20,149 --> 00:07:24,130
+utiliserait plutôt classe n'est donc
+
+217
+00:07:22,130 --> 00:07:26,649
+utiliser classe nine plutôt que classe a
+
+218
+00:07:24,649 --> 00:07:28,029
+dans certaines situations et suivre un
+
+219
+00:07:26,029 --> 00:07:29,009
+certain compileur ça fonctionne mais
+
+220
+00:07:28,009 --> 00:07:31,899
+toujours vous retrouverez classe naim
+
+221
+00:07:29,899 --> 00:07:33,579
+dans vos exemples de la même manière
+
+222
+00:07:31,579 --> 00:07:35,649
+vous pouvez utiliser le système
+
+223
+00:07:33,649 --> 00:07:37,480
+d'interpolation pour injecter une
+
+224
+00:07:35,480 --> 00:07:38,670
+variable au niveau de la tribu alors
+
+225
+00:07:37,670 --> 00:07:40,990
+attention vous ne pouvez pas écrire
+
+226
+00:07:38,990 --> 00:07:42,819
+quelque chose qui ressemble à ça parce
+
+227
+00:07:40,819 --> 00:07:44,680
+que là ils considèrent tout ça comme une
+
+228
+00:07:42,680 --> 00:07:46,810
+chaîne de caractères par contre ce que
+
+229
+00:07:44,810 --> 00:07:49,480
+vous pouvez faire celui d'hier belaidi
+
+230
+00:07:46,480 --> 00:07:52,490
+sera le résultat d'une expression est
+
+231
+00:07:49,490 --> 00:07:54,910
+l'expression c'est itl suivi 2 n
+
+232
+00:07:52,910 --> 00:07:57,380
+et dans ce cas là vous allez obtenir un
+
+233
+00:07:54,380 --> 00:07:59,079
+heidi qui va changer à chaque revendus
+
+234
+00:07:57,079 --> 00:08:00,029
+voilà c'est un peu particulier mais il
+
+235
+00:07:59,029 --> 00:08:03,440
+faut bien comprendre comment ça
+
+236
+00:08:00,440 --> 00:08:05,319
+fonctionne alors maintenant on imagine
+
+237
+00:08:03,319 --> 00:08:07,209
+que l'on aimerait bien on s'imagine plus
+
+238
+00:08:05,209 --> 00:08:09,130
+tôt qu'on aimerait bien créer une liste
+
+239
+00:08:07,130 --> 00:08:12,500
+donc je vais me créer une constante qui
+
+240
+00:08:09,500 --> 00:08:13,079
+sera items et à l'intérieur je vais
+
+241
+00:08:12,079 --> 00:08:19,819
+créer par exemple les éléments de ma to
+
+242
+00:08:13,819 --> 00:08:23,579
+do list par exemple tâche un tâche 2 et
+
+243
+00:08:19,579 --> 00:08:26,930
+tâches 3 ce que j'aimerais bien faire
+
+244
+00:08:23,930 --> 00:08:28,000
+c'est créer à ruelle qui contient
+
+245
+00:08:26,000 --> 00:08:30,370
+ensuite délit avec chacune chacun de ces
+
+246
+00:08:28,370 --> 00:08:33,649
+éléments là ce que je peux faire c'est
+
+247
+00:08:30,649 --> 00:08:33,440
+faire ici un ul n'ont pas forcément dans
+
+248
+00:08:33,440 --> 00:08:38,919
+le h
+
+249
+00:08:33,919 --> 00:08:40,659
+on va le mettre après donc ici ul et
+
+250
+00:08:38,659 --> 00:08:43,570
+ensuite on aurait nos différents elle y
+
+251
+00:08:40,570 --> 00:08:45,690
+est dedans je mets mon premier rallye
+
+252
+00:08:43,690 --> 00:08:47,860
+tout de suite on voit que ça passe en
+
+253
+00:08:45,860 --> 00:08:49,809
+rouge ce qui se passe c'est que ça ce
+
+254
+00:08:47,809 --> 00:08:51,700
+n'est pas du viè 6 valide le problème
+
+255
+00:08:49,700 --> 00:08:52,169
+c'est que pour que logistique soit
+
+256
+00:08:51,169 --> 00:08:55,909
+valide il faut qu'il n'est qu'une seule
+
+257
+00:08:52,909 --> 00:08:56,340
+racines et là on se retrouve avec deux
+
+258
+00:08:55,340 --> 00:08:58,929
+éléments qui sert de racines et qui sont
+
+259
+00:08:56,929 --> 00:08:58,130
+adjacents et ça ça n'aurait pas
+
+260
+00:08:58,130 --> 00:09:00,690
+fonctionné
+
+261
+00:08:58,690 --> 00:09:03,710
+donc ce que l'on pourrait faire ici
+
+262
+00:09:00,710 --> 00:09:05,559
+c'est tout simplement créé indiv qui va
+
+263
+00:09:03,559 --> 00:09:09,570
+permettre d'englober les choses comme
+
+264
+00:09:05,570 --> 00:09:10,710
+ceci si je sauvegarde et que je regarde
+
+265
+00:09:09,710 --> 00:09:12,779
+ça fonctionne bien
+
+266
+00:09:10,779 --> 00:09:14,620
+parfois on n'a pas forcément envie
+
+267
+00:09:12,620 --> 00:09:15,539
+d'avoir cet élément supplémentaire on
+
+268
+00:09:14,539 --> 00:09:18,860
+aimerait bien avoir dans notre d'yves
+
+269
+00:09:15,860 --> 00:09:20,380
+calvi ap tout simplement notre machin et
+
+270
+00:09:18,380 --> 00:09:22,570
+les u n vous avez la possibilité
+
+271
+00:09:20,570 --> 00:09:24,970
+d'utiliser un système de fragments donc
+
+272
+00:09:22,970 --> 00:09:25,230
+c'est un système qui est propre à réate
+
+273
+00:09:24,230 --> 00:09:27,940
+et dans ce cas là vous allez créer un
+
+274
+00:09:25,940 --> 00:09:31,769
+élément dans glee et 6 qui n'aura pas de
+
+275
+00:09:27,769 --> 00:09:33,130
+tags comme ceci si je re sauvegarde ça
+
+276
+00:09:31,130 --> 00:09:35,289
+ne fonctionne plus parce que ça ce n'est
+
+277
+00:09:33,289 --> 00:09:36,090
+pas forcément supporté par la version de
+
+278
+00:09:35,090 --> 00:09:38,159
+babel que l'on a à l'heure actuelle
+
+279
+00:09:36,159 --> 00:09:40,240
+c'est celle que l'on a chargé au niveau
+
+280
+00:09:38,240 --> 00:09:43,370
+de notre html en revanche si vous
+
+281
+00:09:40,370 --> 00:09:46,909
+essayez de reconvertir cette fonction au
+
+282
+00:09:43,909 --> 00:09:46,250
+niveau ici du système vous allez voir ce
+
+283
+00:09:46,250 --> 00:09:49,850
+que ça va donner
+
+284
+00:09:46,850 --> 00:09:51,279
+il va utiliser un réac point fragmente
+
+285
+00:09:49,279 --> 00:09:53,590
+donc ça c'est un fragment c'est quelque
+
+286
+00:09:51,590 --> 00:09:55,269
+chose qui est utile dans réac lorsque
+
+287
+00:09:53,269 --> 00:09:56,279
+vous souhaitez créer plusieurs éléments
+
+288
+00:09:55,279 --> 00:09:59,779
+sans forcément qu'il y ait une racine
+
+289
+00:09:56,779 --> 00:10:00,360
+défini si vous utilisez une ancienne
+
+290
+00:09:59,360 --> 00:10:03,769
+version de babel ce qui est notre cas
+
+291
+00:10:00,769 --> 00:10:04,320
+ici on utilise la version 6 dans ce cas
+
+292
+00:10:03,320 --> 00:10:06,970
+là il faudra utiliser le nom de
+
+293
+00:10:04,970 --> 00:10:08,679
+l'élément complètement donc là on va lui
+
+294
+00:10:06,679 --> 00:10:10,570
+dire je veux utiliser réacteurs
+
+295
+00:10:08,570 --> 00:10:13,909
+fragmente en reparlera de cette syntaxe
+
+296
+00:10:10,909 --> 00:10:16,159
+un petit peu plus tard et après on ferme
+
+297
+00:10:13,159 --> 00:10:18,070
+notre fragments et dans ce cas là on
+
+298
+00:10:16,070 --> 00:10:19,139
+obtient bien notre résultat avec la div
+
+299
+00:10:18,139 --> 00:10:21,700
+qui a laïdi ap
+
+300
+00:10:19,700 --> 00:10:23,320
+et bien nos deux éléments on n'a plus
+
+301
+00:10:21,320 --> 00:10:25,980
+cette fameuse d'yves à la racine
+
+302
+00:10:23,980 --> 00:10:27,970
+donc le dernier problème qui nous
+
+303
+00:10:25,970 --> 00:10:28,350
+restent à régler c'est que l'on souhaite
+
+304
+00:10:27,350 --> 00:10:31,909
+obtenir ici cette liste d'éléments
+
+305
+00:10:28,909 --> 00:10:32,549
+entouré de elie d'habitude que l'on
+
+306
+00:10:31,549 --> 00:10:34,539
+ferait un javascript
+
+307
+00:10:32,539 --> 00:10:36,220
+c'est qu'on fera une boucle for each et
+
+308
+00:10:34,220 --> 00:10:39,700
+pour chaque élément on construirait
+
+309
+00:10:36,700 --> 00:10:41,320
+noélie là malheureusement on ne peut pas
+
+310
+00:10:39,320 --> 00:10:43,480
+le faire ce qui va falloir faire c'est
+
+311
+00:10:41,480 --> 00:10:45,630
+créer un tableau qui va contenir les ali
+
+312
+00:10:43,630 --> 00:10:47,320
+typiquement on pourrait faire une
+
+313
+00:10:45,320 --> 00:10:49,539
+constante qui s'appellerait ali
+
+314
+00:10:47,539 --> 00:10:51,610
+et on lui dirait de faire un hit dance
+
+315
+00:10:49,610 --> 00:10:54,679
+point maps pour parcourir chacun des
+
+316
+00:10:51,679 --> 00:10:57,860
+éléments ont récupéré le nom de l'item
+
+317
+00:10:54,860 --> 00:11:01,620
+et en retour parce que l'on verrait ça
+
+318
+00:10:57,620 --> 00:11:05,130
+serait du g16 qu'on ferait un elie et à
+
+319
+00:11:01,130 --> 00:11:07,149
+l'intérieur en mettrez notre items donc
+
+320
+00:11:05,149 --> 00:11:10,880
+à l'intérieur de cette variable l is on
+
+321
+00:11:07,880 --> 00:11:12,279
+a une liste d'éléments qui pourra
+
+322
+00:11:10,279 --> 00:11:14,289
+ensuite être injectés et après mais je
+
+323
+00:11:12,289 --> 00:11:17,208
+peux utiliser cette liste à l'intérieur
+
+324
+00:11:14,208 --> 00:11:19,299
+de montluel comme ceci donc là ça donne
+
+325
+00:11:17,299 --> 00:11:22,850
+ça si je re sauvegarde
+
+326
+00:11:19,850 --> 00:11:24,458
+j'ai bien mes différentes tâches si vous
+
+327
+00:11:22,458 --> 00:11:25,110
+regardez maintenant votre console vous
+
+328
+00:11:24,110 --> 00:11:27,818
+allez avoir ici une alerte qui va
+
+329
+00:11:25,818 --> 00:11:30,860
+apparaître en rouge qui vous dit itx
+
+330
+00:11:27,860 --> 00:11:33,948
+child in liste fiable une équipe rops on
+
+331
+00:11:30,948 --> 00:11:34,230
+en parlera juste après ce que vous
+
+332
+00:11:33,230 --> 00:11:37,880
+pouvez aussi écrire c'est directement
+
+333
+00:11:34,880 --> 00:11:40,990
+mettre cette expression à ce niveau là
+
+334
+00:11:37,990 --> 00:11:42,068
+après attention à ne pas trop en abuser
+
+335
+00:11:40,068 --> 00:11:43,169
+parce que comme vous le voyez en termes
+
+336
+00:11:42,169 --> 00:11:46,789
+de lisibilité ça peut très rapidement
+
+337
+00:11:43,789 --> 00:11:48,610
+devenir compliqué de relire ce qu au
+
+338
+00:11:46,610 --> 00:11:49,078
+delà donc il faudra faire attention et
+
+339
+00:11:48,078 --> 00:11:52,880
+choisir un bon compromis entre
+
+340
+00:11:49,880 --> 00:11:54,389
+lisibilité et rapidité
+
+341
+00:11:52,389 --> 00:11:56,708
+enfin donc le dernier point c'est cette
+
+342
+00:11:54,708 --> 00:11:58,299
+fameuse erreur il vous dit que chaque
+
+343
+00:11:56,299 --> 00:12:00,429
+enfant dans la liste devrait avoir une
+
+344
+00:11:58,429 --> 00:12:02,049
+propriété clé unique
+
+345
+00:12:00,049 --> 00:12:03,389
+pourquoi ils vous affiche ça tout
+
+346
+00:12:02,389 --> 00:12:05,679
+simplement parce que quand vous rendez
+
+347
+00:12:03,679 --> 00:12:07,360
+une liste ce qui va se passer c'est que
+
+348
+00:12:05,360 --> 00:12:09,068
+peut-être un jour vous allez supprimer
+
+349
+00:12:07,068 --> 00:12:10,198
+cet élément là et lui quand il va
+
+350
+00:12:09,198 --> 00:12:12,519
+refaire sont rendus pour pouvoir
+
+351
+00:12:10,519 --> 00:12:13,110
+comparer les éléments de la liste et
+
+352
+00:12:12,110 --> 00:12:14,880
+ceux d'hier a battu à supprimer ce
+
+353
+00:12:13,880 --> 00:12:16,539
+premier élément
+
+354
+00:12:14,539 --> 00:12:18,190
+il faut que les lieux clés pour
+
+355
+00:12:16,190 --> 00:12:19,289
+identifier chaque élément l'a donc ce
+
+356
+00:12:18,289 --> 00:12:21,880
+sera surtout très utile lorsque vous
+
+357
+00:12:19,880 --> 00:12:22,259
+allez avoir par exemple une liste de
+
+358
+00:12:21,259 --> 00:12:24,578
+commentaires on peut s'imaginer en a eu
+
+359
+00:12:22,578 --> 00:12:25,078
+10 de commentaires et peut-être quand
+
+360
+00:12:24,078 --> 00:12:26,039
+vous ajoutez un commentaire
+
+361
+00:12:25,039 --> 00:12:28,480
+le nouveau commentaire apparaît au
+
+362
+00:12:26,480 --> 00:12:29,068
+dessus de la liste pour éviter que quand
+
+363
+00:12:28,068 --> 00:12:30,690
+réactif à sa comparaison ils se disent
+
+364
+00:12:29,690 --> 00:12:33,980
+ah ben il ya tous les éléments qui ont
+
+365
+00:12:30,980 --> 00:12:34,139
+changé maître des clés permet une
+
+366
+00:12:33,139 --> 00:12:35,850
+meilleure performance au niveau de la
+
+367
+00:12:34,850 --> 00:12:37,899
+manipulation du dom
+
+368
+00:12:35,899 --> 00:12:39,490
+donc nous ici il faut juste qu'on
+
+369
+00:12:37,490 --> 00:12:41,919
+rajoute un nouvel attribut clé qui
+
+370
+00:12:39,919 --> 00:12:42,179
+contiendra une plaie qui doit être
+
+371
+00:12:41,179 --> 00:12:44,289
+unique pour chaque élément
+
+372
+00:12:42,289 --> 00:12:46,809
+ce que je vais faire moi vu qu'ici je
+
+373
+00:12:44,809 --> 00:12:49,068
+n'ai pas l'intention de l'échanger
+
+374
+00:12:46,068 --> 00:12:50,639
+c'est lui donner comme clé l'index du
+
+375
+00:12:49,639 --> 00:12:54,899
+tableau donc ça nous oblige à changer
+
+376
+00:12:50,899 --> 00:12:56,649
+légèrement cette boucle pour faire ça et
+
+377
+00:12:54,649 --> 00:12:59,720
+là maintenant on a plus d'erreurs et en
+
+378
+00:12:56,720 --> 00:13:01,049
+otages qui sont rendus
+
+379
+00:12:59,049 --> 00:13:03,340
+donc voilà pour cette petite découverte
+
+380
+00:13:01,340 --> 00:13:05,860
+du g16 alors rassurez vous si jamais
+
+381
+00:13:03,860 --> 00:13:07,630
+vous vous sentez complètement dépassés
+
+382
+00:13:05,630 --> 00:13:09,880
+par cette syntaxe là rassurez vous dans
+
+383
+00:13:07,880 --> 00:13:11,950
+les exemples suivants on va réutiliser
+
+384
+00:13:09,950 --> 00:13:13,720
+cette syntaxe avec des cas un petit peu
+
+385
+00:13:11,720 --> 00:13:14,220
+plus simple et ça vous permettra
+
+386
+00:13:13,220 --> 00:13:16,750
+d'appréhender les choses plus
+
+387
+00:13:14,750 --> 00:13:17,009
+progressivement ce que je voulais vous
+
+388
+00:13:16,009 --> 00:13:19,450
+montrer dans cette vidéo c'était
+
+389
+00:13:17,450 --> 00:13:21,639
+vraiment que le j ai six va vous
+
+390
+00:13:19,639 --> 00:13:23,710
+permettre de mettre des expressions haut
+
+391
+00:13:21,710 --> 00:13:25,870
+niveau ici des accolades et que vous
+
+392
+00:13:23,870 --> 00:13:26,549
+pouvez mettre n'importe quoi et vous
+
+393
+00:13:25,549 --> 00:13:29,990
+permettra de représenter des structures
+
+394
+00:13:26,990 --> 00:13:32,659
+complexes mais vraiment on est à l'aise
+
+395
+00:13:29,659 --> 00:13:33,720
+au fil du temps en pratique donc je vous
+
+396
+00:13:32,720 --> 00:13:35,649
+donne rendez-vous dans le prochain
+
+397
+00:13:33,649 --> 00:13:37,330
+chapitre on va créer nos premiers
+
+398
+00:13:35,330 --> 00:13:37,000
+composants
+Subtitles End: mo.dbxdb.com
+

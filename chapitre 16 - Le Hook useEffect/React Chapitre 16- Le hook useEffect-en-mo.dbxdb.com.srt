@@ -1,0 +1,1141 @@
+1
+00:00:00,000 --> 00:00:00,000
+ Youtube subtitles download by mo.dbxdb.com 
+
+2
+00:00:00,000 --> 00:00:03,410
+dans le chapitre précédent on a
+
+3
+00:00:01,410 --> 00:00:05,449
+découvert notre premier groupe le you'll
+
+4
+00:00:03,449 --> 00:00:07,220
+stay qui permet de créer un petit état
+
+5
+00:00:05,220 --> 00:00:09,200
+local au niveau d'un composant définit
+
+6
+00:00:07,200 --> 00:00:11,450
+souvent de fonction maintenant on peut
+
+7
+00:00:09,450 --> 00:00:13,219
+se dire ok si c'est la nouvelle manière
+
+8
+00:00:11,219 --> 00:00:15,469
+de définir des composants comment je
+
+9
+00:00:13,469 --> 00:00:18,029
+vais faire pour mais cycle de vie par
+
+10
+00:00:15,029 --> 00:00:20,270
+exemple une composante le complète dit
+
+11
+00:00:18,270 --> 00:00:21,039
+devant tout le camp poney moussaoui la
+
+12
+00:00:20,039 --> 00:00:24,779
+demande comment on va pouvoir gérer ça
+
+13
+00:00:21,779 --> 00:00:25,029
+donc là on va découvrir un nouveau hook
+
+14
+00:00:24,029 --> 00:00:27,710
+qui nous permet justement de remédier à
+
+15
+00:00:25,710 --> 00:00:30,630
+ce problème là c'est le bouquet yooz
+
+16
+00:00:27,630 --> 00:00:33,119
+effect donc ce qui va permettre de créer
+
+17
+00:00:30,119 --> 00:00:36,750
+un code qui va avoir un effet de bord
+
+18
+00:00:33,750 --> 00:00:37,180
+par rapport à votre composants en ce que
+
+19
+00:00:36,180 --> 00:00:39,230
+l'on va faire c'est qu'on va s'imaginer
+
+20
+00:00:37,230 --> 00:00:42,300
+qu'on va garder le premier compteur que
+
+21
+00:00:39,300 --> 00:00:43,210
+l'on avait créé et on garde ce système
+
+22
+00:00:42,210 --> 00:00:45,920
+d'instrumentation ce que j'aimerais bien
+
+23
+00:00:43,920 --> 00:00:47,629
+faire c'est faire en sorte que lorsque
+
+24
+00:00:45,629 --> 00:00:50,820
+j'aime vraiment le titre de la page
+
+25
+00:00:47,820 --> 00:00:52,129
+change donc typiquement c'est quelque
+
+26
+00:00:50,129 --> 00:00:54,170
+chose qui est en dehors du contexte du
+
+27
+00:00:52,170 --> 00:00:56,510
+composant est basiquement il faudrait
+
+28
+00:00:54,510 --> 00:00:58,009
+lui dire mais j'aimerais bien détecté
+
+29
+00:00:56,009 --> 00:01:00,710
+cancun chang et dès que coûte change
+
+30
+00:00:58,710 --> 00:01:02,120
+il faudrait que je change le titre de ma
+
+31
+00:01:00,120 --> 00:01:05,520
+page donc pour faire ça on va utiliser
+
+32
+00:01:02,520 --> 00:01:06,580
+le use effect donc comme pour you the
+
+33
+00:01:05,580 --> 00:01:08,869
+state vous pouvez l'utiliser depuis
+
+34
+00:01:06,869 --> 00:01:11,938
+react en faisant réac pointilleuse
+
+35
+00:01:08,938 --> 00:01:15,430
+effect ou vous pouvez l'importer en gros
+
+36
+00:01:11,430 --> 00:01:17,810
+en faisant ici un news effect maintenant
+
+37
+00:01:15,810 --> 00:01:20,549
+je peux faire au niveau de mon système
+
+38
+00:01:17,549 --> 00:01:22,670
+de compteurs news effect et je devrai
+
+39
+00:01:20,670 --> 00:01:25,200
+lui donner un premier paramètre une
+
+40
+00:01:22,200 --> 00:01:26,200
+fonction appelée donc nous cette
+
+41
+00:01:25,200 --> 00:01:28,610
+fonction ce qu'elle fera c'est qu'elle
+
+42
+00:01:26,610 --> 00:01:31,140
+changera le titre de la page en faisant
+
+43
+00:01:28,140 --> 00:01:33,700
+un document pointe itl égale compteur
+
+44
+00:01:31,700 --> 00:01:37,900
+suivi de la valeur de mon compteur
+
+45
+00:01:33,900 --> 00:01:39,319
+content si je sauvegarde et que je
+
+46
+00:01:37,319 --> 00:01:41,090
+réactualise ma page on voit que le titre
+
+47
+00:01:39,090 --> 00:01:43,549
+de la page deviennent compteur 0 si je
+
+48
+00:01:41,549 --> 00:01:46,828
+clique sur incrémenté la valeur change
+
+49
+00:01:43,828 --> 00:01:48,409
+ou basiquement on peut se dire pourquoi
+
+50
+00:01:46,409 --> 00:01:50,810
+tu ne mets pas simplement le code comme
+
+51
+00:01:48,810 --> 00:01:51,610
+ça et on obtiendra finalement le même
+
+52
+00:01:50,610 --> 00:01:54,530
+résultat
+
+53
+00:01:51,530 --> 00:01:55,000
+la différence c'est que le code que l'on
+
+54
+00:01:54,000 --> 00:01:57,649
+doit exécuter ici ne doit être exécuté
+
+55
+00:01:55,649 --> 00:01:59,540
+que si le compteur change on pourrait
+
+56
+00:01:57,540 --> 00:02:00,250
+s'imaginer que notre compteur à
+
+57
+00:01:59,250 --> 00:02:01,688
+peut-être donc d'autres fonctionnalités
+
+58
+00:02:00,688 --> 00:02:03,739
+et on ne veut pas nécessairement
+
+59
+00:02:01,739 --> 00:02:04,718
+relancer le code qui change le titre
+
+60
+00:02:03,718 --> 00:02:07,920
+systématiquement
+
+61
+00:02:04,920 --> 00:02:09,200
+donc nous effect va prendre un second
+
+62
+00:02:07,200 --> 00:02:12,840
+paramètre qui sera un tableau des
+
+63
+00:02:09,840 --> 00:02:14,539
+valeurs à observer des dépendances nous
+
+64
+00:02:12,539 --> 00:02:16,190
+ici on va lui dire ses comptes
+
+65
+00:02:14,190 --> 00:02:17,139
+donc globalement ce tableau de
+
+66
+00:02:16,139 --> 00:02:19,489
+dépendance est très important parce
+
+67
+00:02:17,489 --> 00:02:20,229
+qu'il va permettre de détecter quand il
+
+68
+00:02:19,229 --> 00:02:22,970
+ya des changements donc si une des
+
+69
+00:02:20,970 --> 00:02:24,500
+valeurs de ce tableau à changer
+
+70
+00:02:22,500 --> 00:02:26,959
+automatiquement les faits le code qui se
+
+71
+00:02:24,959 --> 00:02:29,669
+trouve dans le news effect va être ré
+
+72
+00:02:26,669 --> 00:02:31,639
+exécuté donc si je sauvegarde et que
+
+73
+00:02:29,639 --> 00:02:33,979
+maintenant je clique sur incrémenté je
+
+74
+00:02:31,979 --> 00:02:34,509
+ne vais pas forcément voir de changement
+
+75
+00:02:33,509 --> 00:02:36,919
+c'est tout à fait normal parce que
+
+76
+00:02:34,919 --> 00:02:39,870
+finalement le seul état qui change dans
+
+77
+00:02:36,870 --> 00:02:41,180
+notre composants mais si je ne mets rien
+
+78
+00:02:39,180 --> 00:02:42,190
+au niveau des dépendances et que
+
+79
+00:02:41,190 --> 00:02:44,780
+j'essaie maintenant de ré incrémenté
+
+80
+00:02:42,780 --> 00:02:46,849
+qu'est ce qu'on remarque on remarque que
+
+81
+00:02:44,849 --> 00:02:48,889
+finalement le titre ne change jamais
+
+82
+00:02:46,889 --> 00:02:51,959
+c'est à dire que le code à l'intérieur
+
+83
+00:02:48,959 --> 00:02:53,930
+de cette fonction ne change jamais et ça
+
+84
+00:02:51,930 --> 00:02:56,669
+ne change jamais parce qu'on n'a aucune
+
+85
+00:02:53,669 --> 00:02:58,099
+dépendance donc lui dis ok la première
+
+86
+00:02:56,099 --> 00:03:01,769
+fois que je monte ton composants jeu
+
+87
+00:02:58,769 --> 00:03:02,019
+j'utilise le lieu effect par contre je
+
+88
+00:03:01,019 --> 00:03:04,340
+n'ai rien a observé donc ça veut dire
+
+89
+00:03:02,340 --> 00:03:06,769
+qu'au niveau des rangs du suivant je ne
+
+90
+00:03:04,769 --> 00:03:09,330
+vais par exécuter le code parce que la
+
+91
+00:03:06,330 --> 00:03:10,150
+valeur du tableau n'a pas changé donc si
+
+92
+00:03:09,150 --> 00:03:12,500
+vous mettez un news est faite comme ça
+
+93
+00:03:10,500 --> 00:03:14,060
+en lui passant second paramètre un
+
+94
+00:03:12,060 --> 00:03:15,250
+tableau vide ça c'est l'équivalent de ce
+
+95
+00:03:14,250 --> 00:03:18,569
+qu'on avait vu avec les classes du
+
+96
+00:03:15,569 --> 00:03:21,750
+component did menthe
+
+97
+00:03:18,750 --> 00:03:23,539
+ça permet de détecter en fait quand le
+
+98
+00:03:21,539 --> 00:03:24,400
+composant était monté ce qu au delà ne
+
+99
+00:03:23,400 --> 00:03:27,959
+sera exécutée que quand le composant a
+
+100
+00:03:24,959 --> 00:03:29,539
+été monté à notre exemple d'utilisation
+
+101
+00:03:27,539 --> 00:03:31,759
+c'est pour par exemple créer un timer on
+
+102
+00:03:29,759 --> 00:03:33,109
+aimerait bien que quand le composant et
+
+103
+00:03:31,109 --> 00:03:35,120
+monter la valeur s'incrémente ou tout
+
+104
+00:03:33,120 --> 00:03:37,130
+seul et que toutes les secondes on est
+
+105
+00:03:35,130 --> 00:03:38,380
+la valeur qui s'incrémente donc là ce
+
+106
+00:03:37,380 --> 00:03:40,639
+que je vais faire ce que je voulais dire
+
+107
+00:03:38,639 --> 00:03:41,319
+mais lorsque le composant est monté
+
+108
+00:03:40,319 --> 00:03:45,910
+grâce aux yeux effect avec un paramètre
+
+109
+00:03:41,910 --> 00:03:47,209
+vide je vais faire un wind au point cet
+
+110
+00:03:45,209 --> 00:03:50,459
+intervalle et je vais lui demander de
+
+111
+00:03:47,459 --> 00:03:51,099
+lancer une fonction et cette fonction ce
+
+112
+00:03:50,099 --> 00:03:53,840
+qu'elle fera ce qu'elle fera un appel à
+
+113
+00:03:51,840 --> 00:03:55,789
+une clémente pour incrémenté la valeur
+
+114
+00:03:53,789 --> 00:03:58,318
+et je vais faire cet appel
+
+115
+00:03:55,318 --> 00:04:00,139
+toutes les secondes si je sauvegarde
+
+116
+00:03:58,139 --> 00:04:00,090
+maintenant on voit que toutes les
+
+117
+00:04:00,090 --> 00:04:03,539
+secondes
+
+118
+00:04:00,539 --> 00:04:05,930
+il ya bien une instrumentation alors je
+
+119
+00:04:03,930 --> 00:04:10,789
+vais mettre ici un petit console point
+
+120
+00:04:05,789 --> 00:04:10,970
+blog et on va mettre lots
+
+121
+00:04:10,970 --> 00:04:14,919
+toutes les secondes je vais voir lots on
+
+122
+00:04:12,919 --> 00:04:17,690
+s'imagine maintenant qu'à un rendu
+
+123
+00:04:14,690 --> 00:04:19,269
+consécutif le compteur disparaît on va
+
+124
+00:04:17,269 --> 00:04:20,009
+pas s'embêter on va simplement écrire un
+
+125
+00:04:19,009 --> 00:04:23,630
+petit peu de code ici et on va lui dire
+
+126
+00:04:20,630 --> 00:04:26,959
+de faire un set times d'attendre par
+
+127
+00:04:23,959 --> 00:04:27,149
+exemple deux ou trois secondes et au
+
+128
+00:04:26,149 --> 00:04:29,290
+bout de deux ou trois secondes
+
+129
+00:04:27,290 --> 00:04:32,240
+on va lui demander de refaire un an du
+
+130
+00:04:29,240 --> 00:04:34,329
+sang le compteur ce coup ci comme ceux
+
+131
+00:04:32,329 --> 00:04:38,730
+ci commencent juste rendre une digue qui
+
+132
+00:04:34,730 --> 00:04:42,449
+dira bonjour et on fait ce qu au delà
+
+133
+00:04:38,449 --> 00:04:44,709
+au bout de deux secondes je sauvegarde
+
+134
+00:04:42,709 --> 00:04:46,660
+sarr et actualise la page
+
+135
+00:04:44,660 --> 00:04:48,190
+au bout de deux secondes mon composants
+
+136
+00:04:46,190 --> 00:04:50,079
+disparaît et on voit maintenant qu'on a
+
+137
+00:04:48,079 --> 00:04:52,060
+notre lots qui continue à s'afficher
+
+138
+00:04:50,060 --> 00:04:54,009
+avec des erreurs au niveau de red hat
+
+139
+00:04:52,009 --> 00:04:56,920
+ce qui se passe c'est que là lorsqu on a
+
+140
+00:04:54,920 --> 00:04:58,569
+monté notre composants on a démarré un
+
+141
+00:04:56,569 --> 00:05:00,399
+timer c'est bien ce que l'on veut faire
+
+142
+00:04:58,399 --> 00:05:02,410
+le problème c'est que notre composants
+
+143
+00:05:00,410 --> 00:05:03,269
+et plus tard démonter et se taille mais
+
+144
+00:05:02,269 --> 00:05:06,918
+on va rester en mémoire et va continuer
+
+145
+00:05:03,918 --> 00:05:08,230
+de s'exécuter et qu'henri acte voit son
+
+146
+00:05:06,230 --> 00:05:10,209
+incrémente il dit ouais mais non je peux
+
+147
+00:05:08,209 --> 00:05:11,009
+pas appeler le composant n'existent plus
+
+148
+00:05:10,009 --> 00:05:13,389
+donc tu essaies de changer l'état d'un
+
+149
+00:05:11,389 --> 00:05:15,430
+composant qui n'existe plus donc là
+
+150
+00:05:13,430 --> 00:05:17,019
+c'est le signe d'un gros problème de
+
+151
+00:05:15,019 --> 00:05:19,899
+logique on peut se dire qu'elle est
+
+152
+00:05:17,899 --> 00:05:21,519
+l'équivalent du coup du complot net oui
+
+153
+00:05:19,519 --> 00:05:23,290
+la demande comment on fait pour détecter
+
+154
+00:05:21,290 --> 00:05:25,959
+quand le composant et démonter le
+
+155
+00:05:23,959 --> 00:05:26,759
+youssef est lorsqu'il est appelé vous
+
+156
+00:05:25,759 --> 00:05:29,810
+pouvez lui dire de retourner une
+
+157
+00:05:26,810 --> 00:05:30,089
+fonction cette fonction elle sera
+
+158
+00:05:29,089 --> 00:05:32,889
+utilisé à chaque fois que le lieu effect
+
+159
+00:05:30,889 --> 00:05:34,509
+sera appelée donc à chaque fois que la
+
+160
+00:05:32,509 --> 00:05:36,759
+valeur qui indépendance change ou dans
+
+161
+00:05:34,759 --> 00:05:37,168
+le cas d'un composant qui n'a aucune
+
+162
+00:05:36,168 --> 00:05:40,728
+dépendance à chaque fois que le
+
+163
+00:05:37,728 --> 00:05:41,250
+composant et démonter donc nous ici ce
+
+164
+00:05:40,250 --> 00:05:44,418
+qu'on va faire ce qu'on va sauvegarder
+
+165
+00:05:41,418 --> 00:05:47,269
+la variable timer qui sera donc le timer
+
+166
+00:05:44,269 --> 00:05:48,060
+que l'on a démarré et on lui dira mais
+
+167
+00:05:47,060 --> 00:05:51,829
+pour ce système là je veux que tu
+
+168
+00:05:48,829 --> 00:05:54,589
+retournes une fonction et cette fonction
+
+169
+00:05:51,589 --> 00:05:57,380
+elle fera un clear intervalles et elle
+
+170
+00:05:54,380 --> 00:05:59,199
+supprimera un timer donc maintenant à
+
+171
+00:05:57,199 --> 00:06:02,240
+chaque fois qu'il ya une démontage il va
+
+172
+00:05:59,240 --> 00:06:05,810
+supprimer le timer si je sauvegarde et
+
+173
+00:06:02,810 --> 00:06:07,600
+que j'attends un petit peu en voit ici
+
+174
+00:06:05,600 --> 00:06:08,220
+qu'on a plus d'appels à hello et ça
+
+175
+00:06:07,220 --> 00:06:10,269
+fonctionne convenablement
+
+176
+00:06:08,269 --> 00:06:12,610
+donc si jamais votre effets de bord doit
+
+177
+00:06:10,610 --> 00:06:13,709
+être des initiales ise ce qui va être le
+
+178
+00:06:12,709 --> 00:06:16,940
+cas très souvent lorsque l'on va
+
+179
+00:06:13,940 --> 00:06:17,009
+travailler avec les timer maintenant ce
+
+180
+00:06:16,009 --> 00:06:19,990
+cas là il ne faudra pas hésiter à
+
+181
+00:06:17,990 --> 00:06:21,819
+utiliser une fonction de retour pour
+
+182
+00:06:19,819 --> 00:06:22,408
+expliquer ce que l'on fait
+
+183
+00:06:21,408 --> 00:06:25,879
+donc c'est très très important lorsqu'on
+
+184
+00:06:22,879 --> 00:06:27,459
+utilise le use effect pensé et réfléchi
+
+185
+00:06:25,459 --> 00:06:28,050
+c'est est-ce que vous avez besoin d'un
+
+186
+00:06:27,050 --> 00:06:30,939
+effet de nettoyage c'est à dire est ce
+
+187
+00:06:28,939 --> 00:06:31,348
+que vous avez besoin d'effacer des
+
+188
+00:06:30,348 --> 00:06:34,848
+éventuels traitements qui auraient pu
+
+189
+00:06:31,848 --> 00:06:36,098
+être faits à l'intérieur de votre chiot
+
+190
+00:06:34,098 --> 00:06:38,129
+effect dans l'appel précédent
+
+191
+00:06:36,129 --> 00:06:40,598
+enfin dernier petit détail il ne faudra
+
+192
+00:06:38,598 --> 00:06:42,218
+pas hésiter à utiliser plusieurs fois le
+
+193
+00:06:40,218 --> 00:06:44,319
+use effect là on peut s'imaginer qu'on
+
+194
+00:06:42,319 --> 00:06:45,149
+est content on a bien notre système qui
+
+195
+00:06:44,149 --> 00:06:47,499
+va permettre d'incrémenter la valeur
+
+196
+00:06:45,499 --> 00:06:49,629
+mais on veut garder ce le système que
+
+197
+00:06:47,629 --> 00:06:51,249
+l'on avait écrit initialement qui permet
+
+198
+00:06:49,249 --> 00:06:52,468
+de changer les titres dans ce cas là ce
+
+199
+00:06:51,468 --> 00:06:55,699
+que l'on peut faire c'est rajouter un
+
+200
+00:06:52,699 --> 00:06:57,788
+nouveau use effect et lui dire mauvais
+
+201
+00:06:55,788 --> 00:06:59,678
+ça ce sera il vous effect qui changera
+
+202
+00:06:57,678 --> 00:07:01,869
+que lorsque la valeur de count change
+
+203
+00:06:59,869 --> 00:07:02,639
+or vu que c'est le seul état du
+
+204
+00:07:01,639 --> 00:07:03,658
+composant on pourrait lui dire
+
+205
+00:07:02,658 --> 00:07:05,949
+finalement tu peux le revendre tout le
+
+206
+00:07:03,949 --> 00:07:07,300
+temps mais c'est pas grave
+
+207
+00:07:05,300 --> 00:07:08,579
+et à l'intérieur ici on va lui dire je
+
+208
+00:07:07,579 --> 00:07:11,928
+veux que tu changes le titre en faisant
+
+209
+00:07:08,928 --> 00:07:14,988
+document pointe itl égal on avait dit
+
+210
+00:07:11,988 --> 00:07:18,869
+compteur suivi du de la valeur donc
+
+211
+00:07:14,869 --> 00:07:20,769
+cette écoute comme ceux ci est comme ça
+
+212
+00:07:18,769 --> 00:07:23,028
+on a nos deux boucles qui sont
+
+213
+00:07:20,028 --> 00:07:23,449
+déclenchées en concordance l'un avec
+
+214
+00:07:23,449 --> 00:07:25,809
+l'autre
+
+215
+00:07:23,809 --> 00:07:26,129
+il ne faut vraiment pas hésité à
+
+216
+00:07:25,129 --> 00:07:28,718
+utiliser plusieurs hook si la logique
+
+217
+00:07:26,718 --> 00:07:30,908
+est différente on pourrait être tenté de
+
+218
+00:07:28,908 --> 00:07:32,499
+mettre directement le changement de
+
+219
+00:07:30,499 --> 00:07:33,240
+compteur à ce niveau là mais c'est pas
+
+220
+00:07:32,240 --> 00:07:36,589
+pertinent maintenant on veut vraiment
+
+221
+00:07:33,589 --> 00:07:38,589
+avoir cette notion de suzuka est réservé
+
+222
+00:07:36,589 --> 00:07:40,329
+pour la création et la gestion du timer
+
+223
+00:07:38,329 --> 00:07:42,879
+et ceux où clavat être responsable de
+
+224
+00:07:40,879 --> 00:07:44,788
+l'effet de bord concernant le titre
+
+225
+00:07:42,788 --> 00:07:46,869
+pareil si je regarde la partie
+
+226
+00:07:44,869 --> 00:07:49,699
+composants ici au niveau de ma console
+
+227
+00:07:46,699 --> 00:07:51,418
+grâce à mon petit système de
+
+228
+00:07:49,418 --> 00:07:53,348
+d'inspecteurs réactive toul
+
+229
+00:07:51,348 --> 00:07:54,088
+je vois bien que j'aie mon premier ou
+
+230
+00:07:53,088 --> 00:07:56,769
+qui s'appelle in clémente parce que
+
+231
+00:07:54,769 --> 00:07:58,329
+c'est mon personnalisé qu'on avait créé
+
+232
+00:07:56,329 --> 00:08:00,189
+dans le chapitre précédent et ensuite
+
+233
+00:07:58,189 --> 00:08:01,199
+j'ai mes deux ou que tu es fait qui est
+
+234
+00:08:00,199 --> 00:08:04,339
+qu'ils permettent de changer
+
+235
+00:08:01,339 --> 00:08:04,038
+respectivement le timer est aussi le
+
+236
+00:08:04,038 --> 00:08:06,369
+titre
+
+237
+00:08:04,369 --> 00:08:07,348
+et voilà pour cette petite découverte
+
+238
+00:08:06,348 --> 00:08:09,728
+alors ce qu'il faut retenir c'est que
+
+239
+00:08:07,728 --> 00:08:11,619
+use effect est utilisé pour créer des
+
+240
+00:08:09,619 --> 00:08:14,809
+effets qui sont associés à vos
+
+241
+00:08:11,809 --> 00:08:15,209
+changements d'état en premier paramètre
+
+242
+00:08:14,209 --> 00:08:17,678
+on lui donne une fonction qui va
+
+243
+00:08:15,678 --> 00:08:18,209
+permettre de faire un traitement par
+
+244
+00:08:17,209 --> 00:08:20,619
+exemple nous on l'a utilisé pour des
+
+245
+00:08:18,619 --> 00:08:22,579
+tailles meurt on l'a utilisé
+
+246
+00:08:20,579 --> 00:08:24,408
+pour changer le titre mais on peut
+
+247
+00:08:22,408 --> 00:08:25,240
+s'imaginer l'utilisé aussi pour se
+
+248
+00:08:24,240 --> 00:08:27,680
+connecter d'un pays de weppes socket
+
+249
+00:08:25,680 --> 00:08:28,029
+pour récupérer des messages on peut
+
+250
+00:08:27,029 --> 00:08:30,829
+s'imaginer greffer des événements on
+
+251
+00:08:28,829 --> 00:08:31,990
+peut avoir pas mal pas mal de déchets
+
+252
+00:08:30,990 --> 00:08:33,500
+possible
+
+253
+00:08:31,500 --> 00:08:35,630
+on peut aussi l'utiliser par exemple
+
+254
+00:08:33,630 --> 00:08:36,009
+avec des références pour greffer les
+
+255
+00:08:35,009 --> 00:08:38,538
+plugin java script qui ne serait pas
+
+256
+00:08:36,538 --> 00:08:40,038
+avec react tout ce que l'on pourrait
+
+257
+00:08:38,038 --> 00:08:42,168
+faire en fait avant dans le composite-10
+
+258
+00:08:40,168 --> 00:08:45,208
+demande le comprenant tout événement
+
+259
+00:08:42,208 --> 00:08:46,149
+tout le comprenant 10 days ensuite en 2d
+
+260
+00:08:45,149 --> 00:08:47,230
+paramètres on va lui passer les
+
+261
+00:08:46,230 --> 00:08:49,730
+dépendances c'est à dire les valeurs à
+
+262
+00:08:47,730 --> 00:08:53,708
+observer pour savoir si on doit ré
+
+263
+00:08:49,708 --> 00:08:54,009
+exécuté lehoucq des faits enfin vous
+
+264
+00:08:53,009 --> 00:08:56,958
+pouvez à la fin d'un news effect
+
+265
+00:08:54,958 --> 00:08:58,730
+retourner une fonction qui sera une
+
+266
+00:08:56,730 --> 00:09:01,950
+fonction de nettoyage qui permettra de
+
+267
+00:08:58,950 --> 00:09:03,139
+supprimer les éléments qui auraient pu
+
+268
+00:09:01,139 --> 00:09:05,480
+être créés par le précédent appel à use
+
+269
+00:09:03,480 --> 00:09:07,730
+effect donc penser à l'utiliser si vous
+
+270
+00:09:05,730 --> 00:09:09,289
+abonner par exemple au web socket il
+
+271
+00:09:07,289 --> 00:09:11,539
+faudra penser à se déconnecter lorsqu'il
+
+272
+00:09:09,539 --> 00:09:13,850
+ya un changement d'état est pareil là
+
+273
+00:09:11,850 --> 00:09:15,440
+dans le cadre de nos timer ont fait
+
+274
+00:09:13,440 --> 00:09:17,028
+inquiète l'intervalle pour être sûr de
+
+275
+00:09:15,028 --> 00:09:19,130
+bien supprimée l'intervalle donc voilà
+
+276
+00:09:17,130 --> 00:09:20,708
+pour ce petit principe de hook ce que je
+
+277
+00:09:19,708 --> 00:09:22,789
+vous propose dans le chapitre suivant
+
+278
+00:09:20,789 --> 00:09:25,740
+c'est de pratiquer un petit peu séoul
+
+279
+00:09:22,740 --> 00:09:26,828
+rien qu'avec use effect et use of state
+
+280
+00:09:25,828 --> 00:09:28,909
+vous allez voir qu'on peut faire pas mal
+
+281
+00:09:26,909 --> 00:09:30,559
+de choses et on va découvrir est revenu
+
+282
+00:09:28,559 --> 00:09:32,870
+et on va revenir sur l'utilisation et la
+
+283
+00:09:30,870 --> 00:09:33,339
+création de bouquets personnalisés
+
+284
+00:09:32,339 --> 00:09:36,720
+donc je vous donne rendez-vous dans le
+
+285
+00:09:33,720 --> 00:09:36,000
+prochain chapitre
+Subtitles End: mo.dbxdb.com
+

@@ -1,0 +1,3313 @@
+1
+00:00:00,000 --> 00:00:00,000
+ Youtube subtitles download by mo.dbxdb.com 
+
+2
+00:00:00,000 --> 00:00:02,410
+bienvenue dans ce nouveau chapitre nous
+
+3
+00:00:01,410 --> 00:00:04,790
+allons maintenant voir comment gérer les
+
+4
+00:00:02,790 --> 00:00:05,500
+formulaires au sein de ryad alors les
+
+5
+00:00:04,500 --> 00:00:07,670
+formulaires sont des éléments un peu
+
+6
+00:00:05,670 --> 00:00:09,620
+particulier parce que dans le cadre du
+
+7
+00:00:07,620 --> 00:00:10,120
+dogme classique ils sont capables de
+
+8
+00:00:09,120 --> 00:00:12,769
+maintenir eux-mêmes leur propre état
+
+9
+00:00:10,769 --> 00:00:14,210
+c'est à dire que lorsque l'on va taper
+
+10
+00:00:12,210 --> 00:00:16,039
+quelque chose dans un champ on a une
+
+11
+00:00:14,039 --> 00:00:18,289
+propriété value qui permet de persister
+
+12
+00:00:16,289 --> 00:00:20,750
+l'information qui a été tapée or avait
+
+13
+00:00:18,750 --> 00:00:22,699
+créé à qui on l'a vu react à sa propre
+
+14
+00:00:20,699 --> 00:00:24,890
+manière via le système de state de gérer
+
+15
+00:00:22,890 --> 00:00:26,990
+son état donc il va falloir demander à
+
+16
+00:00:24,990 --> 00:00:28,400
+react de contrôler les choses
+
+17
+00:00:26,400 --> 00:00:30,170
+alors pour vous donner un petit exemple
+
+18
+00:00:28,170 --> 00:00:32,660
+on va créer un nouveau composant qui va
+
+19
+00:00:30,660 --> 00:00:33,700
+contenir notre champ donc ce que l'on va
+
+20
+00:00:32,700 --> 00:00:35,840
+faire c'est qu'on va effacer tout ce que
+
+21
+00:00:33,840 --> 00:00:37,910
+l'on a écrit jusqu'à maintenant sauf la
+
+22
+00:00:35,910 --> 00:00:41,770
+dernière partie on va juste garder ce
+
+23
+00:00:37,770 --> 00:00:43,610
+composant hop je vais recréer ce
+
+24
+00:00:41,610 --> 00:00:45,170
+composant hommes mais cette fois ci en
+
+25
+00:00:43,170 --> 00:00:47,030
+utilisant la proche classe donc on va
+
+26
+00:00:45,030 --> 00:00:49,129
+faire une nouvelle classe qui va étendre
+
+27
+00:00:47,129 --> 00:00:51,370
+de react point compo net
+
+28
+00:00:49,370 --> 00:00:54,899
+à l'intérieur on va créer une fonction
+
+29
+00:00:51,899 --> 00:00:55,090
+renders où cette fonction va simplement
+
+30
+00:00:54,090 --> 00:00:59,920
+rendre les div qui va contenir notre
+
+31
+00:00:55,920 --> 00:01:02,070
+champ donc je return une div qui va
+
+32
+00:00:59,070 --> 00:01:03,160
+contenir notre label pour le label on va
+
+33
+00:01:02,160 --> 00:01:05,930
+avoir un attribut fort alors faites
+
+34
+00:01:03,930 --> 00:01:07,010
+attention vous ne pouvez pas utiliser
+
+35
+00:01:05,010 --> 00:01:10,438
+fort comme ça mais dans le cadre de
+
+36
+00:01:07,438 --> 00:01:12,380
+réacteurs va avoir html fort pourquoi
+
+37
+00:01:10,380 --> 00:01:14,750
+comme pour le système de classes fort
+
+38
+00:01:12,750 --> 00:01:15,280
+est un mot clé du leur script pour
+
+39
+00:01:14,280 --> 00:01:19,720
+éviter tous les problèmes ils ont choisi
+
+40
+00:01:15,720 --> 00:01:20,019
+d'utiliser html fort à la classe donc au
+
+41
+00:01:19,019 --> 00:01:22,880
+niveau du fort remettre dont on imagine
+
+42
+00:01:20,880 --> 00:01:25,319
+que ces chants qui va paraître de taper
+
+43
+00:01:22,319 --> 00:01:28,849
+notre nom dans ce label je mets mon nom
+
+44
+00:01:25,849 --> 00:01:32,470
+ensuite on va avoir un champ donc on met
+
+45
+00:01:28,470 --> 00:01:33,250
+ici un doute de type texte on ne lui met
+
+46
+00:01:32,250 --> 00:01:36,780
+pas de valeur mais pas contre lui
+
+47
+00:01:33,780 --> 00:01:38,930
+donnera un heidi nom est un nom qui va
+
+48
+00:01:36,930 --> 00:01:41,938
+s'appeler donc là je peux
+
+49
+00:01:38,938 --> 00:01:42,130
+automatiquement fermés cette balise pour
+
+50
+00:01:41,130 --> 00:01:44,299
+que ça fonctionne
+
+51
+00:01:42,299 --> 00:01:45,280
+alors faites attention dans le cadre de
+
+52
+00:01:44,280 --> 00:01:47,509
+l'acheter mais l'on peut mettre des
+
+53
+00:01:45,509 --> 00:01:48,578
+balises comme ça mais si vous écrivez ce
+
+54
+00:01:47,578 --> 00:01:51,930
+qu au delà vous le voyez il vous dit non
+
+55
+00:01:48,930 --> 00:01:52,060
+ça ne passe pas donc dans logistique
+
+56
+00:01:51,060 --> 00:01:54,438
+s'il faut nécessairement que les balises
+
+57
+00:01:52,438 --> 00:01:57,750
+et une version fermente ou soit auto
+
+58
+00:01:54,750 --> 00:01:59,299
+fermente pas et ce ne sont pas les mêmes
+
+59
+00:01:57,299 --> 00:02:01,790
+règles que l'acheter mais donc par
+
+60
+00:01:59,790 --> 00:02:02,229
+défaut on voit bien que ça affiche un
+
+61
+00:02:01,229 --> 00:02:04,489
+champ mais le problème c'est que quand
+
+62
+00:02:02,489 --> 00:02:06,110
+on tape une valeur on n'a aucune où
+
+63
+00:02:04,110 --> 00:02:07,509
+aucun moyen de traquer les choses
+
+64
+00:02:06,509 --> 00:02:09,979
+du coup il va nous falloir créer un état
+
+65
+00:02:07,979 --> 00:02:10,628
+qui permettra de savoir quel est le nom
+
+66
+00:02:09,628 --> 00:02:13,880
+qui a été tapée
+
+67
+00:02:10,880 --> 00:02:14,610
+donc on va créer un constructeur dans ce
+
+68
+00:02:13,610 --> 00:02:16,990
+constructeur en prenant part à mettre
+
+69
+00:02:14,990 --> 00:02:17,610
+les propriétés et on appellera la
+
+70
+00:02:16,610 --> 00:02:20,530
+méthode parente
+
+71
+00:02:17,530 --> 00:02:22,330
+ensuite on va définir notre état donc on
+
+72
+00:02:20,330 --> 00:02:23,220
+va faire un vis cette state et on
+
+73
+00:02:22,220 --> 00:02:25,840
+s'imagine que dans cet état on aura le
+
+74
+00:02:23,840 --> 00:02:27,639
+nom de la personne et par défaut on
+
+75
+00:02:25,639 --> 00:02:29,370
+imagine que la valeur sera gens
+
+76
+00:02:27,370 --> 00:02:32,630
+maintenant au niveau de mon champ je
+
+77
+00:02:29,630 --> 00:02:35,630
+peux utiliser dans la tribu value cette
+
+78
+00:02:32,630 --> 00:02:38,060
+valeur là donc je ferai un vice point
+
+79
+00:02:35,060 --> 00:02:39,030
+state points dans donc tout de suite
+
+80
+00:02:38,030 --> 00:02:40,139
+vous allez remarquer quelque chose d'un
+
+81
+00:02:39,139 --> 00:02:44,940
+petit peu étrange donc on voit bien que
+
+82
+00:02:40,940 --> 00:02:45,150
+notre champ à à ce nom là par contre
+
+83
+00:02:44,150 --> 00:02:48,680
+lorsque vous essayez de taper une valeur
+
+84
+00:02:45,680 --> 00:02:49,169
+dans ce champ rien ne se passe tout
+
+85
+00:02:48,169 --> 00:02:51,610
+simplement parce que maintenant que vous
+
+86
+00:02:49,610 --> 00:02:54,979
+avez défini une valeur ce chan va être
+
+87
+00:02:51,979 --> 00:02:55,020
+contrôlé par react donc react va
+
+88
+00:02:54,020 --> 00:02:56,520
+s'assurer que la valeur qui est vers le
+
+89
+00:02:55,520 --> 00:02:59,960
+champ correspond à ce que vous avez émis
+
+90
+00:02:56,960 --> 00:03:00,389
+dans logis et 6 donc le problème c'est
+
+91
+00:02:59,389 --> 00:03:02,800
+que là vous n'avez aucun moyen de
+
+92
+00:03:00,800 --> 00:03:05,449
+changer le nom et c'est pour ça que ce
+
+93
+00:03:02,449 --> 00:03:07,389
+chant devient complètement bloquée du
+
+94
+00:03:05,389 --> 00:03:08,009
+coup il va falloir définir un événement
+
+95
+00:03:07,009 --> 00:03:10,180
+qui va permettre de gérer les
+
+96
+00:03:08,180 --> 00:03:13,009
+changements donc cet événement ces
+
+97
+00:03:10,009 --> 00:03:15,759
+événements on change on va tout de suite
+
+98
+00:03:13,759 --> 00:03:18,740
+appelé une autre méthode que l'on va
+
+99
+00:03:15,740 --> 00:03:20,800
+appeler en dolce and cette méthode je
+
+100
+00:03:18,800 --> 00:03:22,419
+vais à définir plus haut donc ça sera
+
+101
+00:03:20,419 --> 00:03:23,759
+handle change elle prenant part à mettre
+
+102
+00:03:22,759 --> 00:03:26,990
+un événement qui sera du coup un
+
+103
+00:03:23,990 --> 00:03:28,240
+synthétique event et on va tout de suite
+
+104
+00:03:26,240 --> 00:03:30,539
+faire un console points loeb 2e
+
+105
+00:03:28,539 --> 00:03:32,650
+attention pour que vive face bien
+
+106
+00:03:30,650 --> 00:03:33,060
+référence la bonne chose dès le
+
+107
+00:03:32,060 --> 00:03:36,860
+constructeur on fera un vice points en
+
+108
+00:03:33,860 --> 00:03:40,020
+deux ans chez ge égales vise points en
+
+109
+00:03:36,020 --> 00:03:42,160
+dolce and point bas invis maintenant si
+
+110
+00:03:40,160 --> 00:03:44,080
+je réactualise ma page et que je sors
+
+111
+00:03:42,080 --> 00:03:47,360
+mon inspecteur donc je vais sortir ici
+
+112
+00:03:44,360 --> 00:03:48,330
+cet inspecteur en mode console lorsque
+
+113
+00:03:47,330 --> 00:03:51,979
+je vais taper quelque chose je vois que
+
+114
+00:03:48,979 --> 00:03:52,110
+ça ne change rien comme d'habitude mais
+
+115
+00:03:51,110 --> 00:03:54,699
+par contre j'ai bien mon objet avec
+
+116
+00:03:52,699 --> 00:03:56,979
+l'événement et dans cet objet là je vais
+
+117
+00:03:54,979 --> 00:03:58,840
+pouvoir récupérer target qui sera la
+
+118
+00:03:56,840 --> 00:04:00,490
+cible mais je vais surtout pouvoir
+
+119
+00:03:58,490 --> 00:04:02,949
+récupérer la valeur et cette valeur il
+
+120
+00:04:00,949 --> 00:04:04,330
+faut que je la change au niveau de
+
+121
+00:04:02,330 --> 00:04:06,069
+l'état de mon composants pour lui dire
+
+122
+00:04:04,069 --> 00:04:08,169
+bon ben maintenant que la personne a
+
+123
+00:04:06,169 --> 00:04:11,720
+tapé jambes pluie un caractère il faut
+
+124
+00:04:08,720 --> 00:04:14,569
+que la valeur de mon demande composants
+
+125
+00:04:11,569 --> 00:04:17,349
+change pour que lui il change le rendu
+
+126
+00:04:14,349 --> 00:04:19,149
+donc au niveau de mon endogène je vais
+
+127
+00:04:17,149 --> 00:04:20,130
+lui dire il faut que tu cèdes state il
+
+128
+00:04:19,130 --> 00:04:23,670
+faut que tu changes l'état
+
+129
+00:04:20,670 --> 00:04:25,819
+tu vas changer et la valeur de nom est
+
+130
+00:04:23,819 --> 00:04:26,380
+tu mettras ce que le tueur sera au
+
+131
+00:04:25,380 --> 00:04:28,819
+niveau de l'événement donc si vous
+
+132
+00:04:26,819 --> 00:04:30,380
+voulez récupérer la valeur vous pouvez
+
+133
+00:04:28,380 --> 00:04:31,060
+le faire en faisant un peu point target
+
+134
+00:04:30,060 --> 00:04:34,680
+qui vous permettra de récupérer le champ
+
+135
+00:04:31,680 --> 00:04:36,019
+et ensuite value pour récupérer
+
+136
+00:04:34,019 --> 00:04:39,600
+simplement la valeur donc je sauvegarde
+
+137
+00:04:36,600 --> 00:04:40,089
+et maintenant si je tape une lettre on
+
+138
+00:04:39,089 --> 00:04:42,680
+voit que le chant reflète mes
+
+139
+00:04:40,680 --> 00:04:44,329
+changements donc il n'est plus en est en
+
+140
+00:04:42,329 --> 00:04:46,519
+lecture seulement mais il est modifiable
+
+141
+00:04:44,519 --> 00:04:48,889
+donc dès que l'on va taper quelque chose
+
+142
+00:04:46,889 --> 00:04:49,240
+il va appeler cette méthode qui va
+
+143
+00:04:48,240 --> 00:04:52,800
+changer l'état et qui va faire en sorte
+
+144
+00:04:49,800 --> 00:04:54,380
+que le composant ici correspondent à ce
+
+145
+00:04:52,380 --> 00:04:55,329
+que l'on attend donc ça c'est ce que
+
+146
+00:04:54,329 --> 00:04:59,889
+l'on appelle un chant qui est contrôlée
+
+147
+00:04:55,889 --> 00:05:00,220
+via riact alors maintenant qu'est ce qui
+
+148
+00:04:59,220 --> 00:05:03,990
+se passe pour d'autres chant typiquement
+
+149
+00:05:00,990 --> 00:05:04,149
+on va prendre par exemple le texte agen
+
+150
+00:05:03,149 --> 00:05:08,949
+textarea normalement quand le tap en
+
+151
+00:05:04,949 --> 00:05:10,160
+html on fait un textarea et ensuite à
+
+152
+00:05:08,160 --> 00:05:11,350
+l'intérieur on met la valeur donc dans
+
+153
+00:05:10,350 --> 00:05:14,910
+le cadre de reais à être un petit peu
+
+154
+00:05:11,910 --> 00:05:17,069
+différent donc je vais reprendre les
+
+155
+00:05:14,069 --> 00:05:19,009
+différentes propriétés ici voilà donc ça
+
+156
+00:05:17,009 --> 00:05:21,290
+va fonctionner de la même manière sauf
+
+157
+00:05:19,290 --> 00:05:24,720
+que dans le cadre de react un texte area
+
+158
+00:05:21,720 --> 00:05:26,360
+peut avoir un attribut value qui définit
+
+159
+00:05:24,360 --> 00:05:28,279
+sa valeur et c'est ça qui permettra de
+
+160
+00:05:26,279 --> 00:05:30,649
+changer les choses si je sauvegarde
+
+161
+00:05:28,649 --> 00:05:32,690
+j'ai maintenant montrent extérieur avec
+
+162
+00:05:30,690 --> 00:05:34,370
+la valeur initiale et quand je tape des
+
+163
+00:05:32,370 --> 00:05:35,949
+choses sales et modifie alors c'est la
+
+164
+00:05:34,949 --> 00:05:37,759
+petite subtilité
+
+165
+00:05:35,759 --> 00:05:39,560
+les techs terra ne prennent pas des
+
+166
+00:05:37,560 --> 00:05:40,089
+enfants que vous pourrez l'attendre dans
+
+167
+00:05:39,089 --> 00:05:44,769
+le cadre de l'acheter mais classique
+
+168
+00:05:40,769 --> 00:05:46,670
+mais ça prend une valeur alors
+
+169
+00:05:44,670 --> 00:05:47,350
+maintenant on va parler du select alors
+
+170
+00:05:46,350 --> 00:05:50,880
+pour le sélect ça va être un petit peu
+
+171
+00:05:47,880 --> 00:05:52,490
+différent donc on va avoir un select et
+
+172
+00:05:50,490 --> 00:05:56,139
+normalement on aurait plusieurs options
+
+173
+00:05:52,139 --> 00:05:58,130
+donc on va être une première option qui
+
+174
+00:05:56,130 --> 00:06:00,410
+aurait comme valeur des mots hommes et
+
+175
+00:05:58,410 --> 00:06:03,360
+en mai très haut niveau du libellé des
+
+176
+00:06:00,360 --> 00:06:04,360
+monts des mots à vous convaincre et
+
+177
+00:06:03,360 --> 00:06:09,949
+simplement 3 ou qu'on mettra des
+
+178
+00:06:04,949 --> 00:06:10,180
+modeuses les démos 3 dans le cadre du
+
+179
+00:06:09,180 --> 00:06:12,829
+dom classique parce qu'il faudrait faire
+
+180
+00:06:10,829 --> 00:06:14,449
+c'est prendre une de ces options est lui
+
+181
+00:06:12,449 --> 00:06:15,819
+mettre une attributs selected pour le
+
+182
+00:06:14,819 --> 00:06:17,959
+sélectionner
+
+183
+00:06:15,959 --> 00:06:19,550
+dans le cadre de réac ça fonctionne et
+
+184
+00:06:17,550 --> 00:06:22,350
+complètement différemment on va
+
+185
+00:06:19,350 --> 00:06:24,500
+simplement ici avoir une valeur et en
+
+186
+00:06:22,500 --> 00:06:26,120
+mettra la valeur qui est traqué par les
+
+187
+00:06:24,120 --> 00:06:29,279
+actes donc nous ici ça se ravise point
+
+188
+00:06:26,279 --> 00:06:30,579
+state points non on s'imagine que le
+
+189
+00:06:29,579 --> 00:06:32,959
+nombre des faux ça serait par exemple
+
+190
+00:06:30,959 --> 00:06:35,788
+des modeuses
+
+191
+00:06:32,788 --> 00:06:38,079
+pareil lorsque l'on change la valeur
+
+192
+00:06:35,079 --> 00:06:39,288
+mais il faudra faire un échange et là on
+
+193
+00:06:38,288 --> 00:06:43,939
+utilisera la même méthode qu'ils se
+
+194
+00:06:39,939 --> 00:06:45,598
+ravisent points en donne change lorsque
+
+195
+00:06:43,598 --> 00:06:47,490
+l'on fera un e point target point value
+
+196
+00:06:45,490 --> 00:06:49,259
+ça nous renverra la valeur qui a été
+
+197
+00:06:47,259 --> 00:06:51,569
+sélectionné donc si je sauvegarde
+
+198
+00:06:49,569 --> 00:06:53,009
+on voit bien notre des modeuses qui est
+
+199
+00:06:51,009 --> 00:06:54,168
+sélectionné par défaut mais si je
+
+200
+00:06:53,168 --> 00:06:55,158
+sélectionne une autre valeur
+
+201
+00:06:54,158 --> 00:06:57,689
+automatiquement c'est celle là qui est
+
+202
+00:06:55,689 --> 00:06:59,699
+sélectionné si vous voulez vous en
+
+203
+00:06:57,699 --> 00:07:01,379
+assurer à ce que vous pouvez faire c'est
+
+204
+00:06:59,379 --> 00:07:03,209
+par exemple au dessus de votre label
+
+205
+00:07:01,209 --> 00:07:06,430
+mettre la valeur qu'on mettrait ici
+
+206
+00:07:03,430 --> 00:07:08,120
+affiche mois vis point stay points n'ont
+
+207
+00:07:06,120 --> 00:07:10,379
+donc lorsque je sauvegarde dès que je
+
+208
+00:07:08,379 --> 00:07:13,060
+change de valeur automatiquement and
+
+209
+00:07:10,060 --> 00:07:14,120
+change si votre champ accepte plusieurs
+
+210
+00:07:13,120 --> 00:07:17,949
+valeurs vous pouvez lui préciser ici que
+
+211
+00:07:14,949 --> 00:07:18,019
+c'est un chant sélect de type multiples
+
+212
+00:07:17,019 --> 00:07:20,279
+dans ce cas là ça va changer un petit
+
+213
+00:07:18,279 --> 00:07:21,259
+peu l'apparence mais par contre dans les
+
+214
+00:07:20,259 --> 00:07:23,879
+valeurs que vous lui envoyez il faudra
+
+215
+00:07:21,879 --> 00:07:25,408
+lui envoyer un tableau donc par exemple
+
+216
+00:07:23,408 --> 00:07:27,149
+je peux lui dire par défaut il faut que
+
+217
+00:07:25,149 --> 00:07:31,158
+tu sélectionnes des modeuses et aussi
+
+218
+00:07:27,158 --> 00:07:32,269
+des mots est automatiquement là ça va
+
+219
+00:07:31,269 --> 00:07:34,589
+bien fonctionner et quand vous changez
+
+220
+00:07:32,589 --> 00:07:37,779
+les valeurs ça vous renvoie un tableau
+
+221
+00:07:34,779 --> 00:07:38,629
+qui s'il faudra plutôt m ji sun point
+
+222
+00:07:37,629 --> 00:07:42,639
+string il faille
+
+223
+00:07:38,639 --> 00:07:43,038
+c'est un tableau un pop up et on est
+
+224
+00:07:42,038 --> 00:07:45,870
+ravi ce point state point d'eau en
+
+225
+00:07:43,870 --> 00:07:46,370
+revanche quand j'essaie de sélectionner
+
+226
+00:07:45,370 --> 00:07:48,449
+plusieurs valeurs on voit que c'est
+
+227
+00:07:46,449 --> 00:07:50,158
+réinitialiser faut faire attention le un
+
+228
+00:07:48,158 --> 00:07:51,079
+pointage est point value ne va pas
+
+229
+00:07:50,079 --> 00:07:53,399
+fonctionner dans le cas d'un select
+
+230
+00:07:51,399 --> 00:07:54,110
+multiples là ce qu'il faudra faire c'est
+
+231
+00:07:53,110 --> 00:07:57,940
+récupérer l'ensemble des options qui ont
+
+232
+00:07:54,940 --> 00:08:01,389
+été sélectionnés ou selected auctions
+
+233
+00:07:57,389 --> 00:08:02,149
+convertir sa sous forme de tableau donc
+
+234
+00:08:01,149 --> 00:08:05,620
+soit en faisant un réforme soit en
+
+235
+00:08:02,620 --> 00:08:09,228
+utilisant les spread opérateurs comme ça
+
+236
+00:08:05,228 --> 00:08:10,310
+et ensuite sur ce tableau là on va ma
+
+237
+00:08:09,310 --> 00:08:12,930
+paie pour récupérer l'ensemble des
+
+238
+00:08:10,930 --> 00:08:15,399
+options et nous ce qui nous intéresse
+
+239
+00:08:12,399 --> 00:08:17,819
+c'est simplement la valeur voilà donc
+
+240
+00:08:15,819 --> 00:08:18,259
+dans ce cadre là si je fais une
+
+241
+00:08:17,259 --> 00:08:21,968
+sélection multiple maintenant ça va
+
+242
+00:08:18,968 --> 00:08:24,009
+fonctionner convenablement on fait
+
+243
+00:08:21,009 --> 00:08:25,158
+attention à la logique du undji 6 enfin
+
+244
+00:08:24,158 --> 00:08:28,930
+le dernier point ce sont les chants de
+
+245
+00:08:25,930 --> 00:08:30,569
+type radio ou de type checkbox donc là
+
+246
+00:08:28,569 --> 00:08:32,370
+pour le coup c'est plus proche de l'html
+
+247
+00:08:30,370 --> 00:08:35,880
+on aura un hymne pout de type chaque box
+
+248
+00:08:32,880 --> 00:08:37,620
+est il si on veut le sélectionner on
+
+249
+00:08:35,620 --> 00:08:39,839
+aura un attribut checked qui sera un
+
+250
+00:08:37,839 --> 00:08:40,610
+boulet un pour dire si ces sélectionnés
+
+251
+00:08:39,610 --> 00:08:42,259
+ou pas
+
+252
+00:08:40,259 --> 00:08:46,690
+donc là on va peut-être créer dans notre
+
+253
+00:08:42,690 --> 00:08:49,889
+state voilà une propriété checked et on
+
+254
+00:08:46,889 --> 00:08:51,019
+mettra que ces trous par défaut par
+
+255
+00:08:49,019 --> 00:08:54,269
+exemple et à ce niveau là on lui dit
+
+256
+00:08:51,269 --> 00:08:57,919
+ravi ce point state point checked
+
+257
+00:08:54,919 --> 00:08:59,149
+maintenant on aura aussi une méthode
+
+258
+00:08:57,149 --> 00:09:01,070
+unchanged qui permettra de détecter le
+
+259
+00:08:59,070 --> 00:09:03,110
+changement donc on appellera ici encore
+
+260
+00:09:01,110 --> 00:09:06,720
+une fois en 2000 chez ge et en auto
+
+261
+00:09:03,720 --> 00:09:08,210
+ferme se changera donc par défaut c'est
+
+262
+00:09:06,210 --> 00:09:09,580
+déjà cochée et quand on décoche on veut
+
+263
+00:09:08,580 --> 00:09:12,600
+que changer quelque chose
+
+264
+00:09:09,600 --> 00:09:14,740
+donc là on ne changera la propriété gect
+
+265
+00:09:12,740 --> 00:09:16,970
+mais on ne changera pas en utilisant un
+
+266
+00:09:14,970 --> 00:09:18,860
+point target point value mais on
+
+267
+00:09:16,860 --> 00:09:21,389
+utilisera eux pointent target coin
+
+268
+00:09:18,389 --> 00:09:25,630
+checked voilà comment vous pouvez avoir
+
+269
+00:09:21,630 --> 00:09:26,049
+une tchèque box qui va être traqués tout
+
+270
+00:09:25,049 --> 00:09:27,070
+ce que l'on pourrait faire par exemple
+
+271
+00:09:26,070 --> 00:09:32,720
+s'est affiché quelque chose en dessous
+
+272
+00:09:27,720 --> 00:09:38,990
+on imagine up mettre une div
+
+273
+00:09:32,990 --> 00:09:40,340
+un message affiché si on coche la
+
+274
+00:09:38,340 --> 00:09:42,799
+tchèque box de traquer ceux chambre
+
+275
+00:09:40,799 --> 00:09:45,809
+permet par exemple d'afficher ce message
+
+276
+00:09:42,809 --> 00:09:48,690
+seulement 6 check théâtre où on lui dira
+
+277
+00:09:45,690 --> 00:09:51,690
+si checked dans ce cas là je veux que tu
+
+278
+00:09:48,690 --> 00:09:54,600
+affiches ça dans le cas contraire je
+
+279
+00:09:51,600 --> 00:09:55,029
+veux que tu n'affiche rien maintenant ça
+
+280
+00:09:54,029 --> 00:09:57,740
+devrait fonctionner si ce n'est ici que
+
+281
+00:09:55,740 --> 00:10:00,179
+sévissent point state point tchèque
+
+282
+00:09:57,179 --> 00:10:02,090
+attention et lorsque je décoche la case
+
+283
+00:10:00,090 --> 00:10:04,250
+l'élément se masquer sa fiche vous voyez
+
+284
+00:10:02,250 --> 00:10:06,409
+c'est très très simple de connecter des
+
+285
+00:10:04,409 --> 00:10:08,690
+comportements aux modifications au
+
+286
+00:10:06,690 --> 00:10:11,929
+niveau d'un formulaire
+
+287
+00:10:08,929 --> 00:10:12,130
+enfin le dernier type de champ que l'on
+
+288
+00:10:11,130 --> 00:10:14,509
+peut être amené à rencontrer ces les
+
+289
+00:10:12,509 --> 00:10:15,220
+champs de type fichiers donc ces gens là
+
+290
+00:10:14,220 --> 00:10:18,720
+ne peuvent pas être contrôlés par et
+
+291
+00:10:15,720 --> 00:10:19,299
+actes parce que les informations qui
+
+292
+00:10:18,299 --> 00:10:20,500
+sont dans le champ sont disponibles en
+
+293
+00:10:19,500 --> 00:10:22,730
+lecture seule donc il n'est pas possible
+
+294
+00:10:20,730 --> 00:10:24,919
+pour react de modifier la valeur d'année
+
+295
+00:10:22,919 --> 00:10:26,840
+une goutte de type fine donc par défaut
+
+296
+00:10:24,840 --> 00:10:28,039
+si vous avez un une goutte de type
+
+297
+00:10:26,039 --> 00:10:29,230
+fichier va vous pouvez greffer des
+
+298
+00:10:28,230 --> 00:10:31,549
+événements dessus par contre vous ne
+
+299
+00:10:29,549 --> 00:10:33,169
+pouvez pas changer sa valeur
+
+300
+00:10:31,169 --> 00:10:33,120
+dynamiquement depuis ray ce n'est pas
+
+301
+00:10:33,120 --> 00:10:34,570
+possible
+
+302
+00:10:33,570 --> 00:10:36,950
+mais dans tous les cas ce n'est pas
+
+303
+00:10:34,950 --> 00:10:38,570
+possible en javascript de base non plus
+
+304
+00:10:36,570 --> 00:10:40,639
+donc maintenant imaginons on a un
+
+305
+00:10:38,639 --> 00:10:42,350
+formulaire qui contient plusieurs champs
+
+306
+00:10:40,350 --> 00:10:44,570
+on veut le prénom le nom et le fait
+
+307
+00:10:42,570 --> 00:10:46,279
+qu'on en accepte ou non la newsletter
+
+308
+00:10:44,279 --> 00:10:48,289
+donc pour l'instant on va mettre tout le
+
+309
+00:10:46,289 --> 00:10:50,840
+code à ce niveau là donc je vais créer
+
+310
+00:10:48,840 --> 00:10:52,669
+une 1re div qui va permettre de tout
+
+311
+00:10:50,669 --> 00:10:53,470
+englober ensuite je vais créer une 1re
+
+312
+00:10:52,470 --> 00:10:54,240
+div qui va compter
+
+313
+00:10:53,240 --> 00:10:57,708
+mon premier champ donc c'est le chant
+
+314
+00:10:54,708 --> 00:11:00,169
+qui permettra de rentrer son prénom je
+
+315
+00:10:57,169 --> 00:11:03,230
+mets un label j'utilise la tribu halte
+
+316
+00:11:00,230 --> 00:11:07,259
+et html fort et ça sera la tribu pour le
+
+317
+00:11:03,259 --> 00:11:11,279
+nom pour qu'on mettra non ensuite je
+
+318
+00:11:07,279 --> 00:11:15,929
+crée un includes de type texte et je
+
+319
+00:11:11,929 --> 00:11:17,799
+vais lui donner comme valeur vis point
+
+320
+00:11:15,799 --> 00:11:19,480
+state.gov comme on l'a fait tout à
+
+321
+00:11:17,480 --> 00:11:21,880
+l'heure et lorsque l'on change ce champ
+
+322
+00:11:19,880 --> 00:11:24,980
+là je vais lui demander d'appeler la
+
+323
+00:11:21,980 --> 00:11:28,708
+méthode unchanged donc ça sera vise
+
+324
+00:11:24,708 --> 00:11:30,429
+points en deux matches là on pourrait se
+
+325
+00:11:28,429 --> 00:11:32,380
+dire je vais créer une méthode en dolce
+
+326
+00:11:30,380 --> 00:11:34,389
+and pour le nom en de shenge pour le
+
+327
+00:11:32,389 --> 00:11:36,909
+prénom en dolce and pour la newsletter
+
+328
+00:11:34,909 --> 00:11:37,259
+le problème c'est que dans ce cas là
+
+329
+00:11:36,259 --> 00:11:38,519
+vous allez dupliquer beaucoup beaucoup
+
+330
+00:11:37,519 --> 00:11:39,149
+de logique
+
+331
+00:11:38,149 --> 00:11:41,708
+donc nous on va plutôt essayer de penser
+
+332
+00:11:39,708 --> 00:11:43,149
+quelque chose de manière très générique
+
+333
+00:11:41,149 --> 00:11:46,490
+ici et on va utiliser la même méthode
+
+334
+00:11:43,490 --> 00:11:48,100
+unchanged pour nos différents champs et
+
+335
+00:11:46,100 --> 00:11:50,380
+aussi pour la tchèque boxe au niveau de
+
+336
+00:11:48,380 --> 00:11:51,120
+la digue je vais mettre non et je
+
+337
+00:11:50,120 --> 00:11:53,200
+voulais donner aussi un aigle qui
+
+338
+00:11:51,200 --> 00:11:55,720
+s'appellera non voilà donc là j'ai créé
+
+339
+00:11:53,720 --> 00:11:57,970
+mon premier chant et au niveau de mon
+
+340
+00:11:55,970 --> 00:11:59,919
+état je vais préciser une valeur
+
+341
+00:11:57,919 --> 00:12:03,630
+initiale donc on va imaginer que le nom
+
+342
+00:11:59,630 --> 00:12:05,110
+sera vide par défaut le prénom sera vide
+
+343
+00:12:03,110 --> 00:12:07,000
+aussi par défaut et ensuite on aura
+
+344
+00:12:05,000 --> 00:12:08,850
+newsletter et en mettra falls par défaut
+
+345
+00:12:07,850 --> 00:12:11,839
+parce que nos utilisateurs n'a pas
+
+346
+00:12:08,839 --> 00:12:13,539
+accepté la newsletter par défaut donc je
+
+347
+00:12:11,539 --> 00:12:16,880
+vais dupliquer 7/10 veulent a donc là on
+
+348
+00:12:13,880 --> 00:12:18,909
+mettra tout simplement prénom on n'a pas
+
+349
+00:12:16,909 --> 00:12:19,500
+grand chose d'autre a changé si ce n'est
+
+350
+00:12:18,500 --> 00:12:22,909
+que dans le state on récupérera le
+
+351
+00:12:19,909 --> 00:12:25,250
+prénom est ici en récupère après nom et
+
+352
+00:12:22,250 --> 00:12:27,578
+prénom enfin dernier chance et
+
+353
+00:12:25,578 --> 00:12:30,169
+l'abonnement à la newsletter
+
+354
+00:12:27,169 --> 00:12:34,350
+donc là on mettra newsletter et j'ai
+
+355
+00:12:30,350 --> 00:12:37,039
+oublié de changer prénom ici donc ça
+
+356
+00:12:34,039 --> 00:12:39,509
+sera muse letter of pop
+
+357
+00:12:37,509 --> 00:12:42,889
+on l'a d'ailleurs m a plu aux abonnés à
+
+358
+00:12:39,889 --> 00:12:42,339
+la newsletter
+
+359
+00:12:42,339 --> 00:12:46,909
+point d'interrogation
+
+360
+00:12:43,909 --> 00:12:48,370
+là ça sera un reboot de type checkbox
+
+361
+00:12:46,370 --> 00:12:51,470
+donc on ne met pas value mais on mettra
+
+362
+00:12:48,470 --> 00:12:53,169
+checked et ça sera cochet ci vise pointe
+
+363
+00:12:51,169 --> 00:12:55,899
+d'ail point newsletters
+
+364
+00:12:53,899 --> 00:12:57,399
+lorsque l'on change on appelle aussi la
+
+365
+00:12:55,399 --> 00:12:59,200
+méthode en dolce and et on va changer
+
+366
+00:12:57,200 --> 00:13:02,240
+son nom et son âge dit donc ici on
+
+367
+00:12:59,240 --> 00:13:02,539
+mettra newsletters
+
+368
+00:13:02,539 --> 00:13:05,130
+donc là on a notre formulaire bon il
+
+369
+00:13:04,130 --> 00:13:08,659
+n'est pas très joli mais on se concentre
+
+370
+00:13:05,659 --> 00:13:09,330
+avant tout sur le fonctionnement donc on
+
+371
+00:13:08,330 --> 00:13:11,679
+aimerait bien quand on change les choses
+
+372
+00:13:09,679 --> 00:13:13,630
+que ça change l'état et pour voir un
+
+373
+00:13:11,630 --> 00:13:15,700
+petit peu les évolutions de l'état juste
+
+374
+00:13:13,700 --> 00:13:17,049
+après notre formulaire long métrage
+
+375
+00:13:15,049 --> 00:13:20,960
+isson point string faille deux vices
+
+376
+00:13:17,960 --> 00:13:22,360
+point state donc lorsque je tape une
+
+377
+00:13:20,360 --> 00:13:25,460
+valeur ici il faudrait que ça change la
+
+378
+00:13:22,460 --> 00:13:27,820
+valeur au niveau de non ici
+
+379
+00:13:25,820 --> 00:13:29,860
+donc au niveau de notre unchanged on va
+
+380
+00:13:27,860 --> 00:13:30,899
+devoir récupérer le nom du champion en
+
+381
+00:13:29,899 --> 00:13:32,860
+train de modifier
+
+382
+00:13:30,860 --> 00:13:36,779
+donc on peut le récupérer en faisant un
+
+383
+00:13:32,779 --> 00:13:37,470
+e point target point name donc serval
+
+384
+00:13:36,470 --> 00:13:40,970
+sauvegardés dans une variable que l'on
+
+385
+00:13:37,970 --> 00:13:42,130
+va appeler n'est ensuite on peut lui
+
+386
+00:13:40,130 --> 00:13:44,259
+demander de faire un vise points 7 state
+
+387
+00:13:42,259 --> 00:13:46,539
+et on va lui demander de changer la
+
+388
+00:13:44,539 --> 00:13:48,639
+valeur qui correspond ou non donc pour
+
+389
+00:13:46,639 --> 00:13:51,259
+cela je peux utiliser cette annotation
+
+390
+00:13:48,259 --> 00:13:54,080
+là donc je vais m en clé le nom du champ
+
+391
+00:13:51,080 --> 00:13:56,590
+donc ça sera nom prénom ou newsletter et
+
+392
+00:13:54,590 --> 00:14:00,389
+au niveau de la valeur je mettrais 1e
+
+393
+00:13:56,389 --> 00:14:02,799
+fois une target point value et là ça me
+
+394
+00:14:00,799 --> 00:14:05,750
+permet de muter seulement la clé qui
+
+395
+00:14:02,750 --> 00:14:06,419
+correspond au nom de mon champ donc je
+
+396
+00:14:05,419 --> 00:14:07,019
+sauvegarde
+
+397
+00:14:06,019 --> 00:14:09,850
+je modifie le nom on voit que le non ait
+
+398
+00:14:07,850 --> 00:14:10,889
+changé je modifie le prénom ça
+
+399
+00:14:09,889 --> 00:14:12,490
+fonctionne bien
+
+400
+00:14:10,490 --> 00:14:14,649
+par contre pour la tchèque boxe ça va
+
+401
+00:14:12,649 --> 00:14:16,090
+poser un problème on voit que la valeur
+
+402
+00:14:14,090 --> 00:14:18,250
+est toujours au code donc ce que l'on
+
+403
+00:14:16,250 --> 00:14:20,049
+peut faire ici c'est vérifier le type du
+
+404
+00:14:18,049 --> 00:14:22,179
+champ par exemple donc on va faire un
+
+405
+00:14:20,179 --> 00:14:25,850
+constat type égale le point target
+
+406
+00:14:22,850 --> 00:14:27,460
+pointy maintenant on va créer une
+
+407
+00:14:25,460 --> 00:14:29,110
+constante pour récupérer la valeur et on
+
+408
+00:14:27,110 --> 00:14:32,720
+va lui dire si le type est égal à chaque
+
+409
+00:14:29,720 --> 00:14:35,419
+box dans ce cas là on récupérera un
+
+410
+00:14:32,419 --> 00:14:36,149
+point target point checked dans le cas
+
+411
+00:14:35,149 --> 00:14:38,500
+contraire c'est à dire si c'est un chant
+
+412
+00:14:36,500 --> 00:14:43,210
+classique amphores un voeu point target
+
+413
+00:14:38,210 --> 00:14:45,130
+point value maintenant à ce niveau là je
+
+414
+00:14:43,130 --> 00:14:48,649
+n'ai qu'à lui passer la valeur qui est
+
+415
+00:14:45,649 --> 00:14:50,380
+gérée ici donc si j'essaye de soumettre
+
+416
+00:14:48,380 --> 00:14:52,659
+les différentes choses on voit bien que
+
+417
+00:14:50,659 --> 00:14:54,100
+les valeurs correspondent à ce que l'on
+
+418
+00:14:52,100 --> 00:14:56,350
+attend donc après on pourrait faire des
+
+419
+00:14:54,350 --> 00:14:57,360
+traitements supplémentaires voir si on a
+
+420
+00:14:56,360 --> 00:14:59,860
+des erreurs ce genre de chose mais vous
+
+421
+00:14:57,860 --> 00:15:00,929
+voyez comment on peut traquer les
+
+422
+00:14:59,929 --> 00:15:03,889
+changements faits au niveau d'un
+
+423
+00:15:00,889 --> 00:15:05,289
+formulaire dans un objet et au niveau de
+
+424
+00:15:03,289 --> 00:15:07,990
+l'état de notre composants alors
+
+425
+00:15:05,990 --> 00:15:09,490
+maintenant un petit détail important
+
+426
+00:15:07,490 --> 00:15:13,470
+on va mettre au niveau du renders une
+
+427
+00:15:09,470 --> 00:15:16,750
+console point blog de renders
+
+428
+00:15:13,750 --> 00:15:17,159
+à chaque fois que vous tapez quelque
+
+429
+00:15:16,159 --> 00:15:19,389
+chose dans un champ il faut bien
+
+430
+00:15:17,389 --> 00:15:20,009
+comprendre que savard déclencher un
+
+431
+00:15:19,009 --> 00:15:22,958
+rendu c'est à dire que à chaque fois que
+
+432
+00:15:20,958 --> 00:15:24,639
+vous faites un changement et il appelle
+
+433
+00:15:22,639 --> 00:15:27,589
+cette state donc logiquement le
+
+434
+00:15:24,589 --> 00:15:28,049
+composant et revendus donc là on a une
+
+435
+00:15:27,049 --> 00:15:30,610
+logique qui est assez simple mais il
+
+436
+00:15:28,610 --> 00:15:32,860
+faut bien comprendre que ça demande du
+
+437
+00:15:30,860 --> 00:15:33,269
+travail au niveau de réacteurs à chaque
+
+438
+00:15:32,269 --> 00:15:35,380
+fois que vous faites quelque chose dans
+
+439
+00:15:33,380 --> 00:15:37,328
+un champ ce qui peut me poser un
+
+440
+00:15:35,328 --> 00:15:38,429
+problème en terme de performance donc si
+
+441
+00:15:37,429 --> 00:15:41,809
+vous n'avez pas forcément besoin de
+
+442
+00:15:38,809 --> 00:15:42,120
+traquer l'état de votre chance au niveau
+
+443
+00:15:41,120 --> 00:15:44,948
+de réacteurs exemple vous avez un champ
+
+444
+00:15:42,948 --> 00:15:46,809
+et vous nous avez besoin de la valeur
+
+445
+00:15:44,809 --> 00:15:49,909
+que lorsque on soumet le formulaire ce
+
+446
+00:15:46,909 --> 00:15:51,100
+n'est pas forcément utile de traquer les
+
+447
+00:15:49,100 --> 00:15:52,198
+choses donc là on se demande à créer
+
+448
+00:15:51,198 --> 00:15:53,279
+c'est ce qu'on appelle des chambres
+
+449
+00:15:52,279 --> 00:15:56,720
+contrôler mais vous avez la possibilité
+
+450
+00:15:53,720 --> 00:15:58,179
+de créer des champs non contrôlée dans
+
+451
+00:15:56,179 --> 00:16:00,250
+ce cas là alors je vais te laisser mon
+
+452
+00:15:58,250 --> 00:16:03,589
+console point log de renders et vous
+
+453
+00:16:00,589 --> 00:16:06,799
+pouvez avoir un input de type texte et
+
+454
+00:16:03,799 --> 00:16:09,919
+vous n'allez lui m aucune valeur et on
+
+455
+00:16:06,919 --> 00:16:11,470
+va automatiquement le fermer ce champ là
+
+456
+00:16:09,470 --> 00:16:12,089
+est un champ non contrôlés c'est à dire
+
+457
+00:16:11,089 --> 00:16:13,198
+que c'est un chant qui est mis dans le
+
+458
+00:16:12,198 --> 00:16:16,909
+dom et c'est le dom qui est chargée de
+
+459
+00:16:13,909 --> 00:16:18,279
+traquer la valeur si plus tard on voudra
+
+460
+00:16:16,279 --> 00:16:20,169
+récupérer la valeur il faudra récupérer
+
+461
+00:16:18,169 --> 00:16:22,929
+le chant dans le dom et récupérer sa
+
+462
+00:16:20,929 --> 00:16:23,370
+valeur comme on le ferait avec du
+
+463
+00:16:22,370 --> 00:16:27,470
+javascript classique
+
+464
+00:16:23,470 --> 00:16:28,198
+autre petit détail si on l'a si le champ
+
+465
+00:16:27,198 --> 00:16:30,940
+à une valeur initiale qui est définie
+
+466
+00:16:28,940 --> 00:16:32,500
+par react donc ça c'est ce qu'on avait
+
+467
+00:16:30,500 --> 00:16:34,240
+vu tout à l'heure ce chan va être
+
+468
+00:16:32,240 --> 00:16:35,578
+contrôlé et inné du coup plus possible
+
+469
+00:16:34,578 --> 00:16:37,289
+de le modifier
+
+470
+00:16:35,289 --> 00:16:40,880
+en revanche si la valeur qui est donnée
+
+471
+00:16:37,880 --> 00:16:42,698
+ici est une valeur nulle dans ce cas là
+
+472
+00:16:40,698 --> 00:16:43,078
+c'est comme si on n'avait pas de value
+
+473
+00:16:42,078 --> 00:16:45,909
+le chant n'est pas contrôlée par ai hâte
+
+474
+00:16:43,909 --> 00:16:47,889
+et on peut taper absolument n'importe
+
+475
+00:16:45,889 --> 00:16:49,899
+quoi et là on vous dit d'ailleurs mieux
+
+476
+00:16:47,899 --> 00:16:51,759
+vaudrait utiliser un dif 1 donc là on va
+
+477
+00:16:49,759 --> 00:16:54,559
+mettre un dif acte mais le mieux reste
+
+478
+00:16:51,559 --> 00:16:56,110
+de ne pas mettre de valeur du tout si
+
+479
+00:16:54,110 --> 00:16:59,809
+vous voulez laisser le dom gérer l'état
+
+480
+00:16:56,809 --> 00:17:00,240
+de ce champ là enfin dernier petit
+
+481
+00:16:59,240 --> 00:17:01,649
+détail on pourrait se dire oui mais moi
+
+482
+00:17:00,649 --> 00:17:04,730
+j'aimerais bien mettre une valeur
+
+483
+00:17:01,730 --> 00:17:06,400
+initiale au niveau de réac et ensuite
+
+484
+00:17:04,400 --> 00:17:08,949
+ben sans forcément pour autant le
+
+485
+00:17:06,949 --> 00:17:10,779
+contrôler mais dans ce cas là vous avez
+
+486
+00:17:08,779 --> 00:17:11,160
+une autre propriété que vous pouvez
+
+487
+00:17:10,160 --> 00:17:13,838
+utiliser qui est des folles tu vas nous
+
+488
+00:17:11,838 --> 00:17:14,699
+là vous pouvez mettre une chaîne de
+
+489
+00:17:13,699 --> 00:17:17,929
+caractères ou le résultat d'une
+
+490
+00:17:14,929 --> 00:17:19,750
+expression react non remettre ça lui est
+
+491
+00:17:17,750 --> 00:17:21,338
+dans ce cas là ça sera la valeur que
+
+492
+00:17:19,338 --> 00:17:23,349
+prendra le champ initialement sans
+
+493
+00:17:21,349 --> 00:17:24,419
+forcément forcer les choses dire que
+
+494
+00:17:23,419 --> 00:17:25,650
+maintenant vous pouvez taper n'importe
+
+495
+00:17:24,650 --> 00:17:28,349
+quoi d'autre
+
+496
+00:17:25,349 --> 00:17:29,410
+et il n'y a aucun problème donc si vous
+
+497
+00:17:28,410 --> 00:17:31,880
+avez besoin de suivre les modifications
+
+498
+00:17:29,880 --> 00:17:33,740
+qui sont faites au niveau de l'état on
+
+499
+00:17:31,740 --> 00:17:35,900
+utilisera des champs contrôle et donc il
+
+500
+00:17:33,900 --> 00:17:38,609
+faudra nécessairement avoir un value et
+
+501
+00:17:35,609 --> 00:17:39,099
+un ranch hand associés si vous voulez
+
+502
+00:17:38,099 --> 00:17:41,538
+avoir des champs qui ne nécessitent pas
+
+503
+00:17:39,538 --> 00:17:42,130
+forcément d'être contrôlée par ai hâte
+
+504
+00:17:41,130 --> 00:17:44,450
+il vous suffit de nous permettre de
+
+505
+00:17:42,450 --> 00:17:45,609
+valeur et d'utiliser des photos value si
+
+506
+00:17:44,609 --> 00:17:47,779
+vous voulez mettre une valeur initiale
+
+507
+00:17:45,779 --> 00:17:49,579
+donc si par exemple vous générez un
+
+508
+00:17:47,579 --> 00:17:51,679
+formulaire et le formulaire sera soumis
+
+509
+00:17:49,679 --> 00:17:52,269
+de manière classique reste n'est pas
+
+510
+00:17:51,269 --> 00:17:53,650
+forcément pertinent de traquer les
+
+511
+00:17:52,650 --> 00:17:55,429
+valeurs pareils actes
+
+512
+00:17:53,429 --> 00:17:56,230
+en revanche ici par exemple à chaque
+
+513
+00:17:55,230 --> 00:17:59,400
+fois que l'utilisateur tape quelque
+
+514
+00:17:56,400 --> 00:18:00,190
+chose voulait valider les données au
+
+515
+00:17:59,190 --> 00:18:01,569
+niveau de votre composants et faire
+
+516
+00:18:00,569 --> 00:18:02,829
+peut-être des traitements mais dans ce
+
+517
+00:18:01,829 --> 00:18:05,970
+cas là c'est plus intéressant d'avoir
+
+518
+00:18:02,970 --> 00:18:07,909
+des champs de contrôle alors après ici
+
+519
+00:18:05,909 --> 00:18:08,319
+on a écrit quand même pas mal de code
+
+520
+00:18:07,319 --> 00:18:10,519
+mais il faut savoir que vous pouvez
+
+521
+00:18:08,519 --> 00:18:10,048
+évidemment séparés dans des composants
+
+522
+00:18:10,048 --> 00:18:11,740
+dédiés
+
+523
+00:18:10,740 --> 00:18:13,720
+je vais vous donner un petit exemple
+
+524
+00:18:11,720 --> 00:18:17,950
+mais on va imaginer qu'on a envie
+
+525
+00:18:13,950 --> 00:18:17,190
+d'utiliser boudent sera pas ce niveau là
+
+526
+00:18:19,190 --> 00:18:25,900
+donc on va simplement prendre leur css
+
+527
+00:18:21,900 --> 00:18:28,349
+en europe pop qu'on va sur la version 4
+
+528
+00:18:25,349 --> 00:18:33,048
+1 get started et on prend simplement
+
+529
+00:18:28,048 --> 00:18:35,329
+leur css et on va mettre ccss au niveau
+
+530
+00:18:33,329 --> 00:18:37,880
+de notre index pour html le principal
+
+531
+00:18:35,880 --> 00:18:39,470
+problème que l'on a en général avec good
+
+532
+00:18:37,470 --> 00:18:41,029
+frappe c'est que finalement il ya pas
+
+533
+00:18:39,029 --> 00:18:43,759
+mal de classe et de structures que l'on
+
+534
+00:18:41,759 --> 00:18:45,710
+doit mettre donc si on s'amuse pour
+
+535
+00:18:43,710 --> 00:18:47,119
+chaque champ à mettre un classement et
+
+536
+00:18:45,119 --> 00:18:48,308
+megal forme contrôle forme groupe et
+
+537
+00:18:47,308 --> 00:18:50,269
+tout ça ça peut être un petit peu
+
+538
+00:18:48,269 --> 00:18:51,400
+embêtant le gros avantage ici c'est
+
+539
+00:18:50,400 --> 00:18:53,390
+qu'on va pouvoir séparer dans des
+
+540
+00:18:51,390 --> 00:18:56,519
+composants donc je vais pouvoir créer un
+
+541
+00:18:53,519 --> 00:18:58,250
+composant donc je vais créer une classe
+
+542
+00:18:56,250 --> 00:19:02,259
+qui va s'appeler fils et cette classe
+
+543
+00:18:58,259 --> 00:19:05,880
+elle va étendre de réactifs compo net à
+
+544
+00:19:02,880 --> 00:19:08,390
+l'intérieur je vais avoir simplement un
+
+545
+00:19:05,390 --> 00:19:10,609
+renders pour l'instant et dans surrender
+
+546
+00:19:08,609 --> 00:19:12,919
+je vais récupérer des propriétés donc
+
+547
+00:19:10,919 --> 00:19:15,150
+qu'est-ce qui change entre les champs
+
+548
+00:19:12,150 --> 00:19:18,659
+j'ai le libellé qui est ici et ensuite
+
+549
+00:19:15,659 --> 00:19:20,150
+j'ai le nom du champ j'ai besoin
+
+550
+00:19:18,150 --> 00:19:22,038
+peut-être une méthode unchanged et d'un
+
+551
+00:19:20,038 --> 00:19:25,558
+value donc au total j'ai besoin de quoi
+
+552
+00:19:22,558 --> 00:19:28,190
+value unchanged nm
+
+553
+00:19:25,190 --> 00:19:30,880
+donc au niveau de mon renders ici je
+
+554
+00:19:28,880 --> 00:19:32,500
+vais utiliser la déstructuration ça me
+
+555
+00:19:30,500 --> 00:19:34,480
+permettra de traces qui est un petit peu
+
+556
+00:19:32,480 --> 00:19:35,130
+plus simplement ce que je suis censé
+
+557
+00:19:34,130 --> 00:19:40,710
+avoir dans les propriétés
+
+558
+00:19:35,710 --> 00:19:43,400
+donc là on va avoir un name on va
+
+559
+00:19:40,400 --> 00:19:47,819
+ensuite avoir une valeur et le hunt
+
+560
+00:19:43,819 --> 00:19:51,660
+change à l'intérieur je vais retourner
+
+561
+00:19:47,660 --> 00:19:54,319
+une div qui aura comme classe forment
+
+562
+00:19:51,319 --> 00:19:58,829
+des groupes à l'intérieur je vais avoir
+
+563
+00:19:54,829 --> 00:19:59,069
+mon label je vais utiliser le html fort
+
+564
+00:19:58,069 --> 00:20:01,960
+et je vais pouvoir utiliser le nom comme
+
+565
+00:19:59,960 --> 00:20:03,670
+heidi ou si vous voulez éviter les
+
+566
+00:20:01,670 --> 00:20:05,680
+conflits vous pouvez générer un évier à
+
+567
+00:20:03,680 --> 00:20:06,089
+partir d'autres choses mais l'a pour
+
+568
+00:20:05,089 --> 00:20:09,440
+l'instant on va partir du principe que
+
+569
+00:20:06,440 --> 00:20:11,500
+on fait simplement et dans ce label je
+
+570
+00:20:09,500 --> 00:20:12,180
+mettrai le libellé pour l'instant je ne
+
+571
+00:20:11,180 --> 00:20:14,230
+sais pas comment je vais passer les
+
+572
+00:20:12,230 --> 00:20:18,809
+choses ensuite je vais avoir un champ
+
+573
+00:20:14,809 --> 00:20:20,440
+qui sera donc un champ de type texte ça
+
+574
+00:20:18,440 --> 00:20:22,390
+pour l'instant ne le change pas je vais
+
+575
+00:20:20,390 --> 00:20:24,190
+préciser que la valeur sera la valeur
+
+576
+00:20:22,190 --> 00:20:25,380
+qui me sera envoyé par le composant par
+
+577
+00:20:24,380 --> 00:20:27,369
+an
+
+578
+00:20:25,369 --> 00:20:28,200
+je vais avoir un 'point shange et je
+
+579
+00:20:27,200 --> 00:20:32,819
+fais faire appel à la méthode unchanged
+
+580
+00:20:28,819 --> 00:20:33,089
+40 qui a envoyé par les propriétés je
+
+581
+00:20:32,089 --> 00:20:35,829
+vais lui donner un avis qui sera donc le
+
+582
+00:20:33,829 --> 00:20:40,869
+name et je voulais donner un name qui
+
+583
+00:20:35,869 --> 00:20:41,069
+sera le dire comme ça ben là ça me
+
+584
+00:20:40,069 --> 00:20:42,809
+permet de créer la structure de base je
+
+585
+00:20:41,809 --> 00:20:47,859
+vais aussi pouvoir les donner à une
+
+586
+00:20:42,859 --> 00:20:50,809
+classe name et je mettrai forme tirer
+
+587
+00:20:47,809 --> 00:20:52,799
+contrôle et jeux d'eau ferme ce champ là
+
+588
+00:20:50,799 --> 00:20:55,970
+donc j'ai maintenant ce petit composant
+
+589
+00:20:52,970 --> 00:20:57,220
+que je vais pouvoir réutiliser donc à ce
+
+590
+00:20:55,220 --> 00:20:59,079
+niveau là quand je veux créer un nom je
+
+591
+00:20:57,079 --> 00:21:03,839
+peux faire simplement un field je lui
+
+592
+00:20:59,839 --> 00:21:07,230
+donne comme name ben non je vais lui
+
+593
+00:21:03,230 --> 00:21:10,160
+donner un value et ça sera vice - state
+
+594
+00:21:07,160 --> 00:21:15,430
+- non je vais lui donner le hall chaîne
+
+595
+00:21:10,430 --> 00:21:16,829
+va comme on le faisait pour le input de
+
+596
+00:21:15,829 --> 00:21:18,579
+type classique
+
+597
+00:21:16,579 --> 00:21:19,170
+donc vous voyez vous pouvez vraiment
+
+598
+00:21:18,170 --> 00:21:20,640
+passé les propriétés qui sont des call
+
+599
+00:21:19,640 --> 00:21:21,000
+back
+
+600
+00:21:20,000 --> 00:21:23,470
+ça c'est très intéressant parce que ça
+
+601
+00:21:21,470 --> 00:21:25,180
+vous permet d'envoyer des informations
+
+602
+00:21:23,180 --> 00:21:26,400
+vers les composants enfants
+
+603
+00:21:25,400 --> 00:21:28,750
+et après je n'ai pas besoin de lui
+
+604
+00:21:26,750 --> 00:21:30,670
+passer die dit quoi que ce soit d'autre
+
+605
+00:21:28,670 --> 00:21:34,769
+automatiquement ça va être gérée par ce
+
+606
+00:21:30,769 --> 00:21:37,490
+champ là et ensuite je ferme ça donc on
+
+607
+00:21:34,490 --> 00:21:39,609
+va enlever le reste pour l'instant et je
+
+608
+00:21:37,609 --> 00:21:42,950
+vais réactualisé donc automatiquement on
+
+609
+00:21:39,950 --> 00:21:44,500
+voit bien on a ici un chant qui bien
+
+610
+00:21:42,500 --> 00:21:47,630
+formaté avec la structure html de base
+
+611
+00:21:44,630 --> 00:21:51,210
+de gust rap on va peut-être mettre ici
+
+612
+00:21:47,210 --> 00:21:53,019
+une classe containers juste pour le
+
+613
+00:21:51,019 --> 00:21:53,390
+principe
+
+614
+00:21:53,390 --> 00:21:56,500
+en revanche au niveau de ce char
+
+615
+00:21:54,500 --> 00:21:59,150
+j'aimerais bien précisé annie blé donc
+
+616
+00:21:56,150 --> 00:22:00,029
+soit on met ici un label et à
+
+617
+00:21:59,029 --> 00:22:02,890
+l'intérieur au mail label soit on peut
+
+618
+00:22:00,890 --> 00:22:04,150
+se dire mais ça serait peut-être
+
+619
+00:22:02,150 --> 00:22:06,069
+pertinent d'avoir directement un enfant
+
+620
+00:22:04,069 --> 00:22:09,650
+et on mettrait le nombre est ensuite
+
+621
+00:22:06,650 --> 00:22:10,079
+enfermerait notre champ dans ce cas là
+
+622
+00:22:09,079 --> 00:22:12,789
+au niveau des propriétés faudra lui dire
+
+623
+00:22:10,789 --> 00:22:15,710
+attention je veux en plus le children
+
+624
+00:22:12,710 --> 00:22:18,650
+les enfants donc de ce champ là et je
+
+625
+00:22:15,650 --> 00:22:20,369
+vais mettre les enfants directement ici
+
+626
+00:22:18,369 --> 00:22:22,960
+et hop comme ça on a maintenant la
+
+627
+00:22:20,960 --> 00:22:24,220
+possibilité de créer des chambres
+
+628
+00:22:22,220 --> 00:22:26,769
+rapidement et beaucoup plus simplement
+
+629
+00:22:24,769 --> 00:22:28,450
+qu'auparavant donc je peux avoir un
+
+630
+00:22:26,450 --> 00:22:32,029
+champ pour le prénom
+
+631
+00:22:28,029 --> 00:22:37,839
+donc ça sera ici prénom et je mettrai
+
+632
+00:22:32,839 --> 00:22:40,670
+prénom après que je continue et je vais
+
+633
+00:22:37,670 --> 00:22:41,099
+avoir en dessous un gissen point string
+
+634
+00:22:40,099 --> 00:22:44,779
+10 failles et je vais juste rectifier
+
+635
+00:22:41,779 --> 00:22:45,150
+l'état pour vous montrer que ça change
+
+636
+00:22:44,150 --> 00:22:47,160
+bien les choses
+
+637
+00:22:45,160 --> 00:22:47,539
+donc lorsque je change le nom ça change
+
+638
+00:22:47,539 --> 00:22:49,900
+le nom
+
+639
+00:22:47,900 --> 00:22:52,910
+et là ça change le prénom est juste un
+
+640
+00:22:49,910 --> 00:22:57,970
+petit détail ici c'est prénom j'ai mis
+
+641
+00:22:52,970 --> 00:22:59,140
+un accent ça ne passera pas pour la
+
+642
+00:22:57,140 --> 00:23:01,450
+partie tchèque boxe là il faut réfléchir
+
+643
+00:22:59,450 --> 00:23:03,910
+est-ce que l'on crée une condition ici
+
+644
+00:23:01,910 --> 00:23:05,109
+c'est à dire qu on rajouterait dans les
+
+645
+00:23:03,109 --> 00:23:07,329
+propriétés un type et suivant le type
+
+646
+00:23:05,329 --> 00:23:09,430
+peut en changer la structure où est ce
+
+647
+00:23:07,430 --> 00:23:11,170
+qu'on se dit ancré à notre champ qui
+
+648
+00:23:09,170 --> 00:23:12,210
+s'appellerait checkbox alors là il n'y a
+
+649
+00:23:11,210 --> 00:23:14,710
+pas forcément de bonne ou de mauvaise
+
+650
+00:23:12,710 --> 00:23:16,779
+réponse c'est à vous de voir suivant la
+
+651
+00:23:14,779 --> 00:23:18,400
+structure de votre élément donc dans le
+
+652
+00:23:16,400 --> 00:23:19,259
+cadre de bootstrap la structure html est
+
+653
+00:23:18,259 --> 00:23:21,579
+tellement différentes que je me dis que
+
+654
+00:23:19,579 --> 00:23:23,380
+pour l'instant le plus simple serait de
+
+655
+00:23:21,380 --> 00:23:24,029
+créer une classe différente à nouveau
+
+656
+00:23:23,029 --> 00:23:26,169
+composant
+
+657
+00:23:24,169 --> 00:23:27,148
+donc si vous avez des composants comme
+
+658
+00:23:26,148 --> 00:23:29,798
+ça qu'ils n'ont besoin de rien vous
+
+659
+00:23:27,798 --> 00:23:31,148
+pouvez les définir simplement comme des
+
+660
+00:23:29,148 --> 00:23:32,279
+fonctions c'est plus rapide là on
+
+661
+00:23:31,279 --> 00:23:33,960
+pourrait avoir au lieu de voir tout ce
+
+662
+00:23:32,960 --> 00:23:36,378
+truc là
+
+663
+00:23:33,378 --> 00:23:38,288
+une fonction qui s'appelle field cette
+
+664
+00:23:36,288 --> 00:23:40,118
+fonction elle prendra un paramètre les
+
+665
+00:23:38,118 --> 00:23:44,970
+propriétés qu'on peut déstructuré dès le
+
+666
+00:23:40,970 --> 00:23:44,179
+début comme ça et ensuite elle retourne
+
+667
+00:23:44,179 --> 00:23:47,599
+la div
+
+668
+00:23:44,599 --> 00:23:50,509
+voyez que la syntaxe est un petit peu
+
+669
+00:23:47,509 --> 00:23:52,028
+plus simple je vais juste inventé ça
+
+670
+00:23:50,028 --> 00:23:54,429
+convenablement et on va dupliquer ce
+
+671
+00:23:52,429 --> 00:23:57,048
+composant là pour créer un composant
+
+672
+00:23:54,048 --> 00:24:00,739
+chaque box ce composant finalement il va
+
+673
+00:23:57,739 --> 00:24:02,499
+avoir besoin des mêmes propriétés la la
+
+674
+00:24:00,499 --> 00:24:04,298
+dives n'a pas la classe forme groupe
+
+675
+00:24:02,298 --> 00:24:06,429
+mais ses formes tirer tchèque dans le
+
+676
+00:24:04,429 --> 00:24:10,858
+cadre d'une check boxe on a line poudre
+
+677
+00:24:06,858 --> 00:24:12,249
+qui se situe avant le label ensuite lui
+
+678
+00:24:10,249 --> 00:24:14,319
+il recevra effectivement une valeur mais
+
+679
+00:24:12,319 --> 00:24:17,089
+il devra utiliser pour définir si on
+
+680
+00:24:14,089 --> 00:24:20,659
+checke ou non une planque dira gect les
+
+681
+00:24:17,659 --> 00:24:22,690
+inputs sera de type chaque box et il
+
+682
+00:24:20,690 --> 00:24:25,909
+aura comme classe où c'est juste la
+
+683
+00:24:22,909 --> 00:24:28,368
+classe que l'on va changer ici forme tir
+
+684
+00:24:25,368 --> 00:24:30,190
+et chèques tirés input au niveau du
+
+685
+00:24:28,190 --> 00:24:33,460
+label on mettra une classe particulière
+
+686
+00:24:30,460 --> 00:24:34,798
+qui sera la classe forme tiers et
+
+687
+00:24:33,798 --> 00:24:37,759
+chèques tirés
+
+688
+00:24:34,759 --> 00:24:40,909
+la belle aurait choisi de mettre value
+
+689
+00:24:37,909 --> 00:24:41,009
+plutôt que checked pour garder une
+
+690
+00:24:40,009 --> 00:24:43,358
+signature qui est à peu près similaire
+
+691
+00:24:41,358 --> 00:24:45,849
+entre field et checkbox mais après libre
+
+692
+00:24:43,849 --> 00:24:47,108
+à vous de changer ça si ça ne vous
+
+693
+00:24:45,108 --> 00:24:49,749
+convient pas maintenant si je veux une
+
+694
+00:24:47,749 --> 00:24:54,339
+tchèque box pour changer les choses à la
+
+695
+00:24:49,339 --> 00:24:58,009
+fin il me suffit ici up de m chaque box
+
+696
+00:24:54,009 --> 00:25:00,159
+de m name donc c'était newsletter value
+
+697
+00:24:58,159 --> 00:25:03,589
+mais on utilisera vise point estate
+
+698
+00:25:00,589 --> 00:25:04,558
+point newsletter et unchanged on
+
+699
+00:25:03,558 --> 00:25:07,868
+utilisera la même méthode
+
+700
+00:25:04,868 --> 00:25:12,099
+donc là je vais carrément tout dupliquer
+
+701
+00:25:07,099 --> 00:25:16,339
+et on mettra s'abonner à la newsletter
+
+702
+00:25:12,339 --> 00:25:20,759
+et pouf comme ça on aura notre système
+
+703
+00:25:16,759 --> 00:25:22,450
+de teachers boxe ça permet de simplifier
+
+704
+00:25:20,450 --> 00:25:24,128
+la structure de notre composant
+
+705
+00:25:22,128 --> 00:25:26,470
+principal en séparant la logique dans
+
+706
+00:25:24,470 --> 00:25:28,929
+des composants et là vous le voyez vous
+
+707
+00:25:26,929 --> 00:25:30,368
+avez un formulaire qui a une apparence
+
+708
+00:25:28,368 --> 00:25:32,798
+plutôt sympa sans forcément trop chargé
+
+709
+00:25:30,798 --> 00:25:34,069
+cette partie là
+
+710
+00:25:32,069 --> 00:25:35,019
+le principal inconvénient que l'on aura
+
+711
+00:25:34,019 --> 00:25:36,759
+systématiquement avec les champs mais ça
+
+712
+00:25:35,759 --> 00:25:37,630
+on ne peut pas y couper
+
+713
+00:25:36,630 --> 00:25:41,710
+c'est qu'il faudra nécessairement
+
+714
+00:25:37,710 --> 00:25:42,039
+précisé value et unchanged sinon ma le
+
+715
+00:25:41,039 --> 00:25:44,450
+chant ne peut pas être contrôlé par des
+
+716
+00:25:42,450 --> 00:25:45,039
+actes et du coup il faudra gérer les
+
+717
+00:25:44,039 --> 00:25:47,779
+valeurs directement manipulant le top
+
+718
+00:25:45,779 --> 00:25:49,490
+donc là vous le voyez mais ça nous
+
+719
+00:25:47,490 --> 00:25:51,140
+permet vraiment de créer des composants
+
+720
+00:25:49,140 --> 00:25:52,240
+avec une petite logique et qui permet de
+
+721
+00:25:51,240 --> 00:25:54,259
+gérer à la fois la logique et
+
+722
+00:25:52,259 --> 00:25:55,210
+l'apparence et ça permet de simplifier
+
+723
+00:25:54,210 --> 00:25:58,880
+le code que l'on a ici
+
+724
+00:25:55,880 --> 00:26:00,740
+alors peut-être une dernière chose si on
+
+725
+00:25:58,740 --> 00:26:02,450
+veut compléter notre exemple on aurait
+
+726
+00:26:00,450 --> 00:26:06,220
+normalement un bouton donc là on va
+
+727
+00:26:02,220 --> 00:26:08,329
+créer un bouton qu'on ferait un button
+
+728
+00:26:06,329 --> 00:26:11,640
+on lui donnerait comme classe b tn et
+
+729
+00:26:08,640 --> 00:26:15,130
+btn tirer prix marie et en mettrez
+
+730
+00:26:11,130 --> 00:26:18,329
+envoyé pour que ce système fonctionne en
+
+731
+00:26:15,329 --> 00:26:22,630
+or ici un formulaire je remplace mme à
+
+732
+00:26:18,630 --> 00:26:25,619
+dives par un formulaire est peut-être ce
+
+733
+00:26:22,619 --> 00:26:30,019
+bouton jantes touré d'une div qui aura
+
+734
+00:26:25,019 --> 00:26:33,509
+la classe forme tirer groupe île de thau
+
+735
+00:26:30,509 --> 00:26:37,750
+complète pas d'un tapis div class name
+
+736
+00:26:33,750 --> 00:26:39,349
+égale forme tirer groupe et ensuite à
+
+737
+00:26:37,349 --> 00:26:41,059
+l'intérieur je mets mon bouton avec
+
+738
+00:26:39,059 --> 00:26:42,039
+envoyé ça me permettra juste d'espacé un
+
+739
+00:26:41,039 --> 00:26:42,089
+petit peu plus par rapport à la
+
+740
+00:26:42,089 --> 00:26:43,539
+newsletter
+
+741
+00:26:42,539 --> 00:26:45,920
+bon ça n'a pas l'air de bien marcher
+
+742
+00:26:43,920 --> 00:26:46,539
+mais ça a l'air de bien marcher dans les
+
+743
+00:26:45,539 --> 00:26:49,829
+exemples de gust rap non plus c'est pas
+
+744
+00:26:46,829 --> 00:26:50,019
+grave maintenant au niveau de ce
+
+745
+00:26:49,019 --> 00:26:52,640
+formulaire si je veux écouter la
+
+746
+00:26:50,640 --> 00:26:55,259
+soumission mais il me faudra un fun
+
+747
+00:26:52,259 --> 00:26:57,319
+seuls 8 et là on aura une méthode qui
+
+748
+00:26:55,319 --> 00:26:59,359
+s'appellerait vie ce point angels of
+
+749
+00:26:57,359 --> 00:27:01,940
+meat cette méthode je vais aller la
+
+750
+00:26:59,940 --> 00:27:03,769
+créer elle prendra part à mettre
+
+751
+00:27:01,769 --> 00:27:05,390
+l'événement est un frein au point
+
+752
+00:27:03,390 --> 00:27:06,250
+prevent des folk pour empêcher la
+
+753
+00:27:05,250 --> 00:27:09,960
+soumission classiques de notre
+
+754
+00:27:06,960 --> 00:27:11,839
+formulaire tout de suite en haut je vais
+
+755
+00:27:09,839 --> 00:27:13,549
+faire un vice points en deux sommités
+
+756
+00:27:11,549 --> 00:27:15,829
+galvis points à 26,8 points bein vi
+
+757
+00:27:13,829 --> 00:27:16,119
+histoire d'avoir toujours le bon
+
+758
+00:27:15,119 --> 00:27:18,619
+contexte
+
+759
+00:27:16,619 --> 00:27:19,509
+maintenant à ce niveau là bas ce que je
+
+760
+00:27:18,509 --> 00:27:22,980
+pourrais faire c'est rectifier les
+
+761
+00:27:19,980 --> 00:27:24,200
+résultats et les envoyer en ajax par
+
+762
+00:27:22,200 --> 00:27:28,180
+exemple à notre serveur qui ferait le
+
+763
+00:27:24,180 --> 00:27:31,558
+traitement donc là on ferait un constat
+
+764
+00:27:28,558 --> 00:27:33,380
+date à égal gissen point string 10
+
+765
+00:27:31,380 --> 00:27:35,750
+failles et on peut directement string
+
+766
+00:27:33,750 --> 00:27:37,490
+eefje l'état parce que c'est l'état qui
+
+767
+00:27:35,490 --> 00:27:40,740
+contient 20 l'état de notre formulaire
+
+768
+00:27:37,740 --> 00:27:45,789
+je fais un console points loeb de data
+
+769
+00:27:40,789 --> 00:27:47,480
+et lorsque je teste les choses là il me
+
+770
+00:27:45,480 --> 00:27:48,009
+sens juste une petite erreur ici parce
+
+771
+00:27:47,009 --> 00:27:51,450
+que j'ai oublié de mettre classe name au
+
+772
+00:27:48,450 --> 00:27:54,808
+lieu de place donc je modifie les choses
+
+773
+00:27:51,808 --> 00:27:58,259
+je clique sur envoyer et on a bien ici
+
+774
+00:27:54,259 --> 00:28:00,200
+notre j sonne et il sort toujours mon
+
+775
+00:27:58,200 --> 00:28:01,058
+erreur j'ai laissé un class quelque part
+
+776
+00:28:00,058 --> 00:28:04,410
+ici aussi
+
+777
+00:28:01,410 --> 00:28:05,349
+faites bien attention à ça c'est vrai
+
+778
+00:28:04,349 --> 00:28:08,429
+qu'on a l'habitude de travailler que
+
+779
+00:28:05,429 --> 00:28:10,308
+l'html samedi réflexes à prendre et
+
+780
+00:28:08,308 --> 00:28:11,049
+l'ama une fois que le sud le formulaire
+
+781
+00:28:10,049 --> 00:28:12,308
+serait soumis donc faudrait mettre un
+
+782
+00:28:11,308 --> 00:28:14,210
+petit brin de logique
+
+783
+00:28:12,210 --> 00:28:15,369
+on pourrait s'imaginer réinitialiser les
+
+784
+00:28:14,369 --> 00:28:16,179
+données pour pas que l'utilisateur
+
+785
+00:28:15,179 --> 00:28:19,890
+puisse remettre le formulaire
+
+786
+00:28:16,890 --> 00:28:20,410
+donc on ferait vise points 7 states on
+
+787
+00:28:19,410 --> 00:28:22,970
+remet les valeurs initiales
+
+788
+00:28:20,970 --> 00:28:24,230
+on pourrait sauvegarder sa dans une
+
+789
+00:28:22,230 --> 00:28:25,599
+constante mais peu importe et dans ce
+
+790
+00:28:24,599 --> 00:28:27,769
+cas là ça va automatiquement
+
+791
+00:28:25,769 --> 00:28:28,299
+réinitialiser les chambres parce qu'ils
+
+792
+00:28:27,299 --> 00:28:32,910
+sont contrôlés par int
+
+793
+00:28:28,910 --> 00:28:34,339
+et ça donne ça donc voila un petit
+
+794
+00:28:32,339 --> 00:28:36,289
+exemple de manipulation de formulaires
+
+795
+00:28:34,289 --> 00:28:38,779
+et de chant en utilisant riact vous
+
+796
+00:28:36,779 --> 00:28:39,400
+voyez ce qui est intéressant encore une
+
+797
+00:28:38,400 --> 00:28:41,839
+fois par rapport à de la manipulation de
+
+798
+00:28:39,839 --> 00:28:43,609
+domme classique c'est que finalement
+
+799
+00:28:41,609 --> 00:28:45,558
+notre centre d'attention ce n'est plus
+
+800
+00:28:43,558 --> 00:28:47,720
+le dom où il faudrait même traqué les
+
+801
+00:28:45,720 --> 00:28:50,789
+valeurs modifier les valeurs revivez les
+
+802
+00:28:47,789 --> 00:28:52,079
+champs mais c'est cet état là
+
+803
+00:28:50,079 --> 00:28:53,148
+on définit notre fonction qui dépendent
+
+804
+00:28:52,148 --> 00:28:54,890
+de notre état est la seule chose que
+
+805
+00:28:53,890 --> 00:28:56,970
+l'on a à faire dès qu'on a besoin
+
+806
+00:28:54,970 --> 00:28:58,288
+d'écrire un brin de logique
+
+807
+00:28:56,288 --> 00:28:59,058
+c'est simplement changer l'état et ses
+
+808
+00:28:58,058 --> 00:29:01,529
+réacteurs suite qui s'occupe du reste
+
+809
+00:28:59,529 --> 00:29:03,509
+pour nous l'autre gros avantage c'est la
+
+810
+00:29:01,509 --> 00:29:05,548
+capacité d'utilisation de composants qui
+
+811
+00:29:03,548 --> 00:29:07,980
+nous permettent de mieux séparer notre
+
+812
+00:29:05,980 --> 00:29:09,298
+code donc là on a des composants
+
+813
+00:29:07,298 --> 00:29:10,130
+réutilisables qui permet de générer des
+
+814
+00:29:09,130 --> 00:29:12,509
+champs avec bootstrap est
+
+815
+00:29:10,509 --> 00:29:14,819
+automatiquement on peut les utiliser au
+
+816
+00:29:12,819 --> 00:29:16,460
+niveau de notre composante principale
+
+817
+00:29:14,460 --> 00:29:18,690
+donc à force avec le temps vous allez
+
+818
+00:29:16,690 --> 00:29:19,279
+vous créer une sorte de collection de
+
+819
+00:29:18,279 --> 00:29:21,480
+composants qui vont vous permettre
+
+820
+00:29:19,480 --> 00:29:23,730
+d'accélérer votre développement ou aussi
+
+821
+00:29:21,730 --> 00:29:24,500
+utiliser des composants tiers qui sont
+
+822
+00:29:23,500 --> 00:29:26,970
+déjà fournies par d'autres personnes
+
+823
+00:29:24,970 --> 00:29:28,349
+alors du coup ce que je vous propose
+
+824
+00:29:26,349 --> 00:29:30,509
+c'est dans le prochain chapitre de faire
+
+825
+00:29:28,509 --> 00:29:32,638
+un petit épais pour m'avoir si tout ce
+
+826
+00:29:30,638 --> 00:29:34,769
+que l'on vient de dire ici est bien
+
+827
+00:29:32,769 --> 00:29:36,359
+assimilée je vous donne rendez-vous dans
+
+828
+00:29:34,359 --> 00:29:36,000
+le prochain chapitre
+Subtitles End: mo.dbxdb.com
+

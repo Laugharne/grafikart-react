@@ -1,0 +1,2874 @@
+1
+00:00:00,000 --> 00:00:00,000
+ Youtube subtitles download by mo.dbxdb.com 
+
+2
+00:00:00,000 --> 00:00:02,439
+à bienvenue dans ce nouveau chapitre que
+
+3
+00:00:01,439 --> 00:00:04,850
+je vous propose un petit peu de passer à
+
+4
+00:00:02,850 --> 00:00:06,380
+la pratique afin de solidifier nos
+
+5
+00:00:04,380 --> 00:00:07,420
+acquis donc pour cet exemple on va
+
+6
+00:00:06,420 --> 00:00:09,560
+prendre le même exemple qui est
+
+7
+00:00:07,560 --> 00:00:10,058
+disponible dans la documentation comme
+
+8
+00:00:09,058 --> 00:00:12,590
+ça vous pourrez vous y référer si vous
+
+9
+00:00:10,590 --> 00:00:14,420
+avez des problèmes et notre objectif
+
+10
+00:00:12,420 --> 00:00:17,099
+c'est de créer un système qui va être
+
+11
+00:00:14,099 --> 00:00:19,070
+capable de pour lequel on va pouvoir
+
+12
+00:00:17,070 --> 00:00:21,289
+rentrer une température et qui va nous
+
+13
+00:00:19,289 --> 00:00:23,689
+dire s'il ou elle bout ou non est ce que
+
+14
+00:00:21,689 --> 00:00:24,039
+l'on va rajouter après c'est un système
+
+15
+00:00:23,039 --> 00:00:27,960
+capable de convertir des degrés celsius
+
+16
+00:00:24,960 --> 00:00:28,390
+en pha rosneft voilà le petit exemple
+
+17
+00:00:27,390 --> 00:00:29,710
+qui est disponible au niveau de la
+
+18
+00:00:28,710 --> 00:00:31,400
+documentation
+
+19
+00:00:29,400 --> 00:00:33,679
+donc on entre le degré celsius est
+
+20
+00:00:31,679 --> 00:00:35,510
+automatiquement ça nous dit l'eau ne
+
+21
+00:00:33,510 --> 00:00:36,370
+bout pas où l'eau bout si je rentre une
+
+22
+00:00:35,370 --> 00:00:40,719
+température qui est supérieur à 100
+
+23
+00:00:36,719 --> 00:00:41,230
+l'ogou et ensuite juste en dessous on à
+
+24
+00:00:40,230 --> 00:00:44,790
+la température qui est converti en
+
+25
+00:00:41,790 --> 00:00:45,250
+degrés fahrenheit alors rassurez vous on
+
+26
+00:00:44,250 --> 00:00:47,360
+va commencer à faire les choses
+
+27
+00:00:45,360 --> 00:00:48,160
+simplement et on va prendre morceau par
+
+28
+00:00:47,160 --> 00:00:50,110
+morceau
+
+29
+00:00:48,110 --> 00:00:51,250
+donc je vais commencer dans mon fichier
+
+30
+00:00:50,250 --> 00:00:54,960
+javascript a tout effacé
+
+31
+00:00:51,960 --> 00:00:56,149
+l'idée c'est de repartir de zéro pour
+
+32
+00:00:54,149 --> 00:00:58,399
+vous forcer à écrire les choses et pour
+
+33
+00:00:56,399 --> 00:01:00,129
+bien assimiler les différentes notions
+
+34
+00:00:58,129 --> 00:01:01,239
+vous ce que vous pouvez faire c'est
+
+35
+00:01:00,239 --> 00:01:03,829
+garder ce fichier de côté si vous avez
+
+36
+00:01:01,829 --> 00:01:05,750
+besoin d'une référence alors à
+
+37
+00:01:03,750 --> 00:01:07,188
+l'intérieur j'aimerais bien que vous
+
+38
+00:01:05,188 --> 00:01:09,140
+créez un premier composant qui sera
+
+39
+00:01:07,140 --> 00:01:10,330
+capable de vous dire s'il au goût ou non
+
+40
+00:01:09,330 --> 00:01:12,950
+et si vous utilisez bootstrap vous
+
+41
+00:01:10,950 --> 00:01:14,930
+pouvez rajouter des classes alerte pour
+
+42
+00:01:12,930 --> 00:01:15,459
+changer la couleur suivant que l'eau
+
+43
+00:01:14,459 --> 00:01:17,989
+boue ou non
+
+44
+00:01:15,989 --> 00:01:19,549
+notre objectif c'est d'avoir un
+
+45
+00:01:17,549 --> 00:01:22,520
+composant qui va s'appeler boiling
+
+46
+00:01:19,520 --> 00:01:24,950
+verdict qui va prendre en paramètre la
+
+47
+00:01:22,950 --> 00:01:28,989
+température on a passera en degrés
+
+48
+00:01:24,989 --> 00:01:30,340
+celsius et on lui dira par exemple 50
+
+49
+00:01:28,340 --> 00:01:32,840
+automatiquement ce composant la devra
+
+50
+00:01:30,840 --> 00:01:35,489
+afficher un message qui dira l'eau ne
+
+51
+00:01:32,489 --> 00:01:37,880
+bout pas ensuite on va passer une autre
+
+52
+00:01:35,880 --> 00:01:38,229
+fois ce composant lui passera une
+
+53
+00:01:37,229 --> 00:01:41,790
+température qui est supérieur à 100
+
+54
+00:01:38,790 --> 00:01:43,670
+degrés et ça devra nous dire l'ogou donc
+
+55
+00:01:41,670 --> 00:01:44,200
+votre objectif c'est de créer ce petit
+
+56
+00:01:43,200 --> 00:01:47,880
+composant et de le monter au niveau de
+
+57
+00:01:44,880 --> 00:01:49,310
+votre top donc je vous laisse essayer de
+
+58
+00:01:47,310 --> 00:01:52,049
+pratiquer en corrigeant semble juste
+
+59
+00:01:49,049 --> 00:01:54,680
+après pour créer ce composant vu qu'on
+
+60
+00:01:52,680 --> 00:01:55,390
+va lui passer les propriétés il n'aura
+
+61
+00:01:54,390 --> 00:01:57,590
+pas forcément besoin pour l'instant
+
+62
+00:01:55,590 --> 00:01:58,540
+d'état alors je vais simplement créer
+
+63
+00:01:57,540 --> 00:02:01,640
+une fonction
+
+64
+00:01:58,640 --> 00:02:03,078
+cette fonction va s'appeler boiling
+
+65
+00:02:01,078 --> 00:02:05,930
+verdict elle prendra un paramètre des
+
+66
+00:02:03,930 --> 00:02:07,640
+propriétés et nous pour l'instant on n'a
+
+67
+00:02:05,640 --> 00:02:08,530
+qu'une seule c'est la température degrés
+
+68
+00:02:07,530 --> 00:02:10,038
+celsius
+
+69
+00:02:08,038 --> 00:02:12,199
+donc on va utiliser la déstructuration
+
+70
+00:02:10,199 --> 00:02:14,449
+ici pour un petit peu plus de clarté
+
+71
+00:02:12,449 --> 00:02:16,848
+à l'intérieur je vais simplement mettre
+
+72
+00:02:14,848 --> 00:02:18,620
+une petite condition est vérifiée est ce
+
+73
+00:02:16,620 --> 00:02:20,269
+que la température en celsius est
+
+74
+00:02:18,269 --> 00:02:22,639
+supérieure ou égale à 100 si elle est
+
+75
+00:02:20,639 --> 00:02:24,530
+supérieure ou égale à 100 dans ce cas là
+
+76
+00:02:22,530 --> 00:02:28,959
+je vais retourner une diva qui aura
+
+77
+00:02:24,959 --> 00:02:34,818
+comme classe alerte alerte tirer success
+
+78
+00:02:28,818 --> 00:02:36,259
+et je mettrai l'eau bout ensuite dans le
+
+79
+00:02:34,259 --> 00:02:40,720
+cas contraire je retournerai une div qui
+
+80
+00:02:36,720 --> 00:02:45,199
+aura comme classe alerte alerte tirer un
+
+81
+00:02:40,199 --> 00:02:45,130
+faux et on mettra l'eau ne bout pas
+
+82
+00:02:46,130 --> 00:02:50,598
+maintenant que j'ai créé ce composant je
+
+83
+00:02:48,598 --> 00:02:53,280
+peux le monte dans monde sommes donc
+
+84
+00:02:50,280 --> 00:02:56,669
+pour cela je fais un réac tom point
+
+85
+00:02:53,669 --> 00:02:59,220
+renders et j'utilise la méthode renders
+
+86
+00:02:56,220 --> 00:03:00,430
+pour rendre mon boiling verdict je vais
+
+87
+00:02:59,430 --> 00:03:03,598
+lui passer pour l'instant une
+
+88
+00:03:00,598 --> 00:03:06,598
+température qui est inférieur à 100 donc
+
+89
+00:03:03,598 --> 00:03:09,840
+on mettra ce 50 degrés choteau fermement
+
+90
+00:03:06,840 --> 00:03:10,299
+composants parce qu'il n'a pas d'enfant
+
+91
+00:03:09,299 --> 00:03:13,949
+ce composant là je vais le brancher au
+
+92
+00:03:10,949 --> 00:03:14,470
+niveau de mon d'hommes sur l'élément qui
+
+93
+00:03:13,470 --> 00:03:16,549
+a l'a dit ap
+
+94
+00:03:14,549 --> 00:03:19,709
+enjeu que jean poiret selector ou un
+
+95
+00:03:16,709 --> 00:03:21,099
+getelementbyid ça fait pas de différence
+
+96
+00:03:19,099 --> 00:03:23,750
+si je sauvegarde maintenant on me dit
+
+97
+00:03:21,750 --> 00:03:26,970
+que l'eau ne bout pas je vais peut-être
+
+98
+00:03:23,970 --> 00:03:28,190
+au niveau de mon html entouré ma d'yves
+
+99
+00:03:26,190 --> 00:03:30,680
+calvi ap d'une div qui aura la classe
+
+100
+00:03:28,680 --> 00:03:32,479
+contender histoire que ce soit un petit
+
+101
+00:03:30,479 --> 00:03:35,489
+peu centré est un petit peu plus joli
+
+102
+00:03:32,489 --> 00:03:37,489
+aussi et je rajouterais 1 mt tiré 4
+
+103
+00:03:35,489 --> 00:03:39,169
+pourrait se passer par rapport aux de
+
+104
+00:03:37,169 --> 00:03:41,568
+mon écran donc là on me dit bien l'eau
+
+105
+00:03:39,568 --> 00:03:43,818
+nobu pas si maintenant je change la
+
+106
+00:03:41,818 --> 00:03:45,440
+température pour mettre 110 degrés par
+
+107
+00:03:43,440 --> 00:03:48,780
+exemple mais là le message est en verre
+
+108
+00:03:45,780 --> 00:03:50,780
+et l'aube ou impeccable alors maintenant
+
+109
+00:03:48,780 --> 00:03:52,549
+on va complexifier un petit peu notre
+
+110
+00:03:50,549 --> 00:03:53,500
+composants on s'imagine que l'on aura un
+
+111
+00:03:52,500 --> 00:03:55,818
+autre composant qui va s'appeler
+
+112
+00:03:53,818 --> 00:03:57,829
+calculateur donc c'est ce composant la
+
+113
+00:03:55,829 --> 00:03:59,568
+qui va nous permettre de calculer les
+
+114
+00:03:57,568 --> 00:04:01,370
+choses et de nous dire s'il ou elle bout
+
+115
+00:03:59,370 --> 00:04:03,680
+dans ce composant on veut simplement
+
+116
+00:04:01,680 --> 00:04:05,598
+créer un champ où l'utilisateur pourra
+
+117
+00:04:03,598 --> 00:04:07,459
+rentrer la température en degrés celsius
+
+118
+00:04:05,459 --> 00:04:09,769
+et suivant la température qu'il rentre
+
+119
+00:04:07,769 --> 00:04:11,479
+il faudra afficher en dessous l'aube ou
+
+120
+00:04:09,479 --> 00:04:12,110
+où l'eau ne bout pas
+
+121
+00:04:11,110 --> 00:04:14,880
+donc pareil je vous laisse essayer de le
+
+122
+00:04:12,880 --> 00:04:17,259
+faire est encore riche ensemble juste
+
+123
+00:04:14,259 --> 00:04:17,199
+après alors pour ce composant il faut
+
+124
+00:04:17,199 --> 00:04:20,920
+bien réfléchir
+
+125
+00:04:17,920 --> 00:04:22,230
+c'est un composant qui va avoir besoin
+
+126
+00:04:20,230 --> 00:04:23,000
+d'un état parce que on a besoin à
+
+127
+00:04:22,000 --> 00:04:25,949
+l'intérieur de savoir la température qui
+
+128
+00:04:23,949 --> 00:04:26,300
+étaient rentrés par l'utilisateur
+
+129
+00:04:25,300 --> 00:04:29,980
+donc vu que c'est un composant qui
+
+130
+00:04:26,980 --> 00:04:32,829
+nécessite un état on va utiliser le
+
+131
+00:04:29,829 --> 00:04:34,019
+système de classe vous conférera une
+
+132
+00:04:32,019 --> 00:04:39,029
+classe qui va s'appeler calculator et
+
+133
+00:04:34,029 --> 00:04:41,430
+qui va étendre de rilhac one campo net à
+
+134
+00:04:39,430 --> 00:04:42,110
+l'intérieur de suite je vais créer la
+
+135
+00:04:41,110 --> 00:04:46,970
+fonction renders qui pour l'instant ne
+
+136
+00:04:42,970 --> 00:04:48,300
+retournera rien aussi je vais créer un
+
+137
+00:04:46,300 --> 00:04:51,190
+constructeur qui prendra part à mettre
+
+138
+00:04:48,190 --> 00:04:54,730
+les propriétés on en n'a aucune mais on
+
+139
+00:04:51,730 --> 00:04:56,009
+doit toujours dès le début appelée super
+
+140
+00:04:54,009 --> 00:05:00,769
+de prob ça c'est nécessaire vous ne
+
+141
+00:04:56,769 --> 00:05:02,009
+pouvez pas vous passer de ça en dessous
+
+142
+00:05:00,009 --> 00:05:05,620
+on va définir notre état alors au niveau
+
+143
+00:05:02,620 --> 00:05:06,139
+de mon état je réfléchis moi je vais
+
+144
+00:05:05,139 --> 00:05:07,069
+avoir besoin finalement de la
+
+145
+00:05:06,069 --> 00:05:09,630
+température je pourrais l'appeler
+
+146
+00:05:07,630 --> 00:05:10,430
+celsius mais vu que plus tard on va
+
+147
+00:05:09,430 --> 00:05:11,660
+faire un système qui permettra de
+
+148
+00:05:10,660 --> 00:05:13,259
+convertir
+
+149
+00:05:11,259 --> 00:05:16,380
+là on va l'appeler température
+
+150
+00:05:13,380 --> 00:05:19,870
+température est par défaut on dira que
+
+151
+00:05:16,870 --> 00:05:21,019
+la valeur c'est du vide
+
+152
+00:05:19,019 --> 00:05:23,850
+maintenant que j'ai 7 cet état là je
+
+153
+00:05:21,850 --> 00:05:25,860
+vais pouvoir créer mon champ donc je
+
+154
+00:05:23,860 --> 00:05:27,930
+vais faire un return on va avoir une div
+
+155
+00:05:25,930 --> 00:05:30,759
+qui va englober tous notre calculateur
+
+156
+00:05:27,759 --> 00:05:33,399
+et je vais créer une diva qui aura comme
+
+157
+00:05:30,399 --> 00:05:38,910
+place forme tirer groupe et à
+
+158
+00:05:33,910 --> 00:05:39,110
+l'intérieur j'ai créé mon label donc ce
+
+159
+00:05:38,110 --> 00:05:41,790
+label permettra de rentrer la
+
+160
+00:05:39,790 --> 00:05:47,740
+température en selle sus plan mettra
+
+161
+00:05:41,740 --> 00:05:52,589
+celsius et en mettra température en
+
+162
+00:05:47,589 --> 00:05:56,959
+celsius ensuite je crée un monde change
+
+163
+00:05:52,959 --> 00:05:59,019
+donc ce sera un input de type texte
+
+164
+00:05:56,019 --> 00:06:01,589
+il aura comme heidi celsius on n'est pas
+
+165
+00:05:59,589 --> 00:06:03,569
+obligé de lui mettre un nom il aura
+
+166
+00:06:01,569 --> 00:06:05,310
+comme valeur mais la valeur que j'ai
+
+167
+00:06:03,310 --> 00:06:05,500
+dans l'état donc vice - température pour
+
+168
+00:06:05,500 --> 00:06:08,978
+les states
+
+169
+00:06:05,978 --> 00:06:10,199
+un peu plus tôt vise point state point
+
+170
+00:06:08,199 --> 00:06:11,990
+température et pour l'instant c'est tout
+
+171
+00:06:10,990 --> 00:06:14,860
+ce que j'ai besoin de faire
+
+172
+00:06:11,860 --> 00:06:15,050
+évidemment il faudra gérer le moment où
+
+173
+00:06:14,050 --> 00:06:18,449
+on changera les choses
+
+174
+00:06:15,449 --> 00:06:20,279
+enfin on va avoir notre petit composant
+
+175
+00:06:18,279 --> 00:06:22,800
+qui nous permettra de dire si ça vous
+
+176
+00:06:20,800 --> 00:06:25,870
+donc là on va avoir un bowling verdict
+
+177
+00:06:22,870 --> 00:06:26,209
+et on lui passera la température degrés
+
+178
+00:06:25,209 --> 00:06:29,978
+celsius alors attention cette
+
+179
+00:06:26,978 --> 00:06:30,319
+température là pour l'instant aller sous
+
+180
+00:06:29,319 --> 00:06:32,728
+forme de chaînes de caractères ce qui
+
+181
+00:06:30,728 --> 00:06:34,589
+n'est pas forcément pratique donc je
+
+182
+00:06:32,589 --> 00:06:36,300
+vais utiliser la méthode parce flotte
+
+183
+00:06:34,300 --> 00:06:39,279
+pour passer notre chaîne de caractères
+
+184
+00:06:36,279 --> 00:06:42,908
+sous forme de flotte et à ce niveau là
+
+185
+00:06:39,908 --> 00:06:44,009
+je lui passe vie ce point state point
+
+186
+00:06:42,009 --> 00:06:46,649
+température à pour éviter de m'embêter
+
+187
+00:06:44,649 --> 00:06:48,569
+je vais utiliser la déstructuration en
+
+188
+00:06:46,569 --> 00:06:52,158
+amont et je vais dire je récupère la
+
+189
+00:06:48,158 --> 00:06:54,110
+température depuis vit ce point state
+
+190
+00:06:52,110 --> 00:06:57,639
+comme ça après dans le composant n'est
+
+191
+00:06:54,639 --> 00:06:58,009
+pas obligé de faire vis point state tout
+
+192
+00:06:57,009 --> 00:07:00,690
+le temps et c'est toujours un petit peu
+
+193
+00:06:58,690 --> 00:07:02,180
+plus pratique
+
+194
+00:07:00,180 --> 00:07:05,800
+impeccable je sauvegarde et je vois bien
+
+195
+00:07:02,800 --> 00:07:07,348
+que j'aie la température ici j'ai juste
+
+196
+00:07:05,348 --> 00:07:10,000
+oublié haut niveau demande une toute la
+
+197
+00:07:07,000 --> 00:07:12,240
+classe alors classe name forme thierry
+
+198
+00:07:10,240 --> 00:07:14,218
+contrôle sinon je n'ai pas la bonne
+
+199
+00:07:12,218 --> 00:07:17,949
+apparence donc je rentre une température
+
+200
+00:07:14,949 --> 00:07:18,110
+et dès que j'ai c'est de taper dans le
+
+201
+00:07:17,110 --> 00:07:20,728
+champ je suis est bloqué si vous
+
+202
+00:07:18,728 --> 00:07:22,468
+souvenez on avait dit si vous ne mettez
+
+203
+00:07:20,468 --> 00:07:23,329
+pas une valeur qui a dit fine le chant
+
+204
+00:07:22,329 --> 00:07:25,319
+est complètement verrouillé
+
+205
+00:07:23,319 --> 00:07:27,899
+parce qu'il est contrôlé par fiat donc
+
+206
+00:07:25,899 --> 00:07:30,519
+il va nous falloir une méthode and
+
+207
+00:07:27,519 --> 00:07:30,009
+changes qui va permettre de changer la
+
+208
+00:07:30,009 --> 00:07:32,339
+valeur
+
+209
+00:07:30,339 --> 00:07:34,500
+cette méthode prendront part à mettre
+
+210
+00:07:32,500 --> 00:07:36,478
+l'événement et dès le début avant même
+
+211
+00:07:34,478 --> 00:07:37,069
+d'aller plus loin comme ça je n'oublie
+
+212
+00:07:36,069 --> 00:07:39,959
+pas je fais un vice points en de
+
+213
+00:07:37,959 --> 00:07:42,880
+rechange égales vise points en dolce
+
+214
+00:07:39,880 --> 00:07:43,550
+angie point bas invis comme ça à
+
+215
+00:07:42,550 --> 00:07:46,899
+l'intérieur je peux je disais vie c'est
+
+216
+00:07:43,899 --> 00:07:48,930
+ça va toujours référence en incluant la
+
+217
+00:07:46,930 --> 00:07:50,668
+sq il me suffit de faire c'est récupérer
+
+218
+00:07:48,668 --> 00:07:52,440
+la valeur que j'ai dans mon champ et la
+
+219
+00:07:50,440 --> 00:07:54,569
+mettre au niveau de mon état donc je
+
+220
+00:07:52,569 --> 00:07:58,009
+fais un vice points 7
+
+221
+00:07:54,009 --> 00:08:00,089
+tate et je change température et je mets
+
+222
+00:07:58,089 --> 00:08:02,009
+comme valeur que pour une target point
+
+223
+00:08:00,009 --> 00:08:04,348
+value c'est identique aux exemples que
+
+224
+00:08:02,348 --> 00:08:06,319
+l'on avait vu précédemment
+
+225
+00:08:04,319 --> 00:08:08,519
+maintenant je vais lui dire lorsqu'on
+
+226
+00:08:06,519 --> 00:08:11,379
+change la valeur au niveau de ce champ
+
+227
+00:08:08,379 --> 00:08:16,649
+donc on va mettre en challenge je fais
+
+228
+00:08:11,649 --> 00:08:18,779
+un vice points en dolce je sauvegarde et
+
+229
+00:08:16,779 --> 00:08:19,579
+si je change la valeur dans mon champ
+
+230
+00:08:18,579 --> 00:08:21,870
+quand je rentre une valeur qui est
+
+231
+00:08:19,870 --> 00:08:24,430
+supérieur à 100 j'ai bien le message
+
+232
+00:08:21,430 --> 00:08:25,190
+l'aube ou hulu nous vous pas donc là on
+
+233
+00:08:24,190 --> 00:08:26,629
+a cette première partie qui déjà
+
+234
+00:08:25,629 --> 00:08:29,978
+fonctionnel et vous voyez c'est
+
+235
+00:08:26,978 --> 00:08:30,259
+relativement simple à mettre en place
+
+236
+00:08:29,259 --> 00:08:31,759
+alors maintenant on a envie de pousser
+
+237
+00:08:30,759 --> 00:08:33,930
+les choses un petit peu plus loin et
+
+238
+00:08:31,930 --> 00:08:34,460
+d'avoir deux champs on voudrait un
+
+239
+00:08:33,460 --> 00:08:36,990
+premier chant qui permet de rentrer la
+
+240
+00:08:34,990 --> 00:08:38,729
+température en celsius et un autre qui
+
+241
+00:08:36,729 --> 00:08:40,559
+permet de rentrer la température en
+
+242
+00:08:38,559 --> 00:08:42,720
+degrés donc afin de ne pas trop nous
+
+243
+00:08:40,720 --> 00:08:44,460
+répéter à ce niveau là on va simplement
+
+244
+00:08:42,460 --> 00:08:45,470
+imaginer créer un composant je vous
+
+245
+00:08:44,470 --> 00:08:47,730
+donne la structure deux composants et
+
+246
+00:08:45,730 --> 00:08:49,169
+ensuite vous allez essayer de l'écrire
+
+247
+00:08:47,169 --> 00:08:53,960
+tout seul donc on va créer un champ qui
+
+248
+00:08:49,960 --> 00:08:58,769
+va s'appeler température température
+
+249
+00:08:53,769 --> 00:08:59,450
+input ce chan aura comme propriété scale
+
+250
+00:08:58,450 --> 00:09:00,980
+qui sera l'échelle que l'on souhaite
+
+251
+00:08:59,980 --> 00:09:03,490
+utiliser
+
+252
+00:09:00,490 --> 00:09:05,100
+on aura deux échelles c'est pour celsius
+
+253
+00:09:03,100 --> 00:09:09,799
+et f pour fahrenheit et ensuite on fait
+
+254
+00:09:05,799 --> 00:09:13,880
+ça comme ça et là on aura f comme
+
+255
+00:09:09,880 --> 00:09:14,240
+fahrenheit pour la partie libellé pour
+
+256
+00:09:13,240 --> 00:09:16,769
+que ce sont générés automatiquement on
+
+257
+00:09:14,769 --> 00:09:19,630
+va créer une constante tout au début de
+
+258
+00:09:16,630 --> 00:09:20,240
+notre fichier qui va contenir les
+
+259
+00:09:19,240 --> 00:09:23,860
+différentes échelles on va l'appeler
+
+260
+00:09:20,860 --> 00:09:25,409
+skylines et ce sera un objet qui
+
+261
+00:09:23,409 --> 00:09:29,330
+contiendra comme crise c est dans ce cas
+
+262
+00:09:25,330 --> 00:09:30,380
+là ça sera celsius et ensuite une clé f
+
+263
+00:09:29,380 --> 00:09:33,960
+qui sera fahrenheit
+
+264
+00:09:30,960 --> 00:09:34,340
+donc pour l'instant on ne va pas avoir
+
+265
+00:09:33,340 --> 00:09:36,960
+de méthode qui nous permettra d'observer
+
+266
+00:09:34,960 --> 00:09:39,759
+les changements de valeur mais on veut
+
+267
+00:09:36,759 --> 00:09:40,700
+simplement créer ces chants là donc je
+
+268
+00:09:39,700 --> 00:09:42,779
+vous laisse essayer de le faire
+
+269
+00:09:40,779 --> 00:09:44,700
+faites en sorte qu'on ait deux champs
+
+270
+00:09:42,700 --> 00:09:46,409
+qui permettra après une valeur et on
+
+271
+00:09:44,409 --> 00:09:50,210
+veut que le libellé affiche température
+
+272
+00:09:46,210 --> 00:09:50,639
+en 7 sus des températures en fahrenheit
+
+273
+00:09:50,639 --> 00:09:54,480
+alors j'espère que vous avez essayé de
+
+274
+00:09:52,480 --> 00:09:56,580
+pratiquer on est parti donc je vais
+
+275
+00:09:54,580 --> 00:09:58,320
+créer une nouvelle classe qui va me
+
+276
+00:09:56,320 --> 00:10:00,210
+permettre de gérer ses champs donc cette
+
+277
+00:09:58,210 --> 00:10:02,250
+classe de sape les températures y goûte
+
+278
+00:10:00,250 --> 00:10:04,440
+et 20 et ambre de réac points quand on
+
+279
+00:10:02,440 --> 00:10:06,929
+est à l'intérieur
+
+280
+00:10:04,929 --> 00:10:08,519
+je vais avoir besoin de sauvegarder
+
+281
+00:10:06,519 --> 00:10:11,590
+l'état qui va me permettre de savoir la
+
+282
+00:10:08,590 --> 00:10:13,380
+température qui a été tapée donc tout de
+
+283
+00:10:11,380 --> 00:10:16,000
+suite je fais appel à mon constructeurs
+
+284
+00:10:13,000 --> 00:10:17,059
+et je lui passe des propriétés au niveau
+
+285
+00:10:16,059 --> 00:10:19,470
+de ce constructeur j'appelle le
+
+286
+00:10:17,470 --> 00:10:21,059
+constructeur parents en lui passant les
+
+287
+00:10:19,059 --> 00:10:24,610
+propriétés et je vais définir mon état
+
+288
+00:10:21,610 --> 00:10:26,940
+donc chaque chant aura un état qui lui
+
+289
+00:10:24,940 --> 00:10:30,500
+sera propre qui permettra de maintenir
+
+290
+00:10:26,500 --> 00:10:31,100
+la température on dira ici que ça sera
+
+291
+00:10:30,100 --> 00:10:33,860
+du vide
+
+292
+00:10:31,860 --> 00:10:36,700
+maintenant je vais créer ma fonction
+
+293
+00:10:33,700 --> 00:10:38,039
+renders à l'intérieur de cette fonction
+
+294
+00:10:36,039 --> 00:10:40,649
+là je vais pouvoir tout simplement collé
+
+295
+00:10:38,649 --> 00:10:43,669
+le texte que j'avais précédemment
+
+296
+00:10:40,669 --> 00:10:44,100
+je vais retourner indiv qui aura la
+
+297
+00:10:43,100 --> 00:10:46,059
+classe forme groupe
+
+298
+00:10:44,059 --> 00:10:49,730
+je mettrai ici la température est là il
+
+299
+00:10:46,730 --> 00:10:53,610
+faudrait que je rajoute en suivi du les
+
+300
+00:10:49,610 --> 00:10:56,000
+chaînes et ensuite va le link ou de deux
+
+301
+00:10:53,000 --> 00:11:00,870
+types texte qui ne changera pas si ce
+
+302
+00:10:56,870 --> 00:11:02,169
+n'est ici que pour le html fort je vais
+
+303
+00:11:00,169 --> 00:11:05,360
+utiliser directement le scale qui a été
+
+304
+00:11:02,360 --> 00:11:07,240
+demandé donc là je vais très scale ou
+
+305
+00:11:05,240 --> 00:11:11,190
+peut-être ici on mettra comme constante
+
+306
+00:11:07,190 --> 00:11:13,990
+constr name égal et en mettra scale
+
+307
+00:11:11,990 --> 00:11:15,460
+suivi du nom de l'échelle
+
+308
+00:11:13,460 --> 00:11:18,110
+donc le nom de l'échelle en là au niveau
+
+309
+00:11:15,110 --> 00:11:22,470
+des propriétés donc ça sera vice propre
+
+310
+00:11:18,470 --> 00:11:24,279
+point sky ce nom je l'utilisent au
+
+311
+00:11:22,279 --> 00:11:26,679
+niveau de mon html fort mais je
+
+312
+00:11:24,679 --> 00:11:29,389
+l'utilisé aussi au niveau de mon heidi
+
+313
+00:11:26,389 --> 00:11:34,330
+qui se situe ici ça permet de connecter
+
+314
+00:11:29,330 --> 00:11:36,429
+le libellé à notre champ à ce niveau là
+
+315
+00:11:34,429 --> 00:11:39,259
+aussi il va falloir que je récupère le
+
+316
+00:11:36,259 --> 00:11:43,470
+nom de l'échelle donc on va l'appeler
+
+317
+00:11:39,470 --> 00:11:45,250
+sky le name france scale name et on lui
+
+318
+00:11:43,250 --> 00:11:48,440
+dira de faire un scale nails
+
+319
+00:11:45,440 --> 00:11:49,049
+donc ça sera notre objet là haut et en
+
+320
+00:11:48,049 --> 00:11:54,970
+récupérera la valeur qui est associé à
+
+321
+00:11:49,970 --> 00:11:56,009
+la clé qui est d'environ 11 points sky
+
+322
+00:11:54,009 --> 00:11:58,570
+maintenant plutôt que de mettre celsius
+
+323
+00:11:56,570 --> 00:12:02,909
+en dur ici je peux lui dire d'affiché
+
+324
+00:11:58,909 --> 00:12:04,090
+sky le name donc la première vue on est
+
+325
+00:12:02,090 --> 00:12:06,429
+bon il me semble alors il ya juste un
+
+326
+00:12:04,429 --> 00:12:08,259
+petit problème c'est le sandwich ndj qui
+
+327
+00:12:06,259 --> 00:12:10,570
+n'a pas été créée on peut s'inspirer du
+
+328
+00:12:08,570 --> 00:12:13,549
+hand celle qu'on avait écrit ici ou même
+
+329
+00:12:10,549 --> 00:12:15,639
+tout simplement le copie en faisant
+
+330
+00:12:13,639 --> 00:12:18,590
+attention à faire un vide points en
+
+331
+00:12:15,590 --> 00:12:20,759
+dolce and provide vis là haut
+
+332
+00:12:18,759 --> 00:12:22,990
+maintenant je vais avoir mon champ
+
+333
+00:12:20,990 --> 00:12:25,970
+température input qui va être en mesure
+
+334
+00:12:22,970 --> 00:12:29,850
+d'afficher un champ dans lequel je vais
+
+335
+00:12:25,850 --> 00:12:31,750
+pouvoir taper la valeur donc à première
+
+336
+00:12:29,750 --> 00:12:32,159
+vue ça ne se rend pas au niveau de la
+
+337
+00:12:31,159 --> 00:12:35,870
+page de vos jouets sortir mon inspecteur
+
+338
+00:12:32,870 --> 00:12:38,509
+et voir où j'ai pu faire une erreur
+
+339
+00:12:35,509 --> 00:12:40,429
+donc on me dit température ici notified
+
+340
+00:12:38,429 --> 00:12:42,019
+effectivement il faut que j'utilise la
+
+341
+00:12:40,019 --> 00:12:44,450
+déstructuration ici pour extraire la
+
+342
+00:12:42,450 --> 00:12:47,970
+température depuis l'état par contre je
+
+343
+00:12:44,970 --> 00:12:48,100
+devrais le garder ici sinon ici j'ai
+
+344
+00:12:47,100 --> 00:12:50,600
+besoin de température pour ferment parce
+
+345
+00:12:48,600 --> 00:12:52,700
+que tu donc je sauvegarde et j'ai
+
+346
+00:12:50,700 --> 00:12:54,078
+maintenant un premier chant qui me
+
+347
+00:12:52,078 --> 00:12:55,089
+permet de rentrer une valeur handsets us
+
+348
+00:12:54,089 --> 00:12:57,769
+et un second qui me permet de rentrer
+
+349
+00:12:55,769 --> 00:12:58,750
+une température enfin on est donc
+
+350
+00:12:57,750 --> 00:13:00,889
+maintenant ce qu'on a envie de faire
+
+351
+00:12:58,889 --> 00:13:02,630
+c'est que lorsque je tape dans un champ
+
+352
+00:13:00,630 --> 00:13:04,279
+il faudrait que la température soit
+
+353
+00:13:02,279 --> 00:13:06,049
+convertie dans l'autre et inversément
+
+354
+00:13:04,049 --> 00:13:07,208
+donc il va falloir relier les deux
+
+355
+00:13:06,208 --> 00:13:08,559
+informations
+
+356
+00:13:07,559 --> 00:13:11,759
+le problème dans la proche que l'on a
+
+357
+00:13:08,759 --> 00:13:12,220
+choisi actuellement c'est que chaque
+
+358
+00:13:11,220 --> 00:13:15,958
+chant est responsable de son état de sa
+
+359
+00:13:12,958 --> 00:13:16,389
+valeur et ben il n'est pas possible de
+
+360
+00:13:15,389 --> 00:13:19,589
+faire communiquer les deux cents ans
+
+361
+00:13:16,589 --> 00:13:20,019
+semble donc dans ce cas là si vous avez
+
+362
+00:13:19,019 --> 00:13:22,190
+besoin d'une communication
+
+363
+00:13:20,190 --> 00:13:24,409
+ça veut dire que c'est le composant qui
+
+364
+00:13:22,409 --> 00:13:26,690
+est parent qui englobe ces deux éléments
+
+365
+00:13:24,690 --> 00:13:29,909
+là qui va être responsable de passer
+
+366
+00:13:26,909 --> 00:13:30,339
+l'état donc ce que l'on va faire c'est
+
+367
+00:13:29,339 --> 00:13:32,929
+qu'on va maintenir et sauvegarder la
+
+368
+00:13:30,929 --> 00:13:35,909
+température dans ce composant calculator
+
+369
+00:13:32,909 --> 00:13:38,669
+et on va plutôt utilisé propriété pour
+
+370
+00:13:35,669 --> 00:13:39,039
+lui envoyer la température donc on fera
+
+371
+00:13:38,039 --> 00:13:41,720
+ici une propriété qui s'appellera
+
+372
+00:13:39,720 --> 00:13:43,940
+température et on lui passera la
+
+373
+00:13:41,940 --> 00:13:46,649
+température qui sera convertie dans la
+
+374
+00:13:43,649 --> 00:13:47,589
+bonne unité alors pour l'instant juste
+
+375
+00:13:46,589 --> 00:13:50,700
+pour laisser on va mettre une
+
+376
+00:13:47,700 --> 00:13:54,360
+température en eau qui sera en degrés
+
+377
+00:13:50,360 --> 00:13:55,299
+donc on s'imagine d'entre partir ender à
+
+378
+00:13:54,299 --> 00:13:57,889
+ce niveau là bas on peut simplement lui
+
+379
+00:13:55,889 --> 00:13:58,509
+passer la température parce que c'est la
+
+380
+00:13:57,509 --> 00:13:59,320
+bonne température
+
+381
+00:13:58,320 --> 00:14:01,820
+mais par contre pour la partie
+
+382
+00:13:59,820 --> 00:14:03,700
+fahrenheit il va falloir la convertir
+
+383
+00:14:01,700 --> 00:14:06,870
+donc on va créer les fonctions de
+
+384
+00:14:03,870 --> 00:14:07,269
+conversion ses fonctions elle n'a pas
+
+385
+00:14:06,269 --> 00:14:09,649
+forcément besoin d'être dans ce
+
+386
+00:14:07,649 --> 00:14:11,208
+composant ça peut être des fonctions qui
+
+387
+00:14:09,208 --> 00:14:13,909
+sont globales vu que mais le système de
+
+388
+00:14:11,909 --> 00:14:16,889
+conversion il peut être n'importe où
+
+389
+00:14:13,889 --> 00:14:18,139
+donc on aura un tout celsius qui va
+
+390
+00:14:16,139 --> 00:14:21,409
+permettre de convertir des fahrenheit
+
+391
+00:14:18,409 --> 00:14:24,279
+désolé j'ai du mal à l'écrire
+
+392
+00:14:21,279 --> 00:14:26,100
+en degré celsius et on aura la fonction
+
+393
+00:14:24,100 --> 00:14:31,919
+inverse qui va s'appeler touffah run
+
+394
+00:14:26,919 --> 00:14:34,269
+night qui va prendre des degrés celsius
+
+395
+00:14:31,269 --> 00:14:37,708
+et les convertir en degrés fahrenheit
+
+396
+00:14:34,708 --> 00:14:39,870
+alors j'ai besoin de me documenter parce
+
+397
+00:14:37,870 --> 00:14:42,698
+que je connais pas de tête les méthodes
+
+398
+00:14:39,698 --> 00:14:45,519
+de conversion donc on va mettre formule
+
+399
+00:14:42,519 --> 00:14:47,299
+à fahrenheit
+
+400
+00:14:45,299 --> 00:14:51,350
+alors plutôt celle sus on va commencer
+
+401
+00:14:47,350 --> 00:14:55,938
+par celle là celsius tout fahrenheit et
+
+402
+00:14:51,938 --> 00:14:57,028
+on nous donne la formule là je crois que
+
+403
+00:14:55,028 --> 00:15:00,639
+sur ce site on nous donne les deux
+
+404
+00:14:57,639 --> 00:15:01,100
+voilà c'est ça que l'on veut je suis pas
+
+405
+00:15:00,100 --> 00:15:04,889
+si le copier-coller va bien fonctionner
+
+406
+00:15:01,889 --> 00:15:05,058
+impeccable qu'on va se le mettre en
+
+407
+00:15:04,058 --> 00:15:09,679
+commentaire au dessus des deux fonctions
+
+408
+00:15:05,679 --> 00:15:11,279
+comme ça on aura une petite référence et
+
+409
+00:15:09,279 --> 00:15:11,049
+il me manque la formule qui fait l
+
+410
+00:15:11,049 --> 00:15:13,679
+inverse
+
+411
+00:15:11,679 --> 00:15:15,058
+donc si je clique peut-être sur
+
+412
+00:15:13,058 --> 00:15:18,698
+fahrenheit ici voilà on m'explique que
+
+413
+00:15:15,698 --> 00:15:22,279
+pour faire cette conversion là c'est ça
+
+414
+00:15:18,279 --> 00:15:24,929
+la bonne formule donc si j'ai des
+
+415
+00:15:22,929 --> 00:15:27,999
+fahrenheit et que je veux des celsius il
+
+416
+00:15:24,999 --> 00:15:28,818
+faut que je soustrais 32 donc on va
+
+417
+00:15:27,818 --> 00:15:30,058
+faire
+
+418
+00:15:28,058 --> 00:15:36,789
+et j'oubliais vitesse un petit h ici hop
+
+419
+00:15:30,789 --> 00:15:38,129
+on va faire fahrenheit -32 le tout
+
+420
+00:15:36,129 --> 00:15:40,980
+multiplié par 5 / 9
+
+421
+00:15:38,980 --> 00:15:42,448
+faites bien attention à la priorité des
+
+422
+00:15:40,448 --> 00:15:44,068
+opérations à bien mettre vos parenthèse
+
+423
+00:15:42,068 --> 00:15:47,970
+et je vais directement retourner ça
+
+424
+00:15:44,970 --> 00:15:48,889
+alors si j'ai celsius et que je veux des
+
+425
+00:15:47,889 --> 00:15:51,549
+fahrenheit
+
+426
+00:15:48,549 --> 00:15:54,339
+je suis dans ce cas là il faut que je
+
+427
+00:15:51,339 --> 00:16:02,870
+multiplie par 9 / 5 qu'on fera un return
+
+428
+00:15:54,870 --> 00:16:05,259
+2 celsius à plat celsius x 9 5e et
+
+429
+00:16:02,259 --> 00:16:10,708
+ensuite j'additionne 32 quand une fois
+
+430
+00:16:05,708 --> 00:16:11,089
+attention parenthèse impeccable donc au
+
+431
+00:16:10,089 --> 00:16:13,860
+niveau de mon système ici je vais
+
+432
+00:16:11,860 --> 00:16:15,419
+pouvoir lui dire bon bout pour l'instant
+
+433
+00:16:13,419 --> 00:16:17,458
+on va créer une constante qui va
+
+434
+00:16:15,458 --> 00:16:19,589
+s'appeler celsius qui sera égal à
+
+435
+00:16:17,589 --> 00:16:21,448
+température et je vais avoir une
+
+436
+00:16:19,448 --> 00:16:25,308
+constante qui va s'appeler fahrenheit
+
+437
+00:16:21,308 --> 00:16:26,120
+qui sera égal à tous fahrenheit et je
+
+438
+00:16:25,120 --> 00:16:28,799
+les passants paramètres la température
+
+439
+00:16:26,799 --> 00:16:30,559
+en celsius
+
+440
+00:16:28,559 --> 00:16:32,630
+à ce niveau là je peux lui passer du
+
+441
+00:16:30,630 --> 00:16:35,730
+coup la valeur en fahrenheit et à ce
+
+442
+00:16:32,730 --> 00:16:37,179
+niveau là la valeur en celsius
+
+443
+00:16:35,179 --> 00:16:38,289
+maintenant au niveau de mes composantes
+
+444
+00:16:37,289 --> 00:16:40,429
+température input
+
+445
+00:16:38,429 --> 00:16:42,200
+je sais que je vais avoir une propriété
+
+446
+00:16:40,200 --> 00:16:45,960
+température donc on ne va plus avoir
+
+447
+00:16:42,960 --> 00:16:47,450
+besoin de gérer un état vous jouez
+
+448
+00:16:45,450 --> 00:16:49,339
+supprimer cette partie là je vais
+
+449
+00:16:47,339 --> 00:16:53,980
+laisser leur donne change peut-être le
+
+450
+00:16:49,980 --> 00:16:54,279
+vider de son contenu est maintenant mais
+
+451
+00:16:53,279 --> 00:16:56,929
+la température on ne la récupère plus
+
+452
+00:16:54,929 --> 00:17:00,909
+depuis vise point state mais plutôt
+
+453
+00:16:56,909 --> 00:17:02,210
+depuis vit ce point props si je ressens
+
+454
+00:17:00,210 --> 00:17:04,009
+tu gardes et que je recharge mon
+
+455
+00:17:02,009 --> 00:17:07,650
+composants on voit bien qu'ici il y à 20
+
+456
+00:17:04,650 --> 00:17:09,680
+degrés par défaut et ça correspond à 68
+
+457
+00:17:07,680 --> 00:17:11,599
+par contre je ne peux pas taper de
+
+458
+00:17:09,599 --> 00:17:14,279
+valeur parce que pour l'instant mon en
+
+459
+00:17:11,279 --> 00:17:14,250
+jam ne fait rien cela il faut aussi
+
+460
+00:17:14,250 --> 00:17:17,818
+réfléchir
+
+461
+00:17:14,818 --> 00:17:18,009
+finalement quand on va taper une valeur
+
+462
+00:17:17,009 --> 00:17:21,959
+au niveau du chant il faudrait que ça
+
+463
+00:17:18,959 --> 00:17:23,000
+remonte aux parents il faudrait que le
+
+464
+00:17:21,000 --> 00:17:26,250
+calculateur soit capable de détecter
+
+465
+00:17:23,250 --> 00:17:30,130
+quand on a changé la température donc on
+
+466
+00:17:26,130 --> 00:17:33,380
+va créer un handle température challenge
+
+467
+00:17:30,380 --> 00:17:36,179
+et il recevra en paramètre la
+
+468
+00:17:33,179 --> 00:17:37,240
+température ce qu'il va faire tout de
+
+469
+00:17:36,240 --> 00:17:40,710
+suite c'est qu'il faudra un vise points
+
+470
+00:17:37,710 --> 00:17:42,920
+7 state et il changera la valeur de
+
+471
+00:17:40,920 --> 00:17:45,839
+températures par rapport à ce qu'il
+
+472
+00:17:42,839 --> 00:17:47,809
+reçoit maintenant au niveau de mon une
+
+473
+00:17:45,809 --> 00:17:49,700
+poutre deux degrés celsius je vais
+
+474
+00:17:47,700 --> 00:17:50,740
+pouvoir lui dire je veux que tu puisse
+
+475
+00:17:49,740 --> 00:17:53,579
+changer la valeur
+
+476
+00:17:50,579 --> 00:17:54,069
+donc on imaginerait du passé une
+
+477
+00:17:53,069 --> 00:17:57,569
+propriété qui s'appellerait haute
+
+478
+00:17:54,569 --> 00:18:01,299
+température challenge et on lui
+
+479
+00:17:57,299 --> 00:18:03,410
+passerait cette fonction-là cette
+
+480
+00:18:01,410 --> 00:18:05,179
+fonction là pour que vit ce froid face
+
+481
+00:18:03,179 --> 00:18:08,069
+bien référence à la bonne chose on
+
+482
+00:18:05,069 --> 00:18:10,160
+n'oublie pas le fameux ou là le copier
+
+483
+00:18:08,160 --> 00:18:19,470
+couvrir complètement foiré vise points
+
+484
+00:18:10,470 --> 00:18:22,049
+ben vi voilà maintenant une autre
+
+485
+00:18:19,049 --> 00:18:24,380
+composant ici température input ben il
+
+486
+00:18:22,380 --> 00:18:25,119
+va avoir besoin d'écouter les
+
+487
+00:18:24,119 --> 00:18:27,470
+changements qui sont faits au niveau du
+
+488
+00:18:25,470 --> 00:18:28,690
+chant donc on utilisera toujours notre
+
+489
+00:18:27,690 --> 00:18:30,559
+ranch hand
+
+490
+00:18:28,559 --> 00:18:32,329
+par contre il va avoir besoin de faire
+
+491
+00:18:30,329 --> 00:18:33,069
+remonter l'information ou pour faire
+
+492
+00:18:32,069 --> 00:18:36,329
+remonter l'information
+
+493
+00:18:33,329 --> 00:18:39,509
+il va utiliser cette propriété là qui
+
+494
+00:18:36,509 --> 00:18:41,190
+est une qui est un call back
+
+495
+00:18:39,190 --> 00:18:43,230
+va pouvoir appeler donc on va lui dire
+
+496
+00:18:41,230 --> 00:18:45,000
+lorsque tu change les choses
+
+497
+00:18:43,000 --> 00:18:48,910
+je veux simplement que tu fasses un vice
+
+498
+00:18:45,910 --> 00:18:51,130
+points propres points
+
+499
+00:18:48,130 --> 00:18:53,730
+une température challenge et je vais te
+
+500
+00:18:51,730 --> 00:18:56,740
+passer en paramètre la température qui
+
+501
+00:18:53,740 --> 00:18:59,880
+sera eux ou un target point value
+
+502
+00:18:56,880 --> 00:19:01,109
+automatiquement nous composons parents
+
+503
+00:18:59,109 --> 00:19:03,660
+recevra le changement la changera la
+
+504
+00:19:01,660 --> 00:19:05,549
+valeur de température ça déclenche sera
+
+505
+00:19:03,549 --> 00:19:06,500
+à nouveau rendu ce qui fait que ce
+
+506
+00:19:05,500 --> 00:19:09,670
+composant va recevoir une nouvelle
+
+507
+00:19:06,670 --> 00:19:11,039
+température et la valeur du champ on
+
+508
+00:19:09,039 --> 00:19:13,559
+trouvera modifié si j'essaie de faire un
+
+509
+00:19:11,559 --> 00:19:16,630
+test je rentre deux sens on voit bien
+
+510
+00:19:13,630 --> 00:19:17,089
+que l'eau bout et que ce chant a changé
+
+511
+00:19:16,089 --> 00:19:19,950
+le problème que l'on a à l'heure
+
+512
+00:19:17,950 --> 00:19:24,450
+actuelle c'est que ce champ là a une
+
+513
+00:19:19,450 --> 00:19:26,460
+valeur mais quand lui il change il ne se
+
+514
+00:19:24,460 --> 00:19:27,200
+passe rien parce que lui tu n'as pas de
+
+515
+00:19:26,200 --> 00:19:29,759
+hautes températures challenge qui va
+
+516
+00:19:27,759 --> 00:19:31,650
+être appelé donc si j'essaie de faire un
+
+517
+00:19:29,650 --> 00:19:34,960
+essai de rentrer n'importe quoi on tombe
+
+518
+00:19:31,960 --> 00:19:36,480
+juste sur une petite erreur parce que
+
+519
+00:19:34,480 --> 00:19:39,789
+effectivement le une température change
+
+520
+00:19:36,789 --> 00:19:40,130
+n'est pas défini mais vu qu'on n'a pas
+
+521
+00:19:39,130 --> 00:19:42,779
+de hautes températures chaîne la valeur
+
+522
+00:19:40,779 --> 00:19:45,549
+ne change pas et le chant reste un petit
+
+523
+00:19:42,549 --> 00:19:46,490
+peu en lecture seule donc on aimerait
+
+524
+00:19:45,490 --> 00:19:48,809
+bien pousser les choses un petit peu
+
+525
+00:19:46,809 --> 00:19:50,190
+plus loin et faire en sorte que l'on
+
+526
+00:19:48,190 --> 00:19:52,650
+puisse taper dans les deux champs donc
+
+527
+00:19:50,650 --> 00:19:53,690
+on va devoir savoir mais finalement est
+
+528
+00:19:52,690 --> 00:19:54,769
+ce qu'on est en train de rentrer des
+
+529
+00:19:53,769 --> 00:19:55,759
+valeurs en celsius
+
+530
+00:19:54,759 --> 00:19:58,990
+ou est ce qu'on est en train de rentrer
+
+531
+00:19:55,990 --> 00:20:00,150
+des valeurs en fahrenheit donc notre
+
+532
+00:19:58,150 --> 00:20:02,369
+calculateur il va avoir besoin de savoir
+
+533
+00:20:00,369 --> 00:20:04,200
+sur quelle échelle il est donc ici on va
+
+534
+00:20:02,200 --> 00:20:07,450
+mettre scale et nous on avait dit par
+
+535
+00:20:04,450 --> 00:20:08,089
+défaut en et en celsius mais par contre
+
+536
+00:20:07,089 --> 00:20:10,589
+cette échelle peut être différente on
+
+537
+00:20:08,589 --> 00:20:12,690
+peut passer en fahrenheit maintenant
+
+538
+00:20:10,690 --> 00:20:14,670
+pour calculer la température ça va
+
+539
+00:20:12,670 --> 00:20:16,650
+dépendre si on a un seul suspect dans ce
+
+540
+00:20:14,650 --> 00:20:18,059
+cas là on retourne directement la
+
+541
+00:20:16,059 --> 00:20:19,309
+température par contre si on a enfin le
+
+542
+00:20:18,309 --> 00:20:22,509
+night mais il faut retourner la
+
+543
+00:20:19,509 --> 00:20:24,059
+température fahrenheit donc ici je vais
+
+544
+00:20:22,059 --> 00:20:26,039
+mettre une petite condition donc je veux
+
+545
+00:20:24,039 --> 00:20:28,289
+lui dire au niveau de state j'aimerais
+
+546
+00:20:26,289 --> 00:20:30,180
+bien aussi récupérer les chaînes qu'on
+
+547
+00:20:28,180 --> 00:20:33,519
+va appeler scale et je voulais dire si
+
+548
+00:20:30,519 --> 00:20:35,789
+l'échelle est égal à c'est dans ce cas
+
+549
+00:20:33,789 --> 00:20:38,950
+là il faut que tu me renvoie la
+
+550
+00:20:35,950 --> 00:20:39,140
+température dans le cas contraire ça
+
+551
+00:20:38,140 --> 00:20:40,519
+veut dire que la température est en farr
+
+552
+00:20:39,519 --> 00:20:43,930
+knight et dans ce cas là tu feras un
+
+553
+00:20:40,930 --> 00:20:47,180
+tout celsius et je te passerai un
+
+554
+00:20:43,180 --> 00:20:49,009
+paramètre la température
+
+555
+00:20:47,009 --> 00:20:52,529
+pour la partie fahrenheit judici
+
+556
+00:20:49,529 --> 00:20:53,019
+l'échelle est égal à fahrenheit dans ce
+
+557
+00:20:52,019 --> 00:20:56,279
+cas là bas il n'y a pas de problème tu
+
+558
+00:20:53,279 --> 00:20:58,700
+me retourne la température dans le cas
+
+559
+00:20:56,700 --> 00:21:00,200
+contraire tu me retourne la version
+
+560
+00:20:58,200 --> 00:21:03,990
+farhenheit maintenant quand je tape dans
+
+561
+00:21:00,990 --> 00:21:05,900
+le champ qui est de type celsius il faut
+
+562
+00:21:03,900 --> 00:21:07,579
+que je lui dise l'échelle et celsius par
+
+563
+00:21:05,579 --> 00:21:07,079
+contre quand je tape dans le champ qui
+
+564
+00:21:07,079 --> 00:21:09,859
+et fahrenheit
+
+565
+00:21:07,859 --> 00:21:11,299
+il faut que je lui dise attention
+
+566
+00:21:09,299 --> 00:21:12,099
+l'échelle va être du fahrenheit
+
+567
+00:21:11,099 --> 00:21:14,839
+donc je vais avoir besoin de deux
+
+568
+00:21:12,839 --> 00:21:19,910
+fonctions différentes donc là on va
+
+569
+00:21:14,910 --> 00:21:20,200
+l'appeler handle celsius change et dans
+
+570
+00:21:19,200 --> 00:21:22,609
+le set state on lui passera
+
+571
+00:21:20,609 --> 00:21:24,190
+effectivement la nouvelle température
+
+572
+00:21:22,190 --> 00:21:25,660
+mais on aura aussi besoin de lui passer
+
+573
+00:21:24,660 --> 00:21:28,619
+l'échelle
+
+574
+00:21:25,619 --> 00:21:30,130
+donc on lui dira la l'échelle cessé
+
+575
+00:21:28,130 --> 00:21:31,599
+parce que on vient de changer les
+
+576
+00:21:30,599 --> 00:21:34,950
+celsius
+
+577
+00:21:31,950 --> 00:21:35,319
+quand on change d fahrenheit on va
+
+578
+00:21:34,319 --> 00:21:42,730
+utiliser une méthode qui va s'appeler
+
+579
+00:21:35,730 --> 00:21:44,630
+handle fahrenheit challenge alors hop je
+
+580
+00:21:42,630 --> 00:21:47,700
+vais me choisir un mot plus simple à
+
+581
+00:21:44,700 --> 00:21:50,819
+taper donc ça sera fahrenheit challenge
+
+582
+00:21:47,819 --> 00:21:51,039
+dans ce cas là on fera un set state
+
+583
+00:21:50,039 --> 00:21:53,630
+on changera l'échelle pour dire qu'on
+
+584
+00:21:51,630 --> 00:21:55,250
+est en mode f donc on a un mode
+
+585
+00:21:53,250 --> 00:21:58,529
+fahrenheit maintenant et ensuite on lui
+
+586
+00:21:55,529 --> 00:21:59,380
+passe aussi la nouvelle température au
+
+587
+00:21:58,380 --> 00:22:02,880
+niveau de mes deux champs mais
+
+588
+00:21:59,880 --> 00:22:03,369
+températures input je vais lui dire si
+
+589
+00:22:02,369 --> 00:22:04,839
+tu es en train de changer le champ
+
+590
+00:22:03,839 --> 00:22:07,470
+celsius
+
+591
+00:22:04,470 --> 00:22:09,170
+je veux que tu utilise la méthode handle
+
+592
+00:22:07,170 --> 00:22:10,869
+celsius challenge si tu es en train de
+
+593
+00:22:09,869 --> 00:22:13,519
+changer
+
+594
+00:22:10,519 --> 00:22:14,230
+le chant fahrenheit je veux que tu
+
+595
+00:22:13,230 --> 00:22:17,940
+appelles levis points en deuil
+
+596
+00:22:14,940 --> 00:22:20,509
+fahrenheit ichange attention par contre
+
+597
+00:22:17,509 --> 00:22:22,160
+à bien faire en sorte que vice fasse
+
+598
+00:22:20,160 --> 00:22:23,470
+bien référence en notre classe donc la
+
+599
+00:22:22,470 --> 00:22:25,190
+up
+
+600
+00:22:23,190 --> 00:22:27,710
+on va mettre dès le début un vice points
+
+601
+00:22:25,710 --> 00:22:29,630
+en deuil celsius change égales vise
+
+602
+00:22:27,630 --> 00:22:32,670
+points en deuil c'est le challenge point
+
+603
+00:22:29,670 --> 00:22:36,490
+ba vi et en fera la même chose pour les
+
+604
+00:22:32,490 --> 00:22:40,980
+fahrenheit et là on devrait être bon
+
+605
+00:22:36,980 --> 00:22:41,319
+donc on va sauvegarder on tombe sur une
+
+606
+00:22:40,319 --> 00:22:43,910
+petite erreur où il me dit que il ne
+
+607
+00:22:41,910 --> 00:22:47,980
+connaît pas scale j'ai fait une petite
+
+608
+00:22:43,980 --> 00:22:47,910
+erreur de typographie ici
+
+609
+00:22:47,910 --> 00:22:53,559
+donc je rentre une température en degrés
+
+610
+00:22:50,559 --> 00:22:56,200
+et on voit qu'on me dit l'aube où je
+
+611
+00:22:53,200 --> 00:22:59,589
+rentre une valeur en fahrenheit et on
+
+612
+00:22:56,589 --> 00:23:00,200
+voit que ça trop converti la valeur en
+
+613
+00:22:59,200 --> 00:23:02,970
+degrés celsius alors on pourrait faire
+
+614
+00:23:00,970 --> 00:23:03,650
+un arrondi parce que là par défaut
+
+615
+00:23:02,650 --> 00:23:05,970
+sénart ont dit qu'ils aient fait ingérer
+
+616
+00:23:03,970 --> 00:23:07,500
+script qui est pas forcément tip top
+
+617
+00:23:05,500 --> 00:23:09,630
+mais vous voyez le principe à ce niveau
+
+618
+00:23:07,630 --> 00:23:11,670
+là donc attention si vous fait le larron
+
+619
+00:23:09,670 --> 00:23:12,559
+10 au niveau de précision que vous
+
+620
+00:23:11,559 --> 00:23:13,250
+souhaitez obtenir
+
+621
+00:23:12,250 --> 00:23:14,329
+on n'en est pas sûr un truc très
+
+622
+00:23:13,329 --> 00:23:17,920
+scientifique on veut juste savoir si
+
+623
+00:23:14,920 --> 00:23:18,109
+l'eau des pâtes bout d'ailleurs ça
+
+624
+00:23:17,109 --> 00:23:19,609
+semble un peu bizarre là on me dit que
+
+625
+00:23:18,609 --> 00:23:22,869
+l'eau boue alors qu'elles ne devraient
+
+626
+00:23:19,869 --> 00:23:24,500
+pas bouillir vu qu'on est à 37 degrés
+
+627
+00:23:22,500 --> 00:23:27,490
+effectivement dans la partie boiling
+
+628
+00:23:24,490 --> 00:23:28,039
+verdict on faisait un parce flotte et on
+
+629
+00:23:27,039 --> 00:23:30,720
+lui a envoyé la température maintenant
+
+630
+00:23:28,720 --> 00:23:32,640
+on n'a plus besoin de faire ça on va
+
+631
+00:23:30,640 --> 00:23:34,500
+simplement lui dire je t'envoie la
+
+632
+00:23:32,500 --> 00:23:35,119
+température en celsius parce que toi
+
+633
+00:23:34,119 --> 00:23:38,710
+effectivement tu attendais des celsius
+
+634
+00:23:35,710 --> 00:23:40,859
+et dans ce cas là si je tape sens à ce
+
+635
+00:23:38,859 --> 00:23:44,630
+niveau là ça me donne une température
+
+636
+00:23:40,630 --> 00:23:46,740
+qui ne bout pas si je rentre 2000 la loi
+
+637
+00:23:44,740 --> 00:23:48,299
+et va carrément s'évaporer mais vous
+
+638
+00:23:46,299 --> 00:23:50,160
+voyez bien que l'ol book
+
+639
+00:23:48,160 --> 00:23:51,470
+à cette température là donc voilà
+
+640
+00:23:50,470 --> 00:23:52,849
+comment vous pourriez mettre en place un
+
+641
+00:23:51,849 --> 00:23:54,900
+système de conversion
+
+642
+00:23:52,900 --> 00:23:55,339
+alors juste peut-être un petit détail
+
+643
+00:23:54,339 --> 00:23:57,599
+c'est que quand vous tapez n'importe
+
+644
+00:23:55,599 --> 00:23:59,789
+quoi vous voyez que le système il a un
+
+645
+00:23:57,789 --> 00:24:01,559
+petit peu de mal donc ce qui pourrait
+
+646
+00:23:59,559 --> 00:24:04,390
+être intéressant c'est utiliser une
+
+647
+00:24:01,390 --> 00:24:06,480
+fonction qui va permettre de gérer ça de
+
+648
+00:24:04,480 --> 00:24:08,039
+manière un petit peu plus élégante
+
+649
+00:24:06,039 --> 00:24:10,799
+donc cette fonction va l'appeler le ils
+
+650
+00:24:08,799 --> 00:24:11,509
+ont appelé trail convert dans l'exemple
+
+651
+00:24:10,509 --> 00:24:13,859
+de la documentation donc on va l'appeler
+
+652
+00:24:11,859 --> 00:24:16,809
+comme ça aussi et on lui passera un
+
+653
+00:24:13,809 --> 00:24:21,329
+premier paramètre une température et la
+
+654
+00:24:16,329 --> 00:24:23,039
+fonction de conversion à ce niveau là je
+
+655
+00:24:21,039 --> 00:24:24,259
+peux lui dire du coup si jamais la
+
+656
+00:24:23,259 --> 00:24:26,789
+température donc n'est pas dans la bonne
+
+657
+00:24:24,789 --> 00:24:26,200
+unité et qui a besoin de faire une
+
+658
+00:24:26,200 --> 00:24:28,769
+conversion
+
+659
+00:24:26,769 --> 00:24:32,750
+je veux que tu fasses un trail convert
+
+660
+00:24:28,750 --> 00:24:34,109
+je te passe la température et je te
+
+661
+00:24:32,109 --> 00:24:38,509
+passe la fonction de conversion qui sera
+
+662
+00:24:34,509 --> 00:24:39,529
+du hutu celsius dans le cas du
+
+663
+00:24:38,529 --> 00:24:41,220
+fahrenheit
+
+664
+00:24:39,220 --> 00:24:45,920
+je fais ça sauf que la fonction de
+
+665
+00:24:41,920 --> 00:24:46,039
+conversion c'est ou farenheit cette
+
+666
+00:24:45,039 --> 00:24:48,779
+fonction n'a pas besoin du coup d'être
+
+667
+00:24:46,779 --> 00:24:50,130
+dans le composant donc on peut
+
+668
+00:24:48,130 --> 00:24:53,319
+s'imaginer la définir en dehors et je
+
+669
+00:24:50,319 --> 00:24:53,380
+vais la définir tout en haut
+
+670
+00:24:54,380 --> 00:24:58,309
+alors pourquoi c'est intéressant d'avoir
+
+671
+00:24:56,309 --> 00:25:00,259
+cette fonction là tout simplement pour
+
+672
+00:24:58,259 --> 00:25:02,359
+garder ses fonctions les plus générique
+
+673
+00:25:00,359 --> 00:25:04,279
+possible on veut vraiment des fonctions
+
+674
+00:25:02,279 --> 00:25:06,859
+qui vont faire la conversion en brut et
+
+675
+00:25:04,859 --> 00:25:09,420
+cette fonction là elle va permettre de
+
+676
+00:25:06,420 --> 00:25:10,029
+rajouter quelques petites conditions par
+
+677
+00:25:09,029 --> 00:25:12,619
+exemple on peut lui dire j'aimerais bien
+
+678
+00:25:10,619 --> 00:25:14,390
+par ses et m'assurer que la température
+
+679
+00:25:12,390 --> 00:25:18,549
+est un flotte donc on va lui dire
+
+680
+00:25:14,549 --> 00:25:21,359
+constat value égale température que
+
+681
+00:25:18,359 --> 00:25:21,259
+l'ombre parce flotte
+
+682
+00:25:21,259 --> 00:25:25,910
+maintenant c'est température peut ne pas
+
+683
+00:25:23,910 --> 00:25:30,319
+donner un nombre donc on va le dire
+
+684
+00:25:25,319 --> 00:25:33,930
+if number is not number donc si notre
+
+685
+00:25:30,930 --> 00:25:34,480
+value n'est pas un nombre dans ce cas là
+
+686
+00:25:33,480 --> 00:25:36,799
+on retourne une simple chaîne de
+
+687
+00:25:34,799 --> 00:25:37,809
+caractère parce que ce n'est pas la
+
+688
+00:25:36,809 --> 00:25:40,710
+peine d'essayer de faire qu'il
+
+689
+00:25:37,710 --> 00:25:42,140
+quelconque reconversion dans le cas
+
+690
+00:25:40,140 --> 00:25:45,750
+contraire on va récupérer la valeur
+
+691
+00:25:42,750 --> 00:25:48,990
+convertis donc on va mettre au foot et
+
+692
+00:25:45,990 --> 00:25:51,720
+on mettra convert
+
+693
+00:25:48,720 --> 00:25:54,329
+c'est notre fonction de conversion et on
+
+694
+00:25:51,329 --> 00:25:55,420
+lui envoie la valeur on obtient alors la
+
+695
+00:25:54,420 --> 00:25:58,650
+nouvelle valeur que l'on peut choisir
+
+696
+00:25:55,650 --> 00:26:02,829
+d'arrondir donc on fera un math point
+
+697
+00:25:58,829 --> 00:26:03,279
+ronde en multi paiera sa part semble
+
+698
+00:26:02,279 --> 00:26:07,809
+pour avoir une précision à deux chiffres
+
+699
+00:26:03,809 --> 00:26:08,500
+et on divisera sa part s'en est enfin vu
+
+700
+00:26:07,500 --> 00:26:11,819
+que l'on travaille avec des chants il
+
+701
+00:26:08,819 --> 00:26:15,039
+faut que ça se soit converti sous forme
+
+702
+00:26:11,039 --> 00:26:18,210
+de chaînes de caractères donc ça nous
+
+703
+00:26:15,210 --> 00:26:20,000
+permet simplement d'avoir voilà une
+
+704
+00:26:18,000 --> 00:26:22,220
+petite fonction qui va s'assurer en
+
+705
+00:26:20,220 --> 00:26:24,980
+fonction de d'entrée que l'on n'est pas
+
+706
+00:26:22,980 --> 00:26:26,930
+n'importe quoi en sortie donc si je
+
+707
+00:26:24,930 --> 00:26:28,670
+réessaie et que je rentre n'importe quoi
+
+708
+00:26:26,670 --> 00:26:30,710
+dans la partie température on voit que
+
+709
+00:26:28,710 --> 00:26:32,839
+dans la partie celsius il n'est pas
+
+710
+00:26:30,839 --> 00:26:34,700
+capable de trouver une valeur et du coup
+
+711
+00:26:32,700 --> 00:26:37,740
+il ne rend voirie et il a en a terminé
+
+712
+00:26:34,740 --> 00:26:38,109
+avec cet exemple là voilà un petit
+
+713
+00:26:37,109 --> 00:26:40,609
+exemple de système et d'éléments
+
+714
+00:26:38,609 --> 00:26:42,500
+dynamiques que l'on peut créer avec ryad
+
+715
+00:26:40,500 --> 00:26:43,750
+donc vous le voyez encore et ça permet
+
+716
+00:26:42,750 --> 00:26:46,799
+d'avoir une logique qui est un petit peu
+
+717
+00:26:43,799 --> 00:26:48,380
+plus simple à appréhender avec une
+
+718
+00:26:46,380 --> 00:26:50,720
+séparation en composant pour la gérer qui va rentrer les valeurs on peut séparer vraiment les choses dans différentes fonctions est en fait en changeant en état on assure que notre interface change pour l'utilisateur donc j'espère que cette partie travaux pratiques vous incluez.
+je vous donne rendez-vous dans le prochain chapitre
+Subtitles End: mo.dbxdb.com
+

@@ -1,0 +1,1257 @@
+1
+00:00:00,000 --> 00:00:00,000
+ Youtube subtitles download by mo.dbxdb.com 
+
+2
+00:00:00,000 --> 00:00:02,350
+à bienvenue dans ce nouveau chapitre où
+
+3
+00:00:01,350 --> 00:00:04,730
+vous propose de découvrir un autre outil
+
+4
+00:00:02,730 --> 00:00:05,080
+qui va nous permettre de travailler avec
+
+5
+00:00:04,080 --> 00:00:08,910
+react et cet outil c'est par cette
+
+6
+00:00:05,910 --> 00:00:09,039
+parcelle c'est un bonheur qui permet de
+
+7
+00:00:08,039 --> 00:00:11,840
+gérer différents types de fichiers et de
+
+8
+00:00:09,840 --> 00:00:13,910
+les compresser en un seul fichier en
+
+9
+00:00:11,910 --> 00:00:15,950
+sortie le gros avantage qu'il va avoir
+
+10
+00:00:13,950 --> 00:00:17,690
+c'est que c'est un outil qui demande
+
+11
+00:00:15,690 --> 00:00:18,520
+absolument aucune configuration et qui
+
+12
+00:00:17,520 --> 00:00:20,750
+en fonction de la structure de votre
+
+13
+00:00:18,750 --> 00:00:22,880
+projet va être capable de se débrouiller
+
+14
+00:00:20,880 --> 00:00:25,439
+donc c'est très bien surtout quand on
+
+15
+00:00:22,439 --> 00:00:27,439
+débute alors pour l'utiliser comme pour
+
+16
+00:00:25,439 --> 00:00:28,269
+l'outil create react ap
+
+17
+00:00:27,269 --> 00:00:30,710
+il va nous falloir un autre pièce et je
+
+18
+00:00:28,710 --> 00:00:31,090
+vais supposé ici que vous l'avez déjà
+
+19
+00:00:30,090 --> 00:00:32,289
+installé sur votre système
+
+20
+00:00:31,289 --> 00:00:33,700
+une fois que c'est fait pour le
+
+21
+00:00:32,700 --> 00:00:35,960
+découvrir je vous propose de créer un
+
+22
+00:00:33,960 --> 00:00:36,700
+nouveau dossier et à l'intérieur on va
+
+23
+00:00:35,700 --> 00:00:38,960
+créer un premier fichier que l'on
+
+24
+00:00:36,960 --> 00:00:40,550
+rappelait index point html
+
+25
+00:00:38,550 --> 00:00:42,379
+à l'intérieur de ce fichier je vais
+
+26
+00:00:40,379 --> 00:00:43,899
+mettre mon template html5 standard je
+
+27
+00:00:42,899 --> 00:00:46,710
+vais aller me de gagner un petit peu
+
+28
+00:00:43,710 --> 00:00:48,590
+plus de place comme ça et on va mettre à
+
+29
+00:00:46,590 --> 00:00:49,420
+l'intérieur de notre body une div qui
+
+30
+00:00:48,420 --> 00:00:52,760
+aura comme à eddy ap
+
+31
+00:00:49,760 --> 00:00:53,379
+à l'intérieur de cette html on peut
+
+32
+00:00:52,379 --> 00:00:55,789
+charger n'importe quel type de fichier
+
+33
+00:00:53,789 --> 00:00:56,440
+et même des fichiers qui ne seraient
+
+34
+00:00:55,440 --> 00:00:58,670
+normalement pas supporté par les
+
+35
+00:00:56,670 --> 00:01:00,350
+navigateurs comme par exemple du juillet
+
+36
+00:00:58,350 --> 00:01:02,960
+6 je vais aller créer un dossier que je
+
+37
+00:01:00,960 --> 00:01:05,820
+m'appelais src est dedans je vais créer
+
+38
+00:01:02,820 --> 00:01:07,849
+mon index point j ai six jeux mais j ai
+
+39
+00:01:05,849 --> 00:01:09,560
+6 pour que mon éditeur comprennent que
+
+40
+00:01:07,560 --> 00:01:10,209
+je travaillais créé acte mais aussi que
+
+41
+00:01:09,209 --> 00:01:12,590
+le bnd leur puissent s'y repérer
+
+42
+00:01:10,590 --> 00:01:14,090
+beaucoup mieux à l'intérieur je
+
+43
+00:01:12,090 --> 00:01:15,040
+souhaiterais utiliser react d'hommes et
+
+44
+00:01:14,040 --> 00:01:16,959
+utiliser la méthode renders pour rendre
+
+45
+00:01:15,959 --> 00:01:18,500
+mon élément
+
+46
+00:01:16,500 --> 00:01:20,840
+donc l'avantagé avec parcelles sais que
+
+47
+00:01:18,840 --> 00:01:22,580
+je vais pouvoir installer react et react
+
+48
+00:01:20,580 --> 00:01:24,340
+d'hommes via le gestionnaire de paquets
+
+49
+00:01:22,340 --> 00:01:26,659
+donc j'utilise ici yards mais ça
+
+50
+00:01:24,659 --> 00:01:28,009
+fonctionnerait de la même manière si
+
+51
+00:01:26,009 --> 00:01:31,890
+vous utilisez une bm je fais un yarn had
+
+52
+00:01:28,890 --> 00:01:33,590
+briatte et react d'hommes mais juste
+
+53
+00:01:31,590 --> 00:01:35,540
+avant je vais initialiser le fichier
+
+54
+00:01:33,540 --> 00:01:38,909
+package positionne en faisant yarn inite
+
+55
+00:01:35,909 --> 00:01:41,790
+tiers y vous pouvez faire un nvr min tit
+
+56
+00:01:38,790 --> 00:01:44,688
+re y vous avez obtenir le même résultat
+
+57
+00:01:41,688 --> 00:01:46,790
+ensuite je fais un garde had react et
+
+58
+00:01:44,790 --> 00:01:49,909
+réactive et dub
+
+59
+00:01:46,909 --> 00:01:51,078
+maintenant que s'est installée je peux
+
+60
+00:01:49,078 --> 00:01:52,060
+l'utiliser dans mon fichier gsx je peux
+
+61
+00:01:51,060 --> 00:01:55,979
+faire un une porte et j'importe la
+
+62
+00:01:52,979 --> 00:01:55,409
+fonction renders depuis react tirer
+
+63
+00:01:55,409 --> 00:01:58,819
+d'hommes
+
+64
+00:01:55,819 --> 00:02:00,078
+une fois que j'ai cette fonction je lui
+
+65
+00:01:58,078 --> 00:02:02,030
+demande de faire un renders et je vais
+
+66
+00:02:00,030 --> 00:02:04,369
+pouvoir écrire du g16 donc on va
+
+67
+00:02:02,369 --> 00:02:07,349
+simplement mettre une div qui dira hello
+
+68
+00:02:04,349 --> 00:02:10,140
+world et ensuite je lui demande de
+
+69
+00:02:07,140 --> 00:02:13,119
+rendre ça sur les membres qui allie dit
+
+70
+00:02:10,119 --> 00:02:15,900
+ap maintenant que ce fichier est créé au
+
+71
+00:02:13,900 --> 00:02:17,699
+niveau de mon index pour le html je vais
+
+72
+00:02:15,699 --> 00:02:20,919
+pouvoir charger mon javascript je fais
+
+73
+00:02:17,919 --> 00:02:22,348
+inscrits src égal et je lui demande
+
+74
+00:02:20,348 --> 00:02:24,150
+d'aller chercher le fichier qui se situe
+
+75
+00:02:22,150 --> 00:02:27,639
+dans src et qui s'appelle index point
+
+76
+00:02:24,639 --> 00:02:28,220
+gsx donc ça comme on l'a dit ce n'est
+
+77
+00:02:27,220 --> 00:02:30,598
+pas quelque chose qui sera compris par
+
+78
+00:02:28,598 --> 00:02:32,098
+les navigateurs mais grâce à part celle
+
+79
+00:02:30,098 --> 00:02:33,378
+ça va fonctionner et je vais rajouter
+
+80
+00:02:32,378 --> 00:02:37,848
+des fleurs pour que ce code soit
+
+81
+00:02:33,848 --> 00:02:39,139
+exécutée après le chargement de mon html
+
+82
+00:02:37,139 --> 00:02:40,519
+donc si on souhaite utiliser parcelle il
+
+83
+00:02:39,519 --> 00:02:43,658
+va falloir l'installer au niveau de
+
+84
+00:02:40,658 --> 00:02:45,989
+notre projet confère yarn had -d pour
+
+85
+00:02:43,989 --> 00:02:49,160
+dire que c'est une dépendance de
+
+86
+00:02:45,160 --> 00:02:50,389
+développement par celles tirées bender
+
+87
+00:02:49,389 --> 00:02:52,919
+automatiquement il va installer bendler
+
+88
+00:02:50,919 --> 00:02:56,299
+ainsi que les différentes sous est
+
+89
+00:02:52,299 --> 00:03:00,949
+pendante mais il y en a pas mal donc
+
+90
+00:02:56,949 --> 00:03:03,609
+laissé sa s'écouler et une fois que
+
+91
+00:03:00,609 --> 00:03:05,090
+c'est fait on peut faire un ou 2 mpx
+
+92
+00:03:03,090 --> 00:03:07,680
+parcelles et on va lui donner le fichier
+
+93
+00:03:05,680 --> 00:03:10,419
+d'entrée donc notre fichier l'entrée ses
+
+94
+00:03:07,419 --> 00:03:12,628
+index point html si vous l'avez dans un
+
+95
+00:03:10,628 --> 00:03:14,310
+autre dossier mais faute à faudra taper
+
+96
+00:03:12,310 --> 00:03:16,620
+à notre dossier automatiquement il va
+
+97
+00:03:14,620 --> 00:03:18,239
+démarrer un serveur de développement sur
+
+98
+00:03:16,239 --> 00:03:21,519
+le port 1234 donc si sûr mon navigateur
+
+99
+00:03:18,519 --> 00:03:23,699
+je fais local hausse de poing 1234 je
+
+100
+00:03:21,699 --> 00:03:24,109
+vais bien voir ma page qui pour
+
+101
+00:03:23,109 --> 00:03:26,239
+l'instant est une page blanche
+
+102
+00:03:24,239 --> 00:03:27,949
+je vais sortir mon inspecteur est allé
+
+103
+00:03:26,949 --> 00:03:29,940
+dans la partie conseil
+
+104
+00:03:27,940 --> 00:03:32,949
+donc là il me sort une erreur en me
+
+105
+00:03:29,949 --> 00:03:34,199
+disant que réactive notre direct donc
+
+106
+00:03:32,199 --> 00:03:36,359
+attention lorsque vous écrivez du g6 ce
+
+107
+00:03:34,359 --> 00:03:39,039
+qu au delà sera remplacé par des appels
+
+108
+00:03:36,039 --> 00:03:40,039
+à react pointu et telenet pour que ça
+
+109
+00:03:39,039 --> 00:03:42,628
+fonctionne convenablement il faudra
+
+110
+00:03:40,628 --> 00:03:46,930
+importer au niveau de ce fichier réate
+
+111
+00:03:42,930 --> 00:03:46,030
+donc je fais ça et maintenant dès que je
+
+112
+00:03:46,030 --> 00:03:48,568
+sauvegarde
+
+113
+00:03:46,568 --> 00:03:50,310
+il va automatiquement actualiser la page
+
+114
+00:03:48,310 --> 00:03:53,889
+et ré un fichier les choses et on voit
+
+115
+00:03:50,889 --> 00:03:55,769
+bien qu'on a notre hello world ici ce
+
+116
+00:03:53,769 --> 00:03:56,359
+qui est intéressant avec parcelles sait
+
+117
+00:03:55,359 --> 00:03:58,590
+qu'il est capable de travailler aussi
+
+118
+00:03:56,590 --> 00:04:00,720
+avec d'autres types de fichiers donc je
+
+119
+00:03:58,720 --> 00:04:02,818
+peux ici par exemple lui dire j'aimerais
+
+120
+00:04:00,818 --> 00:04:05,348
+bien importer un fichier qui s'appelle
+
+121
+00:04:02,348 --> 00:04:08,440
+un index princesse ce fichier je vais
+
+122
+00:04:05,440 --> 00:04:10,709
+aller le créer et dedans je vais
+
+123
+00:04:08,709 --> 00:04:11,359
+simplement dire que pour mon body je
+
+124
+00:04:10,359 --> 00:04:14,800
+voudrais un pas grande
+
+125
+00:04:11,800 --> 00:04:16,380
+qui serait vert est automatiquement
+
+126
+00:04:14,380 --> 00:04:18,298
+lorsque je vais sauvegarder il va
+
+127
+00:04:16,298 --> 00:04:20,759
+comprendre ça et recharger ma page alors
+
+128
+00:04:18,759 --> 00:04:22,290
+là ça ne fonctionne pas parce qu'il ya
+
+129
+00:04:20,290 --> 00:04:24,329
+eu une erreur qui a été bloquante donc
+
+130
+00:04:22,329 --> 00:04:26,339
+je vais recevoir des ce fichier là pour
+
+131
+00:04:24,339 --> 00:04:29,589
+qu'il rempile et maintenant on voit bien
+
+132
+00:04:26,589 --> 00:04:30,050
+que d'autres font hiver le gros avantage
+
+133
+00:04:29,050 --> 00:04:32,730
+de ce système là c'est qu'il est capable
+
+134
+00:04:30,730 --> 00:04:33,529
+de recharger votre sagesse sans
+
+135
+00:04:32,529 --> 00:04:35,310
+recharger la page
+
+136
+00:04:33,310 --> 00:04:38,769
+si par exemple je venais à modifier ce
+
+137
+00:04:35,769 --> 00:04:39,440
+creux de là et que je change le css pour
+
+138
+00:04:38,440 --> 00:04:41,279
+mettre du rouge
+
+139
+00:04:39,279 --> 00:04:43,649
+on va voir qu'il change le css sans
+
+140
+00:04:41,649 --> 00:04:44,089
+réactualisé où c'est très intéressant
+
+141
+00:04:43,089 --> 00:04:46,980
+pour des composants qui sont un petit
+
+142
+00:04:44,980 --> 00:04:48,540
+peu compliqué et pour lesquels vous avez
+
+143
+00:04:46,540 --> 00:04:51,579
+envie de changer le style sans forcément
+
+144
+00:04:48,579 --> 00:04:53,910
+devoir refaire toutes les opérations et
+
+145
+00:04:51,910 --> 00:04:55,259
+là on a la configuration par défaut
+
+146
+00:04:53,259 --> 00:04:56,149
+lorsque l'on va développer maintenant
+
+147
+00:04:55,149 --> 00:04:57,410
+qu'est ce qui se passe lorsque je veux
+
+148
+00:04:56,410 --> 00:04:59,850
+produire mon fichier c'est à dire que
+
+149
+00:04:57,850 --> 00:05:02,500
+j'aimerais bien publier mon application
+
+150
+00:04:59,500 --> 00:05:04,170
+react et ma page que j'ai créée donc on
+
+151
+00:05:02,170 --> 00:05:07,509
+va couper ce système là en faisant un
+
+152
+00:05:04,509 --> 00:05:09,089
+contrôle c et on va supprimer le dossier
+
+153
+00:05:07,089 --> 00:05:12,910
+disent tu sais le dossier avec les
+
+154
+00:05:09,910 --> 00:05:13,040
+fichiers de développement maintenant je
+
+155
+00:05:12,040 --> 00:05:15,660
+peux lancer la commande parcelles mais
+
+156
+00:05:13,660 --> 00:05:18,790
+en rajoutant bild avant le fichier index
+
+157
+00:05:15,790 --> 00:05:20,579
+point html dans ce cadre là il ne va pas
+
+158
+00:05:18,579 --> 00:05:21,079
+lancer un serveur de développement mais
+
+159
+00:05:20,079 --> 00:05:23,370
+il va tout simplement construire vos
+
+160
+00:05:21,370 --> 00:05:25,769
+fichiers dans le dossier dit je vais
+
+161
+00:05:23,769 --> 00:05:27,329
+avoir mon fichier javascript qui va être
+
+162
+00:05:25,329 --> 00:05:28,279
+tout mini fier alors attention quand
+
+163
+00:05:27,279 --> 00:05:29,569
+vous l'ouvrez avec votre éditeur ça peut
+
+164
+00:05:28,569 --> 00:05:31,350
+être un petit peu lourd
+
+165
+00:05:29,350 --> 00:05:33,540
+vous allez avoir votre fichier css qui
+
+166
+00:05:31,540 --> 00:05:35,880
+va être aussi mini fils et vous allez
+
+167
+00:05:33,880 --> 00:05:37,680
+avoir votre fichier index pour html qui
+
+168
+00:05:35,680 --> 00:05:40,720
+va être muni fier avec des références
+
+169
+00:05:37,720 --> 00:05:41,089
+convenable vers le fichier javascript
+
+170
+00:05:40,089 --> 00:05:45,980
+avec ce petit h qui permet de rafraîchir
+
+171
+00:05:41,980 --> 00:05:47,130
+le cash et le fichier css avec le h
+
+172
+00:05:45,130 --> 00:05:49,440
+aussi donc c'est très intéressant parce
+
+173
+00:05:47,440 --> 00:05:51,089
+que vous voyez parcelles vous permet de
+
+174
+00:05:49,089 --> 00:05:52,100
+travailler avec le minimum d'effort et
+
+175
+00:05:51,100 --> 00:05:54,990
+le minimum de configuration et ça c'est
+
+176
+00:05:52,990 --> 00:05:56,850
+plutôt intéressant
+
+177
+00:05:54,850 --> 00:05:57,019
+maintenant je vais vous montrer une
+
+178
+00:05:56,019 --> 00:05:59,759
+petite fonctionnalité qui va arriver
+
+179
+00:05:57,759 --> 00:06:01,769
+avec la version 2 donc à l'heure à
+
+180
+00:05:59,769 --> 00:06:03,120
+laquelle j'enregistre cette vidéo
+
+181
+00:06:01,120 --> 00:06:04,220
+la version qui s'installe quand vous
+
+182
+00:06:03,220 --> 00:06:06,870
+faites une installation de parcelles ces
+
+183
+00:06:04,870 --> 00:06:07,430
+agressions 1.12 mais il faut savoir
+
+184
+00:06:06,430 --> 00:06:08,690
+qu'il ya une version 2 qui est en
+
+185
+00:06:07,690 --> 00:06:10,980
+préparation qui est actuellement un
+
+186
+00:06:08,980 --> 00:06:12,329
+alpha et qui offre des fonctionnalités
+
+187
+00:06:10,329 --> 00:06:14,249
+intéressantes
+
+188
+00:06:12,249 --> 00:06:16,108
+alors je vais copier du code que j'ai
+
+189
+00:06:14,108 --> 00:06:17,598
+écrit séparément qui permet de créer de
+
+190
+00:06:16,598 --> 00:06:19,069
+liste
+
+191
+00:06:17,069 --> 00:06:20,509
+donc je le copie tout simplement parce
+
+192
+00:06:19,509 --> 00:06:22,918
+que dans ce cas de là j'ai utilisé des
+
+193
+00:06:20,918 --> 00:06:24,119
+looks et c'est ce qu'on verra dans le
+
+194
+00:06:22,119 --> 00:06:26,819
+chapitre suivre donc ne vous en faites
+
+195
+00:06:24,819 --> 00:06:29,348
+pas c'est juste pour vous démontrer
+
+196
+00:06:26,348 --> 00:06:31,168
+quelque chose là au niveau de ceux index
+
+197
+00:06:29,168 --> 00:06:32,119
+point g 1,6 après avoir mis mon vélo
+
+198
+00:06:31,119 --> 00:06:34,978
+world je vais charger le composant que
+
+199
+00:06:32,978 --> 00:06:36,779
+j'ai créée dans le fichier liste donc je
+
+200
+00:06:34,779 --> 00:06:41,728
+vais faire un une porte je vais emporter
+
+201
+00:06:36,728 --> 00:06:43,769
+liste depuis mon fichier liste point j
+
+202
+00:06:41,769 --> 00:06:45,899
+ai 6 a besoin de mettre d'extension et
+
+203
+00:06:43,899 --> 00:06:48,519
+juste après mon et le world je vais
+
+204
+00:06:45,519 --> 00:06:50,369
+écrire ma liste ici donc c'est un simple
+
+205
+00:06:48,369 --> 00:06:52,889
+composant qui permet d'afficher une
+
+206
+00:06:50,889 --> 00:06:54,509
+liste avec un bouton permettant de
+
+207
+00:06:52,509 --> 00:06:56,728
+rajouter un élément pour tester ce
+
+208
+00:06:54,728 --> 00:07:00,769
+composant je vais relancer mon parcelles
+
+209
+00:06:56,769 --> 00:07:02,428
+en mode de développement où je
+
+210
+00:07:00,428 --> 00:07:03,348
+réactualise la page et j'ai bien mon
+
+211
+00:07:02,348 --> 00:07:05,579
+système qui permet d'ajouter des
+
+212
+00:07:03,579 --> 00:07:07,860
+éléments le petit problème que l'on a de
+
+213
+00:07:05,860 --> 00:07:08,119
+manière générale quand on va travailler
+
+214
+00:07:07,119 --> 00:07:10,860
+avec ryad c'est que si jamais j'ai envie
+
+215
+00:07:08,860 --> 00:07:11,629
+de modifier le template par exemple j'ai
+
+216
+00:07:10,629 --> 00:07:13,918
+envie de changer ça et rajouter 1
+
+217
+00:07:11,918 --> 00:07:15,538
+lorsque oblige lorsque je vais
+
+218
+00:07:13,538 --> 00:07:17,369
+sauvegarder il va réactualiser la page
+
+219
+00:07:15,369 --> 00:07:19,110
+et vu qu'il réactualise la page j'ai
+
+220
+00:07:17,110 --> 00:07:20,119
+perdu l'état de mon composants et il
+
+221
+00:07:19,119 --> 00:07:23,259
+faut que je refasse les différentes
+
+222
+00:07:20,259 --> 00:07:24,529
+étapes pour arriver à la même au même
+
+223
+00:07:23,529 --> 00:07:26,819
+niveau ce qui peut être un petit peu
+
+224
+00:07:24,819 --> 00:07:28,439
+compliqué surtout si vous avez des
+
+225
+00:07:26,439 --> 00:07:30,178
+composants avec beaucoup beaucoup de
+
+226
+00:07:28,178 --> 00:07:31,369
+logique donc ce que va permettre de
+
+227
+00:07:30,369 --> 00:07:33,928
+faire parce l2 c'est de mettre en place
+
+228
+00:07:31,928 --> 00:07:35,699
+ce que l'on appelle le faste refresh
+
+229
+00:07:33,699 --> 00:07:37,619
+donc le fassent très fraîche c'est un
+
+230
+00:07:35,619 --> 00:07:39,088
+système qui permet de rafraîchir un
+
+231
+00:07:37,088 --> 00:07:40,298
+composant sans forcément perdre son état
+
+232
+00:07:39,298 --> 00:07:42,959
+a pour vous faire une petite
+
+233
+00:07:40,959 --> 00:07:44,788
+démonstration je vais supprimer de ce
+
+234
+00:07:42,788 --> 00:07:48,769
+projet parcelles en faisant un yard
+
+235
+00:07:44,769 --> 00:07:50,009
+remove par celles tirées ban l'heure si
+
+236
+00:07:48,009 --> 00:07:50,288
+je vais utiliser la version 2.0 de
+
+237
+00:07:50,288 --> 00:07:52,798
+parcelles
+
+238
+00:07:50,798 --> 00:07:55,059
+il faut que je fasse un milliard mme
+
+239
+00:07:52,059 --> 00:08:00,059
+haddad tirer des parcelles
+
+240
+00:07:55,059 --> 00:08:01,218
+@ next comme ceci pendant qu'il est en
+
+241
+00:08:00,218 --> 00:08:03,629
+train de s'installer je vais supprimer
+
+242
+00:08:01,629 --> 00:08:07,910
+le dossier dist
+
+243
+00:08:03,910 --> 00:08:09,660
+et supprimer le dossier de cache donc
+
+244
+00:08:07,660 --> 00:08:10,490
+cette version 2 de parcelles intègre de
+
+245
+00:08:09,490 --> 00:08:12,990
+nouvelles fonctionnalités mais comme je
+
+246
+00:08:10,990 --> 00:08:13,130
+voulais dilettante alpha donc qu'elle
+
+247
+00:08:12,130 --> 00:08:14,269
+contient encore quelques bugs
+
+248
+00:08:13,269 --> 00:08:16,529
+donc vous pouvez essayer de l'utiliser
+
+249
+00:08:14,529 --> 00:08:17,480
+mais si jamais vous rencontrer le
+
+250
+00:08:16,480 --> 00:08:18,860
+moindre bug mais il faudra revenir vers
+
+251
+00:08:17,860 --> 00:08:20,490
+la version 1
+
+252
+00:08:18,490 --> 00:08:22,589
+le gros avantage c'est que cette version
+
+253
+00:08:20,589 --> 00:08:25,750
+2 supporte cette fameuse piqûre qui est
+
+254
+00:08:22,750 --> 00:08:27,060
+le faste refresh alors je vais relancer
+
+255
+00:08:25,060 --> 00:08:28,430
+parcelles la ligne de commande ne
+
+256
+00:08:27,430 --> 00:08:30,750
+fonctionne toujours de la même manière
+
+257
+00:08:28,750 --> 00:08:32,790
+la présentation d'un terminal est
+
+258
+00:08:30,790 --> 00:08:33,918
+légèrement différente mais c'est les
+
+259
+00:08:32,918 --> 00:08:35,909
+mêmes fonctionnalités
+
+260
+00:08:33,909 --> 00:08:36,380
+on voit que ça génère le même dossier
+
+261
+00:08:35,380 --> 00:08:39,788
+distinct et ça fonctionne de la même
+
+262
+00:08:36,788 --> 00:08:41,580
+manière si je réactualise la page ça
+
+263
+00:08:39,580 --> 00:08:43,740
+fonctionne bien et si je change mon css
+
+264
+00:08:41,740 --> 00:08:45,200
+ça se change bien en live
+
+265
+00:08:43,200 --> 00:08:48,759
+la particularité c'est que si j'ajoute
+
+266
+00:08:45,759 --> 00:08:49,039
+des éléments ici et que je me dis tiens
+
+267
+00:08:48,039 --> 00:08:51,600
+j'aimerais bien changer ce composant là
+
+268
+00:08:49,600 --> 00:08:52,100
+pour ajouter un peu à notre bouton
+
+269
+00:08:51,100 --> 00:08:54,990
+lorsque je les sauvegardes et vous allez
+
+270
+00:08:52,990 --> 00:08:57,840
+voir que le composant à se rafraîchir
+
+271
+00:08:54,840 --> 00:08:59,940
+sans que l'état ait été changée et ça
+
+272
+00:08:57,940 --> 00:09:01,230
+c'est très très intéressant pour
+
+273
+00:08:59,230 --> 00:09:02,059
+débugger les choses parce que vous
+
+274
+00:09:01,059 --> 00:09:04,200
+pouvez changer la structure de votre
+
+275
+00:09:02,200 --> 00:09:07,090
+composants par exemple on pourrait
+
+276
+00:09:04,090 --> 00:09:10,840
+utiliser des div plutôt que des us et on
+
+277
+00:09:07,840 --> 00:09:12,899
+peut voir en live les changements sans
+
+278
+00:09:10,899 --> 00:09:14,610
+forcément avoir besoin de refaire les
+
+279
+00:09:12,610 --> 00:09:15,019
+différentes opérations que l'on a fait
+
+280
+00:09:14,019 --> 00:09:18,880
+et ça c'est très très intéressant pour
+
+281
+00:09:15,880 --> 00:09:20,340
+débugger par contre ça ne fonctionne
+
+282
+00:09:18,340 --> 00:09:21,139
+qu'avec la pays d où qu que l'on verra
+
+283
+00:09:20,139 --> 00:09:23,509
+dans les chapitres suivants
+
+284
+00:09:21,509 --> 00:09:25,799
+mais voilà si jamais vous voulez avoir
+
+285
+00:09:23,799 --> 00:09:26,480
+cette expérience de développement sachez
+
+286
+00:09:25,480 --> 00:09:28,980
+que ça peut fonctionner mais qu'il vous
+
+287
+00:09:26,980 --> 00:09:30,899
+faudra utiliser parcelles deux îles et
+
+288
+00:09:28,899 --> 00:09:33,669
+où qu au niveau de votre fonctionnement
+
+289
+00:09:30,669 --> 00:09:34,159
+avec rien en dehors de ça et pour la
+
+290
+00:09:33,159 --> 00:09:36,570
+suite de cette formation
+
+291
+00:09:34,570 --> 00:09:37,100
+ça n'a pas vraiment d'importance vous
+
+292
+00:09:36,100 --> 00:09:39,659
+pouvez utiliser parcelle n ya aucun
+
+293
+00:09:37,659 --> 00:09:42,880
+problème de trouver son nom rechargera
+
+294
+00:09:39,880 --> 00:09:43,610
+la page à chaque fois mais voilà comment
+
+295
+00:09:42,610 --> 00:09:45,990
+vous pouvez utiliser parcelles pour
+
+296
+00:09:43,990 --> 00:09:46,039
+travailler avec réel
+
+297
+00:09:45,039 --> 00:09:48,840
+la seule chose qui nous vaut faire c'est
+
+298
+00:09:46,840 --> 00:09:50,549
+créer un fichier un exploit html qui
+
+299
+00:09:48,549 --> 00:09:51,559
+sert de fichiers d'entrée et ensuite à
+
+300
+00:09:50,559 --> 00:09:53,789
+partir de là on peut charger n'importe
+
+301
+00:09:51,789 --> 00:09:55,679
+quel type de fichier automatiquement ces
+
+302
+00:09:53,679 --> 00:09:57,750
+parcelles qui va se charger de savoir ce
+
+303
+00:09:55,750 --> 00:09:58,639
+qu'il doit utiliser pour convertir vos
+
+304
+00:09:57,639 --> 00:09:59,840
+fichiers et les faire fonctionner au
+
+305
+00:09:58,840 --> 00:10:02,940
+niveau de votre navigateur
+
+306
+00:09:59,940 --> 00:10:04,380
+donc c'est une alternative intéressante
+
+307
+00:10:02,380 --> 00:10:06,990
+selon moi a cru être et act up et qui a
+
+308
+00:10:04,990 --> 00:10:08,669
+surtout l'avantagé dans la version 2 de
+
+309
+00:10:06,669 --> 00:10:09,649
+supporter les fonctionnalités de phase
+
+310
+00:10:08,649 --> 00:10:12,909
+très fraîche
+
+311
+00:10:09,909 --> 00:10:13,200
+j'espère que cette vidéo vous a plu et
+
+312
+00:10:12,200 --> 00:10:14,190
+je vous donne rendez-vous dans le
+
+313
+00:10:13,190 --> 00:10:18,570
+prochain chapitre on va justement
+
+314
+00:10:14,570 --> 00:10:18,000
+attaqué ce système de zhouqu
+Subtitles End: mo.dbxdb.com
+

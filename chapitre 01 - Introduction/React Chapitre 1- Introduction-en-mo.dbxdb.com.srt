@@ -1,0 +1,817 @@
+1
+00:00:00,000 --> 00:00:00,000
+ Youtube subtitles download by mo.dbxdb.com 
+
+2
+00:00:00,000 --> 00:00:03,290
+ça lui bienvenue dans cette nouvelle
+
+3
+00:00:01,290 --> 00:00:05,480
+formation consacrée à l'apprentissage de
+
+4
+00:00:03,480 --> 00:00:06,100
+riz actes alors react qu'est ce que
+
+5
+00:00:05,100 --> 00:00:08,720
+c'est si on en suit la définition du
+
+6
+00:00:06,720 --> 00:00:09,849
+site c'est une librairie javascript qui
+
+7
+00:00:08,849 --> 00:00:12,960
+va vous permettre de créer des
+
+8
+00:00:09,960 --> 00:00:13,300
+interfaces utilisateurs alors cette
+
+9
+00:00:12,300 --> 00:00:15,679
+définition je pense qu'elle n'aide pas
+
+10
+00:00:13,679 --> 00:00:17,509
+forcément à comprendre ce qu'est et réac
+
+11
+00:00:15,509 --> 00:00:19,430
+et la meilleure manière de comprendre
+
+12
+00:00:17,430 --> 00:00:21,529
+pourquoi on va utiliser cette librairie
+
+13
+00:00:19,529 --> 00:00:22,150
+c'est plutôt d'essayer de comprendre la
+
+14
+00:00:21,150 --> 00:00:24,529
+problématique que l'on rencontre à
+
+15
+00:00:22,529 --> 00:00:26,600
+l'heure actuelle alors on va prendre un
+
+16
+00:00:24,600 --> 00:00:27,160
+petit exemple concret qui va permettre
+
+17
+00:00:26,160 --> 00:00:29,330
+d'illustrer la problématique
+
+18
+00:00:27,330 --> 00:00:31,039
+imaginons on a envie de créer un petit
+
+19
+00:00:29,039 --> 00:00:31,079
+système de tout aux listes la principale
+
+20
+00:00:31,079 --> 00:00:33,980
+problématique que l'on va rencontrer
+
+21
+00:00:31,980 --> 00:00:34,420
+sait qu'on va devoir essayer de
+
+22
+00:00:33,420 --> 00:00:36,920
+synchroniser l'état de notre application
+
+23
+00:00:34,920 --> 00:00:39,660
+c'est à dire la liste des to do list
+
+24
+00:00:36,660 --> 00:00:41,329
+avec l'interface utilisateur ici le
+
+25
+00:00:39,329 --> 00:00:43,399
+dogme donc par exemple quand je rajoute
+
+26
+00:00:41,399 --> 00:00:44,230
+un nouvel élément à mathod dolist il va
+
+27
+00:00:43,230 --> 00:00:47,730
+falloir que je crée un nouveau au lit
+
+28
+00:00:44,730 --> 00:00:49,210
+avec à l'intérieur le texte de notre
+
+29
+00:00:47,210 --> 00:00:51,860
+tâche à faire ensuite on va créer un
+
+30
+00:00:49,860 --> 00:00:53,449
+bouton qui permettra de supprimer cette
+
+31
+00:00:51,449 --> 00:00:55,670
+tâche est de la même manière quand je
+
+32
+00:00:53,670 --> 00:00:57,289
+supprimerai la tâche il faudra supprimer
+
+33
+00:00:55,289 --> 00:00:59,719
+le héli donc très rapidement au fur à
+
+34
+00:00:57,719 --> 00:01:00,190
+mesure que votre application montant
+
+35
+00:00:59,190 --> 00:01:01,750
+complexité mais vous allez vous
+
+36
+00:01:00,750 --> 00:01:03,890
+retrouver avec des taux n'est une zone
+
+37
+00:01:01,890 --> 00:01:04,359
+de manipulation du dom et ça va être
+
+38
+00:01:03,359 --> 00:01:06,500
+très difficile à maintenir
+
+39
+00:01:04,500 --> 00:01:08,450
+au risque parfois même de se casser la
+
+40
+00:01:06,450 --> 00:01:09,700
+gueule donc c'est là que react est
+
+41
+00:01:08,700 --> 00:01:11,780
+intéressant parce qu'il va vous
+
+42
+00:01:09,780 --> 00:01:14,510
+permettre de mieux organiser votre
+
+43
+00:01:11,510 --> 00:01:16,430
+interface utilisateur en séparant l'état
+
+44
+00:01:14,430 --> 00:01:19,680
+et le fonctionnement de votre vue
+
+45
+00:01:16,680 --> 00:01:21,319
+l'interface ou si on prend un exemple
+
+46
+00:01:19,319 --> 00:01:22,479
+ici de composants real tu rassurez vous
+
+47
+00:01:21,479 --> 00:01:24,890
+on va en parler un petit peu plus en
+
+48
+00:01:22,890 --> 00:01:25,270
+profondeur dans cette formation mais
+
+49
+00:01:24,270 --> 00:01:28,409
+c'est pour vous donner un ordre d'idée
+
+50
+00:01:25,409 --> 00:01:30,049
+on a ici un état qui permet de
+
+51
+00:01:28,049 --> 00:01:32,360
+représenter l'état de notre interface
+
+52
+00:01:30,360 --> 00:01:34,369
+ici on met simplement la liste des to do
+
+53
+00:01:32,369 --> 00:01:35,078
+ensuite on va avoir différentes
+
+54
+00:01:34,078 --> 00:01:37,849
+fonctions par exemple une fonction a dit
+
+55
+00:01:35,849 --> 00:01:39,380
+m qui va permettre de rajouter un
+
+56
+00:01:37,380 --> 00:01:41,900
+élément dans notre état remy vittel qui
+
+57
+00:01:39,900 --> 00:01:43,640
+va parler de supprimer edith items qui
+
+58
+00:01:41,640 --> 00:01:45,259
+va permet de modifier ainsi de suite
+
+59
+00:01:43,259 --> 00:01:47,239
+ainsi de suite enfin on aura une
+
+60
+00:01:45,239 --> 00:01:49,130
+fonction renders qui automatiquement
+
+61
+00:01:47,130 --> 00:01:51,290
+rendre à la nouvelle version de notre
+
+62
+00:01:49,290 --> 00:01:53,420
+interface donc à chaque fois que l'état
+
+63
+00:01:51,420 --> 00:01:55,759
+va changer automatiquement l'interface
+
+64
+00:01:53,759 --> 00:01:57,880
+que va rendre react va être différente
+
+65
+00:01:55,880 --> 00:01:59,959
+donc le gros avantage c'est que ça
+
+66
+00:01:57,959 --> 00:02:01,430
+permet de représenter notre vue comme
+
+67
+00:01:59,430 --> 00:02:03,200
+une fonction de l'état donc on n'est
+
+68
+00:02:01,200 --> 00:02:05,030
+plus obligé de s'embêter à maintenir une
+
+69
+00:02:03,030 --> 00:02:07,549
+synchronisation entre l'état et le dom
+
+70
+00:02:05,549 --> 00:02:09,409
+série act qui va s'en occuper pour nous
+
+71
+00:02:07,409 --> 00:02:10,130
+et c'est ça qui est intéressant
+
+72
+00:02:09,130 --> 00:02:12,900
+en maintenant on peut se demander
+
+73
+00:02:10,900 --> 00:02:14,669
+finalement pourquoi utiliser react
+
+74
+00:02:12,669 --> 00:02:16,050
+plutôt que d'autres librairies j'ai
+
+75
+00:02:14,050 --> 00:02:18,060
+entendu parler de vue js d'ailettes
+
+76
+00:02:16,060 --> 00:02:20,460
+angulaire amber pourquoi react va être
+
+77
+00:02:18,460 --> 00:02:22,770
+intéressant alors déjà il faut savoir
+
+78
+00:02:20,770 --> 00:02:24,509
+que react n'est pas nécessairement le
+
+79
+00:02:22,509 --> 00:02:25,280
+meilleur des freebox est un framework y
+
+80
+00:02:24,280 --> 00:02:26,479
+est différent son approche est
+
+81
+00:02:25,479 --> 00:02:28,770
+différente et c'est ça qui le rend
+
+82
+00:02:26,770 --> 00:02:30,300
+intéressant ça ne veut pas forcément
+
+83
+00:02:28,300 --> 00:02:32,250
+dire qu'il est meilleur que fuji est
+
+84
+00:02:30,250 --> 00:02:32,050
+meilleur que ce mail ou n'importe quel
+
+85
+00:02:32,050 --> 00:02:35,770
+autre framework
+
+86
+00:02:32,770 --> 00:02:36,139
+il est juste différent j'insiste sur ce
+
+87
+00:02:35,139 --> 00:02:38,370
+point parce que beaucoup de gens sont la
+
+88
+00:02:36,370 --> 00:02:40,229
+recherche du meilleur framework sachez
+
+89
+00:02:38,229 --> 00:02:41,360
+que ça n'existe pas donc maintenant
+
+90
+00:02:40,360 --> 00:02:42,620
+quelques quelles sont les particularités
+
+91
+00:02:41,620 --> 00:02:44,639
+de rillettes
+
+92
+00:02:42,639 --> 00:02:46,440
+la première c'est que red hat est simple
+
+93
+00:02:44,440 --> 00:02:48,330
+en surface ça veut dire que au niveau
+
+94
+00:02:46,330 --> 00:02:50,520
+des fonctions qui vont vous être offerts
+
+95
+00:02:48,520 --> 00:02:52,530
+il y en a assez peu à connaître si on
+
+96
+00:02:50,530 --> 00:02:53,120
+compare à angulaire par exemple comme
+
+97
+00:02:52,120 --> 00:02:54,949
+bear qui font des tonnes et des tonnes
+
+98
+00:02:53,949 --> 00:02:56,370
+de choses
+
+99
+00:02:54,370 --> 00:02:58,680
+le nombre de fonctions disponibles au
+
+100
+00:02:56,680 --> 00:03:00,000
+niveau de richesse sont relativement
+
+101
+00:02:58,000 --> 00:03:01,160
+limités dans sont par contre ça ne veut
+
+102
+00:03:00,160 --> 00:03:02,750
+pas dire que réalité simple pour autant
+
+103
+00:03:01,750 --> 00:03:04,949
+vous allez voir qu'il ya quelques
+
+104
+00:03:02,949 --> 00:03:06,030
+concepts qui ne sont pas forcément
+
+105
+00:03:04,030 --> 00:03:08,280
+évident mais vous avez peu de choses à
+
+106
+00:03:06,280 --> 00:03:09,039
+connaître par rapport à un réel
+
+107
+00:03:08,039 --> 00:03:11,819
+ensuite ce qui est intéressant c'est
+
+108
+00:03:09,819 --> 00:03:13,800
+l'écosystème react est là depuis pas mal
+
+109
+00:03:11,800 --> 00:03:14,569
+de temps je vais y changent assez peu
+
+110
+00:03:13,569 --> 00:03:16,919
+les choses au fil du temps donc
+
+111
+00:03:14,919 --> 00:03:18,180
+l'écosystème a eu le temps de se
+
+112
+00:03:16,180 --> 00:03:19,039
+construire autour donc on va notamment
+
+113
+00:03:18,039 --> 00:03:21,630
+avoir différents adaptateurs pour
+
+114
+00:03:19,630 --> 00:03:23,699
+brancher react donc on va avoir react
+
+115
+00:03:21,699 --> 00:03:24,139
+d'hommes pour faire des modifications au
+
+116
+00:03:23,139 --> 00:03:27,940
+niveau du dom brial que native pour
+
+117
+00:03:24,940 --> 00:03:28,220
+concevoir des applications natives créat
+
+118
+00:03:27,220 --> 00:03:30,660
+des stops pour créer des applications
+
+119
+00:03:28,660 --> 00:03:31,220
+des stops on va avoir beaucoup beaucoup
+
+120
+00:03:30,220 --> 00:03:33,419
+de choses qui sont offertes au tour de
+
+121
+00:03:31,419 --> 00:03:34,039
+red hat et de la même manière on va
+
+122
+00:03:33,039 --> 00:03:36,479
+avoir beaucoup de librairie pour créer
+
+123
+00:03:34,479 --> 00:03:38,750
+des composants et du cône réutilisables
+
+124
+00:03:36,750 --> 00:03:40,620
+ensuite on va avoir une syntaxe
+
+125
+00:03:38,620 --> 00:03:42,720
+spécifique qui s'appelle j ai six que
+
+126
+00:03:40,720 --> 00:03:44,220
+l'on verra un petit peu plus tard qui
+
+127
+00:03:42,220 --> 00:03:46,050
+est une syntaxe qui est juste une toute
+
+128
+00:03:44,050 --> 00:03:47,479
+petite extension au javascript donc par
+
+129
+00:03:46,479 --> 00:03:49,590
+rapport à d'autres frais mort comme
+
+130
+00:03:47,590 --> 00:03:52,419
+svelte ou jus qui vous oblige à prendre
+
+131
+00:03:49,419 --> 00:03:55,599
+tout un nouveau système de template j16
+
+132
+00:03:52,599 --> 00:03:57,209
+est plutôt simple après appréhendé alors
+
+133
+00:03:55,209 --> 00:03:58,220
+par contre c'est quelque chose qui ne
+
+134
+00:03:57,220 --> 00:04:00,509
+plaira pas forcément à tout le monde
+
+135
+00:03:58,509 --> 00:04:02,910
+certains préféreront la syntaxe 200 ou
+
+136
+00:04:00,910 --> 00:04:04,280
+de vue jeunesse justement
+
+137
+00:04:02,280 --> 00:04:05,330
+enfin et je pense que c'est le point le
+
+138
+00:04:04,330 --> 00:04:07,130
+plus important
+
+139
+00:04:05,130 --> 00:04:08,000
+finalement c'est avant tout une
+
+140
+00:04:07,000 --> 00:04:11,919
+préférence personnelle au niveau de la
+
+141
+00:04:08,919 --> 00:04:12,020
+manière d'écrire du code react propose
+
+142
+00:04:11,020 --> 00:04:14,849
+une approche qui est spécifique et qui
+
+143
+00:04:12,849 --> 00:04:16,349
+conviendra à certains développeurs et
+
+144
+00:04:14,349 --> 00:04:18,569
+qui ne conviendra pas à d'autres donc ce
+
+145
+00:04:16,569 --> 00:04:20,668
+qu'il faut faire et j'insiste sur ce
+
+146
+00:04:18,668 --> 00:04:22,410
+point s'est essayée peut-être d'autres
+
+147
+00:04:20,410 --> 00:04:22,300
+frais morgue et faites vous votre propre
+
+148
+00:04:22,300 --> 00:04:24,750
+opinion
+
+149
+00:04:22,750 --> 00:04:26,459
+ne vous dites pas bon mais je choisirais
+
+150
+00:04:24,459 --> 00:04:27,500
+acte je vais apprendre react de a à z et
+
+151
+00:04:26,500 --> 00:04:29,910
+je ne découvrirait par les autres est
+
+152
+00:04:27,910 --> 00:04:32,620
+mort n'hésitez pas peut-être par exemple
+
+153
+00:04:29,620 --> 00:04:33,259
+a commencé une formation sur et acte
+
+154
+00:04:32,259 --> 00:04:35,550
+puis commencer une formation jugée s
+
+155
+00:04:33,550 --> 00:04:37,500
+pour comparer un petit peu les deux et
+
+156
+00:04:35,500 --> 00:04:38,060
+vous faire votre propre opinion ne vous
+
+157
+00:04:37,060 --> 00:04:40,319
+basez pas du tout sur l'opinion de
+
+158
+00:04:38,319 --> 00:04:41,690
+quelqu'un d'autre pour justement choisir
+
+159
+00:04:40,690 --> 00:04:43,759
+un framework
+
+160
+00:04:41,759 --> 00:04:45,750
+alors maintenant pourquoi cette
+
+161
+00:04:43,750 --> 00:04:47,970
+formation il en existe déjà sur internet
+
+162
+00:04:45,970 --> 00:04:49,259
+qu'est ce que je vais apporter de
+
+163
+00:04:47,259 --> 00:04:51,259
+différent par rapport à d'autres choses
+
+164
+00:04:49,259 --> 00:04:53,100
+personnellement sur les formations que
+
+165
+00:04:51,100 --> 00:04:54,050
+j'ai pu voir le problème qui apparaît
+
+166
+00:04:53,050 --> 00:04:55,610
+assez souvent c'est qu'il se lance tout
+
+167
+00:04:54,610 --> 00:04:57,990
+de suite tête baissée dans le code sans
+
+168
+00:04:55,990 --> 00:04:58,250
+forcément expliquer les concepts
+
+169
+00:04:57,250 --> 00:05:00,630
+derrière donc l'objectif dans cette
+
+170
+00:04:58,630 --> 00:05:01,279
+formation s'est décidé à montrer un
+
+171
+00:05:00,279 --> 00:05:03,870
+petit peu plus en profondeur sur ce
+
+172
+00:05:01,870 --> 00:05:05,668
+qu'est un vrai acte est d'essayer date
+
+173
+00:05:03,668 --> 00:05:07,978
+de comprendre les outils avant de les
+
+174
+00:05:05,978 --> 00:05:09,750
+apprendre donc on va essayer de mieux
+
+175
+00:05:07,750 --> 00:05:11,550
+comprendre ce qu'est un élément react la
+
+176
+00:05:09,550 --> 00:05:13,079
+différence entre réacteurs rep dom
+
+177
+00:05:11,079 --> 00:05:16,060
+plutôt que tout tout de suite lancé une
+
+178
+00:05:13,060 --> 00:05:18,600
+commande pour commencer à accorder enfin
+
+179
+00:05:16,600 --> 00:05:19,038
+les prérequis pour suivre cette
+
+180
+00:05:18,038 --> 00:05:21,690
+formation dans des bonnes conditions il
+
+181
+00:05:19,690 --> 00:05:23,668
+faut que vous soyez et c'est impératif à
+
+182
+00:05:21,668 --> 00:05:25,829
+l'aise avec le javascript si vous ne
+
+183
+00:05:23,829 --> 00:05:26,300
+comprenez pas bien le javascript et que
+
+184
+00:05:25,300 --> 00:05:29,889
+vous vous lancez dans react vous allez
+
+185
+00:05:26,889 --> 00:05:31,199
+rencontrer problème après problème react
+
+186
+00:05:29,199 --> 00:05:34,839
+parlera certains aspects et il est assez
+
+187
+00:05:31,839 --> 00:05:35,060
+complexe et si en plus vous cumulez des
+
+188
+00:05:34,060 --> 00:05:36,560
+problématiques et des lacunes sur le
+
+189
+00:05:35,560 --> 00:05:38,940
+javascript ça ne va pas du tout vous
+
+190
+00:05:36,940 --> 00:05:39,740
+aider donc il faut déjà que la syntaxe
+
+191
+00:05:38,740 --> 00:05:42,940
+que vous voyez à l'écran vous la
+
+192
+00:05:39,940 --> 00:05:44,009
+comprenez que vous soyez à l'aise avec
+
+193
+00:05:42,009 --> 00:05:47,589
+qu'est-ce que elvis quand je fais un
+
+194
+00:05:44,589 --> 00:05:49,440
+adema le 19 mai que représente vis à
+
+195
+00:05:47,440 --> 00:05:51,180
+quoi sert le bind par exemple et ce
+
+196
+00:05:49,180 --> 00:05:52,009
+genre de chose sinon vous allez vraiment
+
+197
+00:05:51,009 --> 00:05:54,569
+vraiment galéré et je vous déconseille
+
+198
+00:05:52,569 --> 00:05:57,430
+de suivre cette formation sans avoir de
+
+199
+00:05:54,430 --> 00:05:58,190
+bons acquis en javascript donc ceci
+
+200
+00:05:57,190 --> 00:06:00,690
+étant dit je vous donne rendez-vous dans
+
+201
+00:05:58,690 --> 00:06:02,069
+le premier chapitre nous allons créer
+
+202
+00:06:00,069 --> 00:06:04,769
+notre premiers éléments ont pris acte et
+
+203
+00:06:02,769 --> 00:06:06,209
+on va essayer de découvrir un petit peu
+
+204
+00:06:04,209 --> 00:06:06,000
+son fonctionnement
+Subtitles End: mo.dbxdb.com
+

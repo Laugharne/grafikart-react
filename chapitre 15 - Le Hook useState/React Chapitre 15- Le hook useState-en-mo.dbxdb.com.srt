@@ -1,0 +1,2049 @@
+1
+00:00:00,000 --> 00:00:00,000
+ Youtube subtitles download by mo.dbxdb.com 
+
+2
+00:00:00,000 --> 00:00:02,560
+dans ce nouveau chapitre ainsi que les
+
+3
+00:00:01,560 --> 00:00:04,939
+chapitres suivants nous allons découvrir
+
+4
+00:00:02,939 --> 00:00:05,170
+les hooks hürriyet
+
+5
+00:00:04,170 --> 00:00:07,460
+donc les hawks en ajout qui est
+
+6
+00:00:05,460 --> 00:00:09,140
+relativement récent ils ont été ajoutés
+
+7
+00:00:07,140 --> 00:00:11,300
+dans la version 16.8 de riz actes et ils
+
+8
+00:00:09,300 --> 00:00:12,099
+permettent d'ajouter certaines
+
+9
+00:00:11,099 --> 00:00:15,960
+fonctionnalités aux composants qui sont
+
+10
+00:00:12,960 --> 00:00:17,120
+définis sous forme de fonction alors ils
+
+11
+00:00:15,120 --> 00:00:18,400
+résolvent deux problèmes principaux le
+
+12
+00:00:17,400 --> 00:00:20,750
+premier on l'a vu dans les chapitres
+
+13
+00:00:18,750 --> 00:00:22,220
+précédents c'est que lorsqu'on en crée
+
+14
+00:00:20,220 --> 00:00:23,350
+un composant sous forme de fonction ce
+
+15
+00:00:22,350 --> 00:00:25,730
+composant peut prendre effectivement des
+
+16
+00:00:23,730 --> 00:00:26,320
+propriétés mais il n'est pas possible de
+
+17
+00:00:25,320 --> 00:00:28,820
+lui donner un état local dès qu'on a
+
+18
+00:00:26,820 --> 00:00:29,018
+besoin d'un état local
+
+19
+00:00:28,018 --> 00:00:32,820
+on doit créer une classe qui extends de
+
+20
+00:00:29,820 --> 00:00:34,130
+réac components et à l'intérieur ensuite
+
+21
+00:00:32,130 --> 00:00:36,170
+on peut faire appel à state et 7 state
+
+22
+00:00:34,170 --> 00:00:37,390
+et c'est un petit peu dommage de ne pas
+
+23
+00:00:36,390 --> 00:00:39,710
+pouvoir utiliser les fonctions pour ça
+
+24
+00:00:37,710 --> 00:00:40,899
+l'autre problème il va se voir lorsque
+
+25
+00:00:39,899 --> 00:00:42,829
+l'on va commencer à créer véritablement
+
+26
+00:00:40,829 --> 00:00:44,870
+des applications avec react c'est que
+
+27
+00:00:42,870 --> 00:00:46,579
+souvent on a les mêmes manipulations
+
+28
+00:00:44,579 --> 00:00:47,230
+d'état affaires et vu qu'on utilise le
+
+29
+00:00:46,230 --> 00:00:50,670
+système de classe ce n'est pas forcément
+
+30
+00:00:47,670 --> 00:00:51,280
+évident d'extraire les choses pour vous
+
+31
+00:00:50,280 --> 00:00:53,989
+illustrer le problème j'ai ici créé de
+
+32
+00:00:51,989 --> 00:00:55,460
+petits composants 1 qui permet de
+
+33
+00:00:53,460 --> 00:00:57,289
+récupérer une liste de tout doux depuis
+
+34
+00:00:55,289 --> 00:00:58,239
+une api sous forme de liste et un autre
+
+35
+00:00:57,239 --> 00:01:00,320
+qui venait de le faire sous forme de
+
+36
+00:00:58,320 --> 00:01:02,359
+tableau le problème c'est que finalement
+
+37
+00:01:00,359 --> 00:01:03,460
+la logique à l'intérieur de composants à
+
+38
+00:01:02,460 --> 00:01:05,750
+logique qui permet de changer l'état
+
+39
+00:01:03,750 --> 00:01:07,909
+elle est relativement similaire mais on
+
+40
+00:01:05,909 --> 00:01:09,799
+ne peut pas l'extraire en dehors de
+
+41
+00:01:07,799 --> 00:01:11,630
+cette classe là et du conte se retrouve
+
+42
+00:01:09,630 --> 00:01:12,369
+très souvent malheureusement à devoir
+
+43
+00:01:11,369 --> 00:01:13,840
+répéter de la logique entre les
+
+44
+00:01:12,840 --> 00:01:16,680
+différents composants
+
+45
+00:01:13,680 --> 00:01:17,170
+et ça c'est pas forcément idéal donc ça
+
+46
+00:01:16,170 --> 00:01:19,549
+c'est un problème que va permettre de
+
+47
+00:01:17,549 --> 00:01:20,290
+résoudre les looks que ce que je vous
+
+48
+00:01:19,290 --> 00:01:22,640
+propose de faire c'est de les découvrir
+
+49
+00:01:20,640 --> 00:01:24,770
+à travers un petit exemple simple et on
+
+50
+00:01:22,770 --> 00:01:26,390
+va repartir de zéro donc je vais
+
+51
+00:01:24,390 --> 00:01:28,188
+supprimer les fichiers que j'ai créée
+
+52
+00:01:26,188 --> 00:01:30,079
+juste pour vous démontrer les choses et
+
+53
+00:01:28,079 --> 00:01:33,360
+au niveau de notre index point j ai 6 on
+
+54
+00:01:30,360 --> 00:01:35,569
+va simplement mettre le code de basse et
+
+55
+00:01:33,569 --> 00:01:37,340
+imaginons on va reprendre le premier
+
+56
+00:01:35,340 --> 00:01:38,019
+exemple que l'on à effet avec le conteur
+
+57
+00:01:37,019 --> 00:01:40,700
+qui s'agrémente et donc on va créer
+
+58
+00:01:38,700 --> 00:01:42,319
+nouveaux composants que l'on va appeler
+
+59
+00:01:40,319 --> 00:01:44,930
+compteur et se compose en va donc avoir
+
+60
+00:01:42,930 --> 00:01:46,970
+un état qui permettra de mémoriser le
+
+61
+00:01:44,970 --> 00:01:49,979
+compteur donc juste au dessus je vais
+
+62
+00:01:46,979 --> 00:01:51,078
+créer une fonction qui s'appelle
+
+63
+00:01:49,078 --> 00:01:54,720
+compteur et cette fonction retournera
+
+64
+00:01:51,720 --> 00:01:56,060
+simplement un petit bouton qui
+
+65
+00:01:54,060 --> 00:01:57,250
+contiendra le compteur et là on a un
+
+66
+00:01:56,250 --> 00:01:59,810
+petit peu embêté parce que vu qu'on a
+
+67
+00:01:57,810 --> 00:02:01,040
+créé une fonction ne peut pas définir
+
+68
+00:01:59,040 --> 00:02:03,170
+d'état locale donc on va pouvoir le
+
+69
+00:02:01,170 --> 00:02:06,360
+faire grâce justement à ce nouvel ajout
+
+70
+00:02:03,360 --> 00:02:07,119
+qui est le look you the state alors cook
+
+71
+00:02:06,119 --> 00:02:09,799
+ne vous formalisez pas trop c'est juste
+
+72
+00:02:07,799 --> 00:02:11,270
+un nom qui a été donné à cette nouvelle
+
+73
+00:02:09,270 --> 00:02:13,580
+api de riz actes en fait c'est une série
+
+74
+00:02:11,580 --> 00:02:14,380
+de fonctions qui commence par yooz
+
+75
+00:02:13,380 --> 00:02:17,970
+et qui permettent de rajouter des
+
+76
+00:02:14,970 --> 00:02:19,400
+fonctionnalités qui on a trait à l'état
+
+77
+00:02:17,400 --> 00:02:21,280
+ou aux cycles de vie de notre composants
+
+78
+00:02:19,280 --> 00:02:23,270
+donc le premier ou que l'on va découvrir
+
+79
+00:02:21,270 --> 00:02:25,310
+c'est le look you the states ça va
+
+80
+00:02:23,310 --> 00:02:27,229
+permettre de dire que cette fonction va
+
+81
+00:02:25,229 --> 00:02:31,509
+avoir besoin d'un état donc en fait new
+
+82
+00:02:27,509 --> 00:02:32,229
+state et c'est au niveau de réacteurs si
+
+83
+00:02:31,229 --> 00:02:34,910
+vous utilisez react importés depuis
+
+84
+00:02:32,910 --> 00:02:35,590
+l'extérieur vous faites un réac point in
+
+85
+00:02:34,590 --> 00:02:37,220
+the state
+
+86
+00:02:35,220 --> 00:02:38,319
+et si vous utilisez le système d'un port
+
+87
+00:02:37,319 --> 00:02:41,910
+vous pouvez directement importé you the
+
+88
+00:02:38,910 --> 00:02:43,880
+state comme ça en premier paramètre vous
+
+89
+00:02:41,880 --> 00:02:45,530
+allez lui donner une valeur initiale
+
+90
+00:02:43,530 --> 00:02:47,210
+moi par exemple mon compteur il va
+
+91
+00:02:45,210 --> 00:02:49,880
+commencer à la valeur zéro une fois que
+
+92
+00:02:47,880 --> 00:02:51,410
+vous avez fait ça cette fonction elle va
+
+93
+00:02:49,410 --> 00:02:54,990
+retourner un tableau de taille 2 qui
+
+94
+00:02:51,990 --> 00:02:56,449
+contient en première valeur l'état et en
+
+95
+00:02:54,449 --> 00:02:58,310
+seconde valeur la fonction qui va
+
+96
+00:02:56,310 --> 00:02:59,620
+permettre de modifier l'état donc nous
+
+97
+00:02:58,620 --> 00:03:01,580
+pour l'instant on va simplement
+
+98
+00:02:59,580 --> 00:03:03,139
+sauvegarder le résultat dans une
+
+99
+00:03:01,139 --> 00:03:04,090
+variable que l'on appelait state et
+
+100
+00:03:03,090 --> 00:03:05,500
+ensuite on va faire un console point
+
+101
+00:03:04,500 --> 00:03:07,669
+l'ogre vu que c'est la première fois que
+
+102
+00:03:05,669 --> 00:03:09,410
+l'on travaille avec pour voir de quoi il
+
+103
+00:03:07,410 --> 00:03:09,539
+en retourne et je sauvegarde tout de
+
+104
+00:03:09,539 --> 00:03:12,840
+suite
+
+105
+00:03:09,840 --> 00:03:13,090
+donc je vais me rendre sur la page web
+
+106
+00:03:12,090 --> 00:03:15,830
+et je vais sortir mon inspecteur
+
+107
+00:03:13,830 --> 00:03:18,960
+si je regarde dans la partie console
+
+108
+00:03:15,960 --> 00:03:20,330
+gène tableau de taille 2 dans ce tableau
+
+109
+00:03:18,330 --> 00:03:22,310
+j'ai une première valeur qui contient la
+
+110
+00:03:20,310 --> 00:03:24,500
+valeur de mon état vu que j'ai dit
+
+111
+00:03:22,500 --> 00:03:26,389
+qu'initialement savez la valeur zéro je
+
+112
+00:03:24,389 --> 00:03:28,220
+vous retrouve bien avec 0 en seconde
+
+113
+00:03:26,220 --> 00:03:29,020
+valeur de mon tableau j'ai une fonction
+
+114
+00:03:28,020 --> 00:03:33,940
+qui permettra de changer la valeur de
+
+115
+00:03:29,940 --> 00:03:35,240
+l'état ce que l'on fera lorsque l'on
+
+116
+00:03:33,240 --> 00:03:36,250
+travaillera avec les use the state et ce
+
+117
+00:03:35,250 --> 00:03:38,720
+look là c'est que directement va
+
+118
+00:03:36,720 --> 00:03:39,160
+utiliser la déstructuration et en
+
+119
+00:03:38,160 --> 00:03:42,780
+récupérera directement la valeur de
+
+120
+00:03:39,780 --> 00:03:44,030
+count et ce qui va permettre de changer
+
+121
+00:03:42,030 --> 00:03:46,639
+la valeur cette fonction au niveau de
+
+122
+00:03:44,639 --> 00:03:50,410
+notre bouton on va pouvoir dire nombre
+
+123
+00:03:46,410 --> 00:03:52,180
+suivi de la valeur du coude pour
+
+124
+00:03:50,180 --> 00:03:53,199
+l'instant ça fonctionne bien ça nous
+
+125
+00:03:52,199 --> 00:03:55,520
+donne la valeur zéro mais j'aimerais
+
+126
+00:03:53,520 --> 00:03:57,169
+bien quand je clique que ça vienne
+
+127
+00:03:55,169 --> 00:03:59,810
+changer la valeur du nombre à dans ce
+
+128
+00:03:57,810 --> 00:04:01,459
+cas là on va directement créer une
+
+129
+00:03:59,459 --> 00:04:03,039
+fonction en 2 clics
+
+130
+00:04:01,039 --> 00:04:04,780
+que l'on va mettre dans notre fonction
+
+131
+00:04:03,780 --> 00:04:06,889
+n'y a pas de problème à ce niveau là
+
+132
+00:04:04,889 --> 00:04:09,449
+elle prend dans paramètres l'événement
+
+133
+00:04:06,449 --> 00:04:10,330
+ça fera un e point prévente des folk
+
+134
+00:04:09,330 --> 00:04:12,680
+mais vous n'avez même pas besoin
+
+135
+00:04:10,680 --> 00:04:14,449
+d'utiliser la fonction fléché ici vous
+
+136
+00:04:12,449 --> 00:04:16,430
+pouvez utiliser les fonctions classiques
+
+137
+00:04:14,430 --> 00:04:17,470
+il n'y a pas de contexte vis c'est aussi
+
+138
+00:04:16,470 --> 00:04:20,819
+un désavantage de ne pas utiliser des
+
+139
+00:04:17,819 --> 00:04:21,220
+classes et ensuite à l'intérieur je
+
+140
+00:04:20,220 --> 00:04:23,089
+pourrais faire un set
+
+141
+00:04:21,089 --> 00:04:25,220
+kunz donc c'est la fonction qui a
+
+142
+00:04:23,220 --> 00:04:26,019
+renvoyé en deuxième valeur de notre
+
+143
+00:04:25,019 --> 00:04:28,910
+blot et on lui passe la nouvelle valeur
+
+144
+00:04:26,910 --> 00:04:31,918
+de l'état donc moi ce que je peux faire
+
+145
+00:04:28,918 --> 00:04:33,339
+ici c'est mettre 10 par exemple
+
+146
+00:04:31,339 --> 00:04:35,569
+maintenant que ce land leur ai créé je
+
+147
+00:04:33,569 --> 00:04:37,158
+peux lui dire au niveau du bouton je
+
+148
+00:04:35,158 --> 00:04:40,319
+veux que lorsque tu cliques tu appelles
+
+149
+00:04:37,319 --> 00:04:40,459
+en 2 clics
+
+150
+00:04:40,459 --> 00:04:45,598
+si je sauvegarde et que je réactualise
+
+151
+00:04:42,598 --> 00:04:47,240
+ma page lorsque je clique sur nombre 0
+
+152
+00:04:45,240 --> 00:04:49,038
+je vois bien que ça passe un nombreux 10
+
+153
+00:04:47,038 --> 00:04:50,019
+alors ça peut paraître surprenant et
+
+154
+00:04:49,019 --> 00:04:53,699
+prenant le temps de réaliser ce qui a
+
+155
+00:04:50,699 --> 00:04:55,190
+été écrit ici lorsque l'on fait un you
+
+156
+00:04:53,190 --> 00:04:57,259
+the state automatiquement ça va créer un
+
+157
+00:04:55,259 --> 00:05:00,870
+état et sarah sauvegarder la valeur qui
+
+158
+00:04:57,870 --> 00:05:02,209
+correspond à l'état dans la première clé
+
+159
+00:05:00,209 --> 00:05:03,339
+ensuite en seconde clé ça nous donnera
+
+160
+00:05:02,339 --> 00:05:06,839
+une call back que l'on pourra appeler
+
+161
+00:05:03,839 --> 00:05:08,569
+dès qu'on veut modifier l'état des que
+
+162
+00:05:06,569 --> 00:05:10,130
+ce call back est appelée savard
+
+163
+00:05:08,130 --> 00:05:11,019
+déclencher un rendu ça veut dire que
+
+164
+00:05:10,019 --> 00:05:14,579
+savard déclencher l'appel de cette
+
+165
+00:05:11,579 --> 00:05:16,158
+fonction là où dans le cadre du second
+
+166
+00:05:14,158 --> 00:05:19,769
+appel la valeur de coude sera changé vu
+
+167
+00:05:16,769 --> 00:05:21,500
+qu'on a fait 1,7 conte à 10 et du coup
+
+168
+00:05:19,500 --> 00:05:24,418
+le nombre qui sera affichée ici sera
+
+169
+00:05:21,418 --> 00:05:25,240
+égal à 10 si on regarde dans la partie
+
+170
+00:05:24,240 --> 00:05:27,800
+inspecteurs donc si on sort notre
+
+171
+00:05:25,800 --> 00:05:29,690
+composants je regarde l'état de mon
+
+172
+00:05:27,690 --> 00:05:32,908
+compteur on voit ici qu'il me montre
+
+173
+00:05:29,908 --> 00:05:34,459
+l'état de mon compteur mais ils ne
+
+174
+00:05:32,459 --> 00:05:36,468
+montrent pas la partie states on a un
+
+175
+00:05:34,468 --> 00:05:37,149
+nouvel onglet qui s'appelle hooks qui
+
+176
+00:05:36,149 --> 00:05:39,978
+nous montre les différents looks donc
+
+177
+00:05:37,978 --> 00:05:42,509
+pour l'instant on n'a qu'un seul ou qui
+
+178
+00:05:39,509 --> 00:05:44,120
+ici qui est le bouc qui contient notre
+
+179
+00:05:42,120 --> 00:05:46,250
+nombre et on voit qu'il nous dit à ce
+
+180
+00:05:44,250 --> 00:05:49,728
+moment là l'état et des états disent
+
+181
+00:05:46,728 --> 00:05:51,168
+maintenant on peut se dire et comment il
+
+182
+00:05:49,168 --> 00:05:53,899
+fait pour savoir que ce compteur est à
+
+183
+00:05:51,899 --> 00:05:54,519
+10 et si on en a plusieurs comment ils
+
+184
+00:05:53,519 --> 00:05:56,630
+traquent les choses parce que finalement
+
+185
+00:05:54,630 --> 00:05:57,158
+c'est la même fonction comment il est
+
+186
+00:05:56,158 --> 00:05:58,658
+capable de dire que celui là doit être à
+
+187
+00:05:57,658 --> 00:06:01,728
+dix mais pas l'autre
+
+188
+00:05:58,728 --> 00:06:03,319
+alors en fait lorsque vous faites un use
+
+189
+00:06:01,319 --> 00:06:05,028
+the state en interne ce que fait rien
+
+190
+00:06:03,028 --> 00:06:07,370
+que ce qui dit ok là je vais créer un
+
+191
+00:06:05,370 --> 00:06:09,529
+état pour le composant qui est
+
+192
+00:06:07,529 --> 00:06:10,000
+actuellement en train d'être exécuté
+
+193
+00:06:09,000 --> 00:06:13,829
+donc c'est ce qui lui permet en fait
+
+194
+00:06:10,829 --> 00:06:16,319
+grâce au contexte d'exécution de savoir
+
+195
+00:06:13,319 --> 00:06:19,560
+que ce use the state fera référence à
+
+196
+00:06:16,560 --> 00:06:20,050
+l'état de notre compteur il voit aussi
+
+197
+00:06:19,050 --> 00:06:22,940
+que c'est le premier appel à user state
+
+198
+00:06:20,940 --> 00:06:24,649
+dans cette fonction c'est l'ordre
+
+199
+00:06:22,649 --> 00:06:26,598
+d'appel qui lui permet de savoir et de
+
+200
+00:06:24,598 --> 00:06:28,819
+retrouver la correspondance ça nous
+
+201
+00:06:26,819 --> 00:06:29,199
+amène à une règle importante
+
+202
+00:06:28,199 --> 00:06:31,788
+un you the state ne peut pas être dans
+
+203
+00:06:29,788 --> 00:06:33,199
+une condition ou une boucle c'est
+
+204
+00:06:31,199 --> 00:06:35,209
+important parce que si vous faites ça ça
+
+205
+00:06:33,209 --> 00:06:36,339
+peut changer l'ordre des appels et
+
+206
+00:06:35,339 --> 00:06:39,600
+vous ça peut poser des problèmes au
+
+207
+00:06:36,600 --> 00:06:40,259
+niveau du fonctionnement des idées ou qu
+
+208
+00:06:39,259 --> 00:06:42,500
+ensuite
+
+209
+00:06:40,500 --> 00:06:44,720
+autre petit détail à l'intérieur du
+
+210
+00:06:42,720 --> 00:06:46,399
+views state vous pouvez avoir n'importe
+
+211
+00:06:44,399 --> 00:06:49,680
+quoi on va supprimer ce que l'on a écrit
+
+212
+00:06:46,680 --> 00:06:51,019
+ici et on va s'imaginer simplement créé
+
+213
+00:06:49,019 --> 00:06:54,630
+une vive est dedans on affichera une
+
+214
+00:06:51,630 --> 00:06:56,630
+valeur qui s'appelle state donc je vais
+
+215
+00:06:54,630 --> 00:07:00,519
+recommencer et on va s'imaginer
+
+216
+00:06:56,519 --> 00:07:03,449
+récupérer un state et 1,7 state et cette
+
+217
+00:07:00,449 --> 00:07:05,750
+fois ci on fera un news state et on lui
+
+218
+00:07:03,750 --> 00:07:07,130
+dira que la valeur initiale c'est un
+
+219
+00:07:05,130 --> 00:07:12,918
+objet est plutôt là on va développer cet
+
+220
+00:07:07,918 --> 00:07:14,089
+objet là ou si je sauvegarde je vais
+
+221
+00:07:12,089 --> 00:07:16,880
+voir que j'ai un objet vide maintenant
+
+222
+00:07:14,880 --> 00:07:18,529
+on s'imagine que lorsque je clique je
+
+223
+00:07:16,529 --> 00:07:22,540
+vais changer la valeur de cet objet donc
+
+224
+00:07:18,540 --> 00:07:22,500
+on va lui dire bonne clic en 2 clics
+
+225
+00:07:24,500 --> 00:07:29,569
+et à l'intérieur on va avoir donc notre
+
+226
+00:07:27,569 --> 00:07:31,699
+fonction en 2 clics
+
+227
+00:07:29,699 --> 00:07:33,620
+qui sera une fonction qui prendront part
+
+228
+00:07:31,620 --> 00:07:36,930
+à mettre l'événement qui fera le pré
+
+229
+00:07:33,930 --> 00:07:39,750
+vente des fold pas du tout supprimer et
+
+230
+00:07:36,750 --> 00:07:40,360
+ensuite je fais un set state et je
+
+231
+00:07:39,360 --> 00:07:44,860
+change les temps je lui dis par exemple
+
+232
+00:07:40,860 --> 00:07:45,459
+que maintenant au coude sera égal à 10 6
+
+233
+00:07:44,459 --> 00:07:47,990
+jeux sauvegardés que je réactualise ma
+
+234
+00:07:45,990 --> 00:07:49,759
+page lorsque je vais cliquez sur ma dîme
+
+235
+00:07:47,759 --> 00:07:52,709
+on voit bien que ça change et ça crée un
+
+236
+00:07:49,709 --> 00:07:54,190
+objet qui a comme clé count qui vaut 10
+
+237
+00:07:52,190 --> 00:07:55,660
+détail important contrat dans cette
+
+238
+00:07:54,660 --> 00:07:57,978
+taille qu'il n'y a pas de fusion
+
+239
+00:07:55,978 --> 00:08:00,810
+d'objets c'est à dire que si mon état
+
+240
+00:07:57,810 --> 00:08:02,360
+initial était un objet qui continue qui
+
+241
+00:08:00,360 --> 00:08:04,668
+contenait une valeur arbitraire lorsque
+
+242
+00:08:02,668 --> 00:08:05,168
+je clique on voit qu'il change
+
+243
+00:08:04,168 --> 00:08:07,098
+complètement les choses
+
+244
+00:08:05,098 --> 00:08:09,259
+donc par rapport aux 7 state que l'on
+
+245
+00:08:07,259 --> 00:08:11,478
+avait au niveau de nos composants c'est
+
+246
+00:08:09,478 --> 00:08:13,130
+complètement différent si jamais je veux
+
+247
+00:08:11,130 --> 00:08:14,319
+mais écrasé rajouter une clé
+
+248
+00:08:13,319 --> 00:08:17,880
+supplémentaire il faudra plutôt que je
+
+249
+00:08:14,880 --> 00:08:20,220
+lui dise mais là je vais avoir une
+
+250
+00:08:17,220 --> 00:08:24,250
+fonction qui prendra l'état précédent et
+
+251
+00:08:20,250 --> 00:08:27,300
+qui retournera le nouvel état auquel je
+
+252
+00:08:24,300 --> 00:08:28,329
+rajoute à la clé count qui vaut 10 et
+
+253
+00:08:27,329 --> 00:08:31,860
+dans ce cas là on aura bien une fusion
+
+254
+00:08:28,860 --> 00:08:34,860
+avec les états précédent si je clique
+
+255
+00:08:31,860 --> 00:08:36,679
+ça me donne bien coûte 10 en plus de
+
+256
+00:08:34,679 --> 00:08:37,479
+l'état initial vous faites bien
+
+257
+00:08:36,479 --> 00:08:40,529
+attention il ya une grosse différence
+
+258
+00:08:37,529 --> 00:08:43,408
+entre un le modificateur des tas d où qu
+
+259
+00:08:40,408 --> 00:08:45,328
+du modificateurs d'état avec les classes
+
+260
+00:08:43,328 --> 00:08:48,818
+ce qui est aussi super intéressant c'est
+
+261
+00:08:45,818 --> 00:08:48,159
+que vous pouvez créer plusieurs appels à
+
+262
+00:08:48,159 --> 00:08:50,999
+you the state
+
+263
+00:08:48,999 --> 00:08:53,499
+on va s'imaginer qu'on a à l'intérieur
+
+264
+00:08:50,499 --> 00:08:55,669
+de boutons on va créer un premier bouton
+
+265
+00:08:53,669 --> 00:08:59,989
+qui permet d'incrémenter donc on va
+
+266
+00:08:55,989 --> 00:09:00,230
+mettre incrémenté suivi du conteur qu'on
+
+267
+00:08:59,230 --> 00:09:02,458
+veut renommer cool comme tout à l'heure
+
+268
+00:09:00,458 --> 00:09:04,769
+et on s'imaginait aussi qu'on va créer
+
+269
+00:09:02,769 --> 00:09:07,749
+un autre bouton qui permettrait
+
+270
+00:09:04,749 --> 00:09:08,119
+d'incrémenter une autre valeur c'est
+
+271
+00:09:07,119 --> 00:09:10,769
+juste pour l'exemple n'a pas vraiment de
+
+272
+00:09:08,769 --> 00:09:12,958
+sens mais on aurait un second compteur
+
+273
+00:09:10,958 --> 00:09:14,970
+qui s'appellerait compte 2 et qui lui
+
+274
+00:09:12,970 --> 00:09:16,350
+c'est un crime entrée de deux ans de bep
+
+275
+00:09:14,350 --> 00:09:18,568
+je vais maintenant à créer un premier
+
+276
+00:09:16,568 --> 00:09:20,759
+compteur et je vais avoir la méthode qui
+
+277
+00:09:18,759 --> 00:09:22,350
+permettra de le modifier qui s'appelle 7
+
+278
+00:09:20,350 --> 00:09:24,749
+coude au niveau du state plutôt que
+
+279
+00:09:22,749 --> 00:09:26,159
+d'avoir un objet jeu mais simplement une
+
+280
+00:09:24,159 --> 00:09:28,589
+valeur comme ça ensuite je crée un
+
+281
+00:09:26,589 --> 00:09:30,360
+second compteur qui s'appelle count 2
+
+282
+00:09:28,360 --> 00:09:33,489
+qui aura du coup en cette heure qui
+
+283
+00:09:30,489 --> 00:09:36,428
+s'appellera 7 compte 2 et qui aura aussi
+
+284
+00:09:33,428 --> 00:09:38,009
+comme valeur initiale 0 automatiquement
+
+285
+00:09:36,009 --> 00:09:40,619
+j'ai bien mais deux boutons je vais
+
+286
+00:09:38,619 --> 00:09:42,089
+d'ailleurs supprimé le second compteur 1
+
+287
+00:09:40,089 --> 00:09:43,489
+se sert à rien maintenant je vais créer
+
+288
+00:09:42,489 --> 00:09:45,720
+une mais deux fonctions qui vont
+
+289
+00:09:43,720 --> 00:09:46,279
+permettre de gérer le clic on va
+
+290
+00:09:45,279 --> 00:09:48,360
+l'appeler en 2 clics
+
+291
+00:09:46,360 --> 00:09:50,279
+ce sera une fonction qui prend pas
+
+292
+00:09:48,279 --> 00:09:52,470
+remettre l'événement qui annulera le
+
+293
+00:09:50,470 --> 00:09:54,720
+comportement par défaut et qui fera un
+
+294
+00:09:52,720 --> 00:09:56,818
+set compte et qui incrémente ras la
+
+295
+00:09:54,818 --> 00:10:00,918
+valeur donc là on pourrait être tenté de
+
+296
+00:09:56,918 --> 00:10:02,068
+faire coûte plus un mais attention comme
+
+297
+00:10:00,068 --> 00:10:04,529
+on l'avait vu lorsqu'on a parlé 17 state
+
+298
+00:10:02,529 --> 00:10:06,418
+au niveau des composants sous forme de
+
+299
+00:10:04,418 --> 00:10:08,999
+classe lorsque vous modifiez l'état à
+
+300
+00:10:06,999 --> 00:10:10,828
+partir d'une propriété ou d'un état
+
+301
+00:10:08,828 --> 00:10:10,448
+précédent mieux vous utilisez un call
+
+302
+00:10:10,448 --> 00:10:13,779
+back
+
+303
+00:10:10,779 --> 00:10:15,389
+ça évite lorsque react groupe les choses
+
+304
+00:10:13,389 --> 00:10:16,279
+d'avoir des problèmes donc la limite
+
+305
+00:10:15,279 --> 00:10:18,418
+vous pouvez créer des choses comme ça
+
+306
+00:10:16,418 --> 00:10:20,269
+c'est encore plus rapide
+
+307
+00:10:18,269 --> 00:10:23,708
+ensuite je vais créer une autre fonction
+
+308
+00:10:20,708 --> 00:10:24,318
+qui va s'appeler en deux clics 2 et
+
+309
+00:10:23,318 --> 00:10:27,909
+cette fonction elle va modifier l'autre
+
+310
+00:10:24,909 --> 00:10:30,578
+compteur en faisant un set compte 2 et
+
+311
+00:10:27,578 --> 00:10:32,789
+en incrémente on nous demande maintenant
+
+312
+00:10:30,789 --> 00:10:33,589
+au niveau du premier bouton jouer dû
+
+313
+00:10:32,589 --> 00:10:36,578
+dire lorsque tu cliques
+
+314
+00:10:33,578 --> 00:10:38,909
+je veux que tu fasses en 2 clics et
+
+315
+00:10:36,909 --> 00:10:43,639
+lorsque tu cliques sur le second bouton
+
+316
+00:10:38,639 --> 00:10:43,649
+je veux que tu fasses un en deux clics 2
+
+317
+00:10:43,649 --> 00:10:48,239
+si je regarde au niveau de ma page
+
+318
+00:10:46,239 --> 00:10:50,308
+on voit bien que mon compteur à de zouk
+
+319
+00:10:48,308 --> 00:10:52,438
+donc le 1er août qui permettait de
+
+320
+00:10:50,438 --> 00:10:54,958
+sauvegarder l'état et le second qui
+
+321
+00:10:52,958 --> 00:10:56,980
+permet aussi de sauvegarder cette étape
+
+322
+00:10:54,980 --> 00:10:58,539
+cliquer sur le premier est
+
+323
+00:10:56,539 --> 00:10:59,669
+automatiquement ça change l'état du 1er
+
+324
+00:10:58,669 --> 00:11:02,990
+août pour mettre la valeur 1
+
+325
+00:10:59,990 --> 00:11:04,929
+si je fais incrémenté deux là c'est le
+
+326
+00:11:02,929 --> 00:11:05,970
+second hub qui change de valeur est
+
+327
+00:11:04,970 --> 00:11:08,720
+automatiquement
+
+328
+00:11:05,720 --> 00:11:09,028
+il change la valeur ce qu'il faut bien
+
+329
+00:11:08,028 --> 00:11:11,559
+comprendre c'est qu'à chaque fois que
+
+330
+00:11:09,559 --> 00:11:13,448
+vous faites un set ou n'importe quoi
+
+331
+00:11:11,448 --> 00:11:15,250
+automatiquement cette fonction est
+
+332
+00:11:13,250 --> 00:11:16,559
+entièrement rappelé c'est à dire que si
+
+333
+00:11:15,559 --> 00:11:18,759
+je fais une console points block de
+
+334
+00:11:16,759 --> 00:11:20,500
+renders comme quand on change les
+
+335
+00:11:18,500 --> 00:11:22,740
+propriétés au final dès que je clique
+
+336
+00:11:20,740 --> 00:11:25,610
+automatiquement on va voir de nouveaux
+
+337
+00:11:22,610 --> 00:11:27,549
+länder qui vont avoir lieu en fait react
+
+338
+00:11:25,549 --> 00:11:29,289
+va en interne se dira
+
+339
+00:11:27,289 --> 00:11:30,028
+et ça c'est le premier appel c'est le
+
+340
+00:11:29,028 --> 00:11:33,828
+premier ou qui a été appelé donc j'ai
+
+341
+00:11:30,828 --> 00:11:34,110
+gardé une trace de l'état précédent est
+
+342
+00:11:33,110 --> 00:11:36,850
+automatiquement je te remets dans la
+
+343
+00:11:34,850 --> 00:11:37,679
+valeur le nouvel état donc je vous
+
+344
+00:11:36,679 --> 00:11:39,730
+avouerai que c'est pas forcément une
+
+345
+00:11:37,730 --> 00:11:40,259
+logique qui est très évidente c'est
+
+346
+00:11:39,259 --> 00:11:42,850
+assez original en terme de
+
+347
+00:11:40,850 --> 00:11:44,948
+fonctionnement mais n'hésitez pas à
+
+348
+00:11:42,948 --> 00:11:46,899
+faire des petits d'expérimentation et à
+
+349
+00:11:44,899 --> 00:11:47,039
+regarder ce que vous pouvez faire à
+
+350
+00:11:46,039 --> 00:11:49,570
+partir de ces ou plat pour bien
+
+351
+00:11:47,570 --> 00:11:51,519
+comprendre comment ils fonctionnent à
+
+352
+00:11:49,519 --> 00:11:53,559
+maintenant on peut se dire qu'est ce que
+
+353
+00:11:51,559 --> 00:11:55,570
+va apporter cette syntaxe la mois à
+
+354
+00:11:53,570 --> 00:11:56,339
+première vue d'après ce que je vois ça a
+
+355
+00:11:55,339 --> 00:11:58,958
+l'air plus compliqué que l' approche
+
+356
+00:11:56,958 --> 00:12:00,028
+précédente
+
+357
+00:11:58,028 --> 00:12:02,440
+c'est moins lisible je préfère peut-être
+
+358
+00:12:00,440 --> 00:12:03,419
+la proche par classe ce qui est très
+
+359
+00:12:02,419 --> 00:12:05,919
+intéressant avec les hawks et qu'on va
+
+360
+00:12:03,919 --> 00:12:08,240
+pouvoir extraire une partie de la
+
+361
+00:12:05,240 --> 00:12:10,089
+logique dans des fonctions et pouvoir
+
+362
+00:12:08,089 --> 00:12:12,698
+exposer des auc personnalisé pour vous
+
+363
+00:12:10,698 --> 00:12:14,110
+montrer un tout petit exemple on
+
+364
+00:12:12,110 --> 00:12:15,360
+s'imagine que de nombreuses reprises
+
+365
+00:12:14,360 --> 00:12:17,769
+dans notre application on a besoin d'un
+
+366
+00:12:15,769 --> 00:12:20,990
+crémant td valeurs je peux me faire un
+
+367
+00:12:17,990 --> 00:12:22,659
+look qui va s'appeler use incrémenté qui
+
+368
+00:12:20,659 --> 00:12:24,429
+permettra de garder cette logique-là
+
+369
+00:12:22,429 --> 00:12:26,380
+donc un vous que c'est simplement une
+
+370
+00:12:24,380 --> 00:12:28,419
+fonction que l'on va prêts fixé par yooz
+
+371
+00:12:26,419 --> 00:12:30,309
+ça c'est juste une convention de
+
+372
+00:12:28,309 --> 00:12:32,019
+réacteurs on va l'appeler use in
+
+373
+00:12:30,019 --> 00:12:35,958
+clémente à l'intérieur de cette fonction
+
+374
+00:12:32,958 --> 00:12:37,328
+je peux appeler d où qu donc je peux lui
+
+375
+00:12:35,328 --> 00:12:39,100
+dire je vais créer une valeur de queens
+
+376
+00:12:37,100 --> 00:12:42,860
+qui sera un état et je fais un set coûte
+
+377
+00:12:39,860 --> 00:12:45,559
+et j'utilise à l'intérieur le look de
+
+378
+00:12:42,559 --> 00:12:47,679
+rihanna use the state maintenant je vais
+
+379
+00:12:45,679 --> 00:12:49,179
+créer une fonction qui va s'appeler
+
+380
+00:12:47,179 --> 00:12:51,309
+incrémente qui permettra d'incrémenter
+
+381
+00:12:49,309 --> 00:12:53,679
+une valeur cette fonction ce qu'elle
+
+382
+00:12:51,679 --> 00:12:55,389
+fera ce qu'elle fera tout simplement un
+
+383
+00:12:53,389 --> 00:12:59,909
+set kunz elle prendra en paramètre la
+
+384
+00:12:55,909 --> 00:13:02,679
+valeur et elle fera une instrumentation
+
+385
+00:12:59,679 --> 00:13:04,240
+enfin en retour de cette fonction je
+
+386
+00:13:02,240 --> 00:13:07,039
+vais renvoyer un tableau qui sera le
+
+387
+00:13:04,039 --> 00:13:09,610
+count et qui sera ma fonction incrémenté
+
+388
+00:13:07,610 --> 00:13:11,440
+et je garde la partie 7 comptes à
+
+389
+00:13:09,440 --> 00:13:13,929
+l'intérieur de cette fonction maintenant
+
+390
+00:13:11,929 --> 00:13:15,490
+ça me permet si je souhaite avoir
+
+391
+00:13:13,490 --> 00:13:17,078
+quelque chose d'un crémant talent de
+
+392
+00:13:15,078 --> 00:13:21,740
+pouvoir faire une constance
+
+393
+00:13:17,740 --> 00:13:22,289
+je récupérerai count et in clémente qui
+
+394
+00:13:21,289 --> 00:13:26,610
+serait la fonction d'onde incrémentation
+
+395
+00:13:22,610 --> 00:13:28,360
+et je ferai un use in clémente et je
+
+396
+00:13:26,360 --> 00:13:31,009
+mettrai aucune valeur parce que la
+
+397
+00:13:28,009 --> 00:13:32,339
+valeur initiale c'est toujours 0 et au
+
+398
+00:13:31,339 --> 00:13:33,839
+niveau de mon bouton je lui dis quand tu
+
+399
+00:13:32,839 --> 00:13:36,259
+cliques
+
+400
+00:13:33,259 --> 00:13:38,380
+je veux que tu appelles incrémente et ça
+
+401
+00:13:36,380 --> 00:13:40,179
+nous permet maintenant quand on regarde
+
+402
+00:13:38,179 --> 00:13:42,610
+le code de ce composant la d'alléger la
+
+403
+00:13:40,610 --> 00:13:44,230
+logique toute la logique qui a trait au
+
+404
+00:13:42,230 --> 00:13:45,208
+changement d'état est extrait dans une
+
+405
+00:13:44,208 --> 00:13:48,559
+autre fonction qui d'un look
+
+406
+00:13:45,559 --> 00:13:50,589
+personnalisés et comme ça ça rend le
+
+407
+00:13:48,589 --> 00:13:52,360
+code à l'interview composant un petit
+
+408
+00:13:50,360 --> 00:13:54,610
+peu plus léger si j'essaie de regarder
+
+409
+00:13:52,610 --> 00:13:55,078
+que je clique sur incrémenté
+
+410
+00:13:54,078 --> 00:13:58,720
+s'incrémente bientôt un an
+
+411
+00:13:55,720 --> 00:13:59,490
+on pourrait même avoir des variantes on
+
+412
+00:13:58,490 --> 00:14:02,750
+pourrait lui dire ben là je pourrais
+
+413
+00:13:59,750 --> 00:14:02,000
+avoir la valeur initiale et le pas par
+
+414
+00:14:02,000 --> 00:14:06,419
+exemple
+
+415
+00:14:02,419 --> 00:14:09,578
+donc on mettrait ici initial et le steak
+
+416
+00:14:06,578 --> 00:14:10,500
+on lui dirait à bell lorsque tu fais un
+
+417
+00:14:09,500 --> 00:14:11,880
+you the state tu donnes la valeur
+
+418
+00:14:10,880 --> 00:14:13,389
+initiale
+
+419
+00:14:11,389 --> 00:14:15,730
+et lorsque tu incrémente je veux que tu
+
+420
+00:14:13,730 --> 00:14:17,919
+utilises la valeur de ce type est
+
+421
+00:14:15,919 --> 00:14:19,659
+automatiquement maintenant quelque chose
+
+422
+00:14:17,659 --> 00:14:21,250
+qui permet d'agrémenter de deux en deux
+
+423
+00:14:19,250 --> 00:14:24,708
+et on peut avoir un bon personnalisé qui
+
+424
+00:14:21,708 --> 00:14:25,078
+prend des paramètres et qui permet de
+
+425
+00:14:24,078 --> 00:14:27,159
+faire des traitements un petit peu plus
+
+426
+00:14:25,159 --> 00:14:29,620
+poussée et ça nous permet d'isoler une
+
+427
+00:14:27,620 --> 00:14:32,089
+partie de la logique en dehors du
+
+428
+00:14:29,089 --> 00:14:33,059
+composant ne vous inquiétez pas si vous
+
+429
+00:14:32,059 --> 00:14:34,470
+n'êtes pas forcément encore alex
+
+430
+00:14:33,470 --> 00:14:36,100
+découpage
+
+431
+00:14:34,100 --> 00:14:37,380
+on va revenir dessus encore et encore
+
+432
+00:14:36,380 --> 00:14:39,698
+parce qu'on va découvrir nouveau hook
+
+433
+00:14:37,698 --> 00:14:41,110
+qui vont aussi ouvrir de nouvelles
+
+434
+00:14:39,110 --> 00:14:43,360
+perspectives au niveau des souks
+
+435
+00:14:41,360 --> 00:14:45,490
+personnalisés ce qu'il faut retenir
+
+436
+00:14:43,490 --> 00:14:47,289
+basiquement c'est que lorsque vous
+
+437
+00:14:45,289 --> 00:14:49,750
+faites appel à user state et il va créer
+
+438
+00:14:47,750 --> 00:14:51,610
+une variable qui va être sauvegardés
+
+439
+00:14:49,610 --> 00:14:53,350
+comme l'état du composant et tout au
+
+440
+00:14:51,350 --> 00:14:55,809
+long de la vie de ce composant la ce et
+
+441
+00:14:53,809 --> 00:14:57,549
+ou qui va permettre de mémoriser la
+
+442
+00:14:55,549 --> 00:14:58,139
+valeur donc à chaque fois qu'il ya un
+
+443
+00:14:57,139 --> 00:15:00,940
+nouveau rendu la fonction et ré appelé
+
+444
+00:14:58,940 --> 00:15:02,698
+mais grâce à you the state
+
+445
+00:15:00,698 --> 00:15:05,779
+automatiquement react connaît la valeur
+
+446
+00:15:02,779 --> 00:15:07,028
+précédente et dans votre première valeur
+
+447
+00:15:05,028 --> 00:15:08,130
+il mettra la valeur qui correspond à
+
+448
+00:15:07,130 --> 00:15:09,480
+l'état
+
+449
+00:15:08,480 --> 00:15:11,889
+le second paramètre c'est toujours un
+
+450
+00:15:09,889 --> 00:15:12,600
+secteur qui va permettre de changer la
+
+451
+00:15:11,600 --> 00:15:15,850
+valeur de l'état
+
+452
+00:15:12,850 --> 00:15:17,669
+donc comme pour la fonction 7 state si
+
+453
+00:15:15,669 --> 00:15:17,169
+vous faites une mutation qui dépend de
+
+454
+00:15:17,169 --> 00:15:20,860
+l'état précédent
+
+455
+00:15:17,860 --> 00:15:21,110
+mieux vaudra utiliser un call back et
+
+456
+00:15:20,110 --> 00:15:23,730
+contrairement à cette state par contre
+
+457
+00:15:21,730 --> 00:15:25,620
+dès que vous faites un changement d'état
+
+458
+00:15:23,620 --> 00:15:27,929
+vous devez lui passer un nouvel objet il
+
+459
+00:15:25,929 --> 00:15:29,370
+n'y a pas de fusion comme ça pouvait
+
+460
+00:15:27,370 --> 00:15:30,649
+être le cas sur 700 ensuite quelques
+
+461
+00:15:29,649 --> 00:15:33,698
+règles importantes
+
+462
+00:15:30,698 --> 00:15:34,130
+vous ne pouvez pas changer l'ordre des
+
+463
+00:15:33,130 --> 00:15:37,870
+users tête sinon ça perd complètement
+
+464
+00:15:34,870 --> 00:15:39,179
+react react utilise l'ordre d'appel pour
+
+465
+00:15:37,179 --> 00:15:40,429
+savoir à quel état correspond chaque
+
+466
+00:15:39,429 --> 00:15:42,929
+appel à you the state donc si vous
+
+467
+00:15:40,929 --> 00:15:43,220
+changez l'ordre suite à des conditions
+
+468
+00:15:42,220 --> 00:15:45,539
+ou des boucles vous allez avoir des
+
+469
+00:15:43,539 --> 00:15:47,730
+problèmes l'autre chose c'est que si
+
+470
+00:15:45,730 --> 00:15:48,139
+jamais vous décidé d'extraire mais on
+
+471
+00:15:47,139 --> 00:15:49,130
+aura le temps d'en reparler dans les
+
+472
+00:15:48,130 --> 00:15:52,539
+prochains chapitres comme je lé fais ici
+
+473
+00:15:49,539 --> 00:15:53,089
+vous ne devez faire appel ou hawkesbury
+
+474
+00:15:52,089 --> 00:15:56,860
+acte que dans des bouquets personnalisés
+
+475
+00:15:53,860 --> 00:15:57,409
+que dans d'autres fonctions qui agiront
+
+476
+00:15:56,409 --> 00:15:58,068
+comme des boucs
+
+477
+00:15:57,068 --> 00:15:59,360
+vous ne pouvez pas le mettre dans
+
+478
+00:15:58,360 --> 00:16:00,350
+n'importe quelle fonction de votre
+
+479
+00:15:59,350 --> 00:16:04,909
+système c'est très important
+
+480
+00:16:00,909 --> 00:16:05,179
+sinon ça créera des problèmes mais je
+
+481
+00:16:04,179 --> 00:16:08,889
+pense que vous voyez ici qu'on a un
+
+482
+00:16:05,889 --> 00:16:10,049
+petit avantage si on prend notre
+
+483
+00:16:08,049 --> 00:16:11,659
+composante compteur par rapport à ce qu
+
+484
+00:16:10,659 --> 00:16:13,980
+on aurait pu écrire avec toute une
+
+485
+00:16:11,980 --> 00:16:15,990
+classe va finalement la logique de ce
+
+486
+00:16:13,990 --> 00:16:18,458
+composant est extrêmement simple
+
+487
+00:16:15,458 --> 00:16:20,279
+là on a un composant qui permet de créer
+
+488
+00:16:18,279 --> 00:16:21,078
+un bouton qui va sacrément tait et on
+
+489
+00:16:20,078 --> 00:16:22,458
+n'a que deux lignes à écrire alors
+
+490
+00:16:21,458 --> 00:16:24,929
+qu'avec les classes on serait obligé de
+
+491
+00:16:22,929 --> 00:16:26,610
+faire un set state on sera obligé de
+
+492
+00:16:24,610 --> 00:16:27,919
+faire le state on aurait le render on
+
+493
+00:16:26,919 --> 00:16:29,970
+aurait tout de suite une structure qui
+
+494
+00:16:27,970 --> 00:16:31,828
+serait un petit peu plus compliqué ce
+
+495
+00:16:29,828 --> 00:16:32,269
+qui est intéressant on l'a aussi c'est
+
+496
+00:16:31,269 --> 00:16:34,740
+que si on décide de changer la structure
+
+497
+00:16:32,740 --> 00:16:36,688
+pour mettre un lien on crée un autre
+
+498
+00:16:34,688 --> 00:16:38,578
+composante on peut récupérer de la même
+
+499
+00:16:36,578 --> 00:16:39,350
+logique avec une fonction de rendu qui
+
+500
+00:16:38,350 --> 00:16:42,839
+serait complètement différente et ça
+
+501
+00:16:39,839 --> 00:16:44,850
+c'est plutôt intéressant à ce niveau là
+
+502
+00:16:42,850 --> 00:16:48,828
+on pourrait avoir un compteur qui
+
+503
+00:16:44,828 --> 00:16:49,028
+fonctionnerait sous forme de liens hop
+
+504
+00:16:48,028 --> 00:16:51,809
+et la pop
+
+505
+00:16:49,809 --> 00:16:53,578
+c'est un lien qui s'incrémente de hand
+
+506
+00:16:51,578 --> 00:16:55,438
+encore une fois si vous avez un petit
+
+507
+00:16:53,438 --> 00:16:56,059
+peu du mal avec le youth the state ne
+
+508
+00:16:55,059 --> 00:16:58,529
+vous inquiétez pas on va reparler dans
+
+509
+00:16:56,529 --> 00:16:59,028
+les prochains chapitres au fil du temps
+
+510
+00:16:58,028 --> 00:17:02,980
+au fur et à mesure qu'on découvre de
+
+511
+00:16:59,980 --> 00:17:04,169
+nouveaux je vous donne rendez-vous dans
+
+512
+00:17:02,169 --> 00:17:04,000
+le prochain chapitre
+Subtitles End: mo.dbxdb.com
+

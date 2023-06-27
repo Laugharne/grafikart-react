@@ -1,0 +1,1125 @@
+1
+00:00:00,000 --> 00:00:00,000
+ Youtube subtitles download by mo.dbxdb.com 
+
+2
+00:00:00,000 --> 00:00:02,989
+à bienvenue dans ce nouveau chapitre
+
+3
+00:00:00,989 --> 00:00:04,850
+nous allons découvrir ensemble nous
+
+4
+00:00:02,850 --> 00:00:06,830
+tirer hacked dave tout donc lorsque l'on
+
+5
+00:00:04,830 --> 00:00:08,600
+travaille avec riact bas il peut être
+
+6
+00:00:06,600 --> 00:00:10,309
+parfois assez difficile de savoir où on
+
+7
+00:00:08,309 --> 00:00:12,380
+en est pourquoi les différents rendus
+
+8
+00:00:10,380 --> 00:00:13,000
+sont déclenchés et connaître les
+
+9
+00:00:12,000 --> 00:00:15,710
+propriétés des différents composants
+
+10
+00:00:13,710 --> 00:00:16,269
+encore heureusement pour nous on a un
+
+11
+00:00:15,269 --> 00:00:20,980
+outil qui est plutôt intéressant sur les
+
+12
+00:00:16,980 --> 00:00:21,130
+navigateurs qui est le réactif tout donc
+
+13
+00:00:20,130 --> 00:00:23,630
+cet outil est disponible sous forme
+
+14
+00:00:21,630 --> 00:00:24,039
+d'une extension que vous pouvez
+
+15
+00:00:23,039 --> 00:00:26,180
+installer sur votre navigateur
+
+16
+00:00:24,180 --> 00:00:27,160
+donc dans le cas de firefox il vous
+
+17
+00:00:26,160 --> 00:00:28,599
+suffit simplement d'aller dans la partie
+
+18
+00:00:27,599 --> 00:00:29,470
+préférence en eau
+
+19
+00:00:28,470 --> 00:00:32,939
+vous allez ensuite dans module
+
+20
+00:00:29,939 --> 00:00:35,899
+complémentaire et vous cherchez react
+
+21
+00:00:32,899 --> 00:00:37,610
+vous devriez tombé sur le réacteur
+
+22
+00:00:35,610 --> 00:00:39,649
+développé tools donc vérifiez bien que
+
+23
+00:00:37,649 --> 00:00:40,030
+c'est l'extension qui est créé par
+
+24
+00:00:39,030 --> 00:00:43,890
+hjalte et vous cliquez sur ajouter à
+
+25
+00:00:40,890 --> 00:00:46,800
+firefox vous acceptez les différentes
+
+26
+00:00:43,800 --> 00:00:48,649
+permission et vous choisissez si vous
+
+27
+00:00:46,649 --> 00:00:50,329
+voulez l'activer ou non dans la partie
+
+28
+00:00:48,329 --> 00:00:51,009
+navigation privée moi ne faut pas trop
+
+29
+00:00:50,009 --> 00:00:53,329
+intérêt à ça donc je clique sur j'ai
+
+30
+00:00:51,329 --> 00:00:55,850
+compris automatiquement maintenant
+
+31
+00:00:53,850 --> 00:00:57,170
+lorsque vous allez vous rendre sur une
+
+32
+00:00:55,170 --> 00:00:58,210
+page qui utilisent react avec react en
+
+33
+00:00:57,210 --> 00:01:00,800
+mode de développement lorsque vous allez
+
+34
+00:00:58,800 --> 00:01:01,570
+sortir votre inspecteurs vous allez
+
+35
+00:01:00,570 --> 00:01:03,800
+avoir deux nouveaux onglets qui vont
+
+36
+00:01:01,800 --> 00:01:06,539
+être à droite qui seront réactifs
+
+37
+00:01:03,539 --> 00:01:07,270
+honnête et réaliste profilers alors ici
+
+38
+00:01:06,270 --> 00:01:09,470
+pour une raison que j'ignore ce n'est
+
+39
+00:01:07,470 --> 00:01:10,270
+pas disponible c'est sûrement dû à un
+
+40
+00:01:09,270 --> 00:01:12,500
+bug dans la version qui actuellement
+
+41
+00:01:10,500 --> 00:01:14,330
+disponibles dont je vais vous montrer la
+
+42
+00:01:12,330 --> 00:01:16,640
+version sur chrome si vous êtes sur
+
+43
+00:01:14,640 --> 00:01:18,380
+chrome la procédure est la même vous
+
+44
+00:01:16,380 --> 00:01:19,479
+allez dans la partie préférence vous
+
+45
+00:01:18,479 --> 00:01:23,909
+allez ensuite dans le plus d'outils et
+
+46
+00:01:19,909 --> 00:01:24,099
+extensions vous allez choisir de
+
+47
+00:01:23,099 --> 00:01:27,688
+rajouter de nouvelles extensions donc
+
+48
+00:01:24,688 --> 00:01:29,119
+vous allez ouvrir le web chrome store et
+
+49
+00:01:27,119 --> 00:01:31,880
+vous cherchez react donc encore une fois
+
+50
+00:01:29,880 --> 00:01:32,409
+fait bien attention à trouver
+
+51
+00:01:31,409 --> 00:01:34,759
+l'extension qui est développé par
+
+52
+00:01:32,759 --> 00:01:36,290
+facebook
+
+53
+00:01:34,290 --> 00:01:39,780
+je clique sur ajouter à chrome je clique
+
+54
+00:01:36,780 --> 00:01:40,060
+sur ajouter l'extension est c'est fait
+
+55
+00:01:39,060 --> 00:01:42,680
+je ne vais pas activer la
+
+56
+00:01:40,680 --> 00:01:44,450
+synchronisation ici et on voit qu'on a
+
+57
+00:01:42,450 --> 00:01:45,220
+cette icône qui apparaît en haut donc
+
+58
+00:01:44,220 --> 00:01:47,720
+cette icône par des fois elle va être
+
+59
+00:01:45,720 --> 00:01:49,700
+opaque comme ça si la page sur laquelle
+
+60
+00:01:47,700 --> 00:01:51,909
+vous êtes n'utilise paris at
+
+61
+00:01:49,909 --> 00:01:54,858
+si je réactualise cette page là on voit
+
+62
+00:01:51,858 --> 00:01:55,140
+que l'extension devient orange et en a
+
+63
+00:01:54,140 --> 00:01:57,369
+dans notre inspecteur la partie
+
+64
+00:01:55,369 --> 00:01:59,289
+composants et profilers chose que vous
+
+65
+00:01:57,289 --> 00:02:02,770
+devriez avoir aussi dans firefox
+
+66
+00:01:59,770 --> 00:02:03,000
+si vous allez sur une page qui
+
+67
+00:02:02,000 --> 00:02:05,409
+utiliserait actes en mode production
+
+68
+00:02:03,409 --> 00:02:07,299
+donc on va aller par exemple sur react
+
+69
+00:02:05,299 --> 00:02:09,310
+js tout simplement on va se rendre sur
+
+70
+00:02:07,310 --> 00:02:11,679
+la documentation on voit que l'icône
+
+71
+00:02:09,679 --> 00:02:13,810
+apparaît en bleu ici ça ça veut dire que
+
+72
+00:02:11,810 --> 00:02:15,068
+react a été importé en mode de
+
+73
+00:02:13,068 --> 00:02:17,019
+production donc fait très très attention
+
+74
+00:02:15,019 --> 00:02:18,180
+à ça si vous y avez l'icône en rouge je
+
+75
+00:02:17,180 --> 00:02:19,348
+sais très bien pendant la phase de
+
+76
+00:02:18,348 --> 00:02:21,729
+développement mais vous ne devriez pas
+
+77
+00:02:19,729 --> 00:02:23,919
+l'avoir en rouge orange lorsque vous
+
+78
+00:02:21,919 --> 00:02:24,419
+mettez ça en ligne sur votre site
+
+79
+00:02:23,419 --> 00:02:26,739
+internet sinon ça veut dire que vous
+
+80
+00:02:24,739 --> 00:02:28,090
+avez importé la version debug
+
+81
+00:02:26,090 --> 00:02:30,340
+et ce n'est pas une bonne chose alors
+
+82
+00:02:28,340 --> 00:02:32,079
+qu'est ce qu'apporte cette extension là
+
+83
+00:02:30,079 --> 00:02:33,509
+elle va apporter ses deux onglets donc
+
+84
+00:02:32,509 --> 00:02:36,769
+le premier va vous permettre en fait
+
+85
+00:02:33,769 --> 00:02:37,410
+d'inspecter votre arbre en regardant les
+
+86
+00:02:36,410 --> 00:02:38,220
+différents composants
+
+87
+00:02:37,220 --> 00:02:39,120
+donc c'est un petit peu comme
+
+88
+00:02:38,120 --> 00:02:41,949
+l'inspecteur que l'on a ici pour les
+
+89
+00:02:39,949 --> 00:02:43,660
+éléments dans le dom sauf que là ça nous
+
+90
+00:02:41,660 --> 00:02:46,639
+permet d'inspecter les éléments que l'on
+
+91
+00:02:43,639 --> 00:02:48,579
+a au niveau de ryad alors vu que dans le
+
+92
+00:02:46,579 --> 00:02:50,289
+précédent chapitre on avait juste créer
+
+93
+00:02:48,289 --> 00:02:52,690
+un composant simple je vais revenir en
+
+94
+00:02:50,690 --> 00:02:54,579
+arrière et je verrai ouvrir l'exemple
+
+95
+00:02:52,579 --> 00:02:55,259
+avec le listing produit parce qu'il y
+
+96
+00:02:54,259 --> 00:02:58,579
+aura un peu plus de composants et ce
+
+97
+00:02:55,579 --> 00:02:58,598
+sera plus intéressant
+
+98
+00:02:58,598 --> 00:03:05,949
+voilà et je vais lui demander de
+
+99
+00:03:00,949 --> 00:03:08,359
+démarrer le live serveurs plutôt pour ce
+
+100
+00:03:05,359 --> 00:03:10,239
+projet donc je réactualise ma page j'ai
+
+101
+00:03:08,239 --> 00:03:12,370
+bien mon estime produits et si je vais
+
+102
+00:03:10,370 --> 00:03:13,259
+dans l'onglet composants je vois bien
+
+103
+00:03:12,259 --> 00:03:15,519
+ensemble ma structure
+
+104
+00:03:13,519 --> 00:03:17,949
+donc si je clique sur un des composants
+
+105
+00:03:15,949 --> 00:03:19,329
+je peux voir les différentes propriétés
+
+106
+00:03:17,329 --> 00:03:20,068
+qu'il reçoit donc là par exemple le
+
+107
+00:03:19,068 --> 00:03:22,598
+producteur table on voit qu'il a un fils
+
+108
+00:03:20,598 --> 00:03:25,759
+texte qui est vide et un en stock on lit
+
+109
+00:03:22,759 --> 00:03:27,370
+à falls et je vois aussi les produits
+
+110
+00:03:25,370 --> 00:03:28,259
+si je regarde search ou bar c'est pareil
+
+111
+00:03:27,259 --> 00:03:30,818
+je vois les propriétés
+
+112
+00:03:28,818 --> 00:03:32,620
+si je regarde mon filtrables produite
+
+113
+00:03:30,620 --> 00:03:34,000
+table j'ai en plus la possibilité
+
+114
+00:03:32,000 --> 00:03:35,250
+d'inspecter le state si je viens à
+
+115
+00:03:34,250 --> 00:03:38,870
+modifier quelque chose par exemple je
+
+116
+00:03:35,870 --> 00:03:39,150
+vais chercher foot on voit que le filter
+
+117
+00:03:38,150 --> 00:03:41,769
+texte a été mis à jour et ça me permet
+
+118
+00:03:39,769 --> 00:03:43,269
+d'inspecter l'état de mes composants
+
+119
+00:03:41,269 --> 00:03:46,720
+beaucoup plus simplement qu auparavant
+
+120
+00:03:43,720 --> 00:03:47,039
+vous avez aussi la possibilité de
+
+121
+00:03:46,039 --> 00:03:49,660
+configurer l'apparence de cet inspecteur
+
+122
+00:03:47,660 --> 00:03:50,699
+donc vous pouvez cliquer ici sur view
+
+123
+00:03:49,699 --> 00:03:52,770
+settings
+
+124
+00:03:50,770 --> 00:03:55,870
+vous pouvez changer le thème vous pouvez
+
+125
+00:03:52,870 --> 00:03:56,030
+changer la présentation vous pouvez
+
+126
+00:03:55,030 --> 00:03:58,740
+cocher cette case là donc ça c'est très
+
+127
+00:03:56,740 --> 00:03:59,300
+intéressant ça vous permet en fait de
+
+128
+00:03:58,300 --> 00:04:02,919
+faire clignoter les éléments lorsqu'ils
+
+129
+00:03:59,919 --> 00:04:05,139
+sont mis à jour donc on va sélectionner
+
+130
+00:04:02,139 --> 00:04:06,020
+ça donc ça ça permet d'avoir plus
+
+131
+00:04:05,020 --> 00:04:08,250
+d'informations ce que vous avez des
+
+132
+00:04:06,250 --> 00:04:09,530
+erreurs en console c'est pratique donc
+
+133
+00:04:08,530 --> 00:04:11,970
+dans l'onglet component vous pouvez
+
+134
+00:04:09,970 --> 00:04:13,740
+choisir de filtrer de retirer certains
+
+135
+00:04:11,740 --> 00:04:14,240
+composants donc ça ça peut être
+
+136
+00:04:13,240 --> 00:04:16,830
+intéressant surtout quand on parlera des
+
+137
+00:04:14,830 --> 00:04:18,420
+contextes genre de choses ça vous permet
+
+138
+00:04:16,420 --> 00:04:21,519
+d'enlever des composants qui ne sont pas
+
+139
+00:04:18,519 --> 00:04:22,130
+utiles pour votre des bugs et dans la
+
+140
+00:04:21,130 --> 00:04:24,750
+partie profilers c'est la partie que
+
+141
+00:04:22,750 --> 00:04:26,399
+l'on verra juste après vous pouvez
+
+142
+00:04:24,399 --> 00:04:27,110
+enregistrer à chaque fois qu'un
+
+143
+00:04:26,110 --> 00:04:29,670
+composant a été à chaque fois qu'un
+
+144
+00:04:27,670 --> 00:04:31,380
+composant a été rendue et pourquoi donc
+
+145
+00:04:29,380 --> 00:04:32,630
+ça on va le cocher parce que ça peut
+
+146
+00:04:31,630 --> 00:04:35,259
+être intéressant
+
+147
+00:04:32,259 --> 00:04:37,079
+donc je vais fermer ça et maintenant je
+
+148
+00:04:35,079 --> 00:04:39,120
+vais taper bol par exemple et on voit
+
+149
+00:04:37,120 --> 00:04:41,579
+que ces composants la s'entoure d'une
+
+150
+00:04:39,579 --> 00:04:43,589
+petite bordure pour nous dire ma j'étais
+
+151
+00:04:41,589 --> 00:04:44,449
+rendu j'ai été rendu donc c'est très
+
+152
+00:04:43,449 --> 00:04:46,190
+intéressant
+
+153
+00:04:44,190 --> 00:04:49,600
+alors après à droite ici vous avez la
+
+154
+00:04:46,600 --> 00:04:50,000
+possibilité de bloquer un composant vous
+
+155
+00:04:49,000 --> 00:04:52,620
+pouvez l'inspecter donc ça ça vous
+
+156
+00:04:50,620 --> 00:04:54,180
+montre directement où il se trouve dans
+
+157
+00:04:52,180 --> 00:04:56,880
+le dom ou est-ce qu'il a été montée vous
+
+158
+00:04:54,880 --> 00:04:58,560
+pouvez le debug est donc là tout
+
+159
+00:04:56,560 --> 00:05:00,720
+simplement ça va créer une variable au
+
+160
+00:04:58,720 --> 00:05:01,279
+niveau de votre console qui contiendra
+
+161
+00:05:00,279 --> 00:05:03,630
+votre composants
+
+162
+00:05:01,630 --> 00:05:05,069
+si je regarde la partie console j'ai
+
+163
+00:05:03,069 --> 00:05:07,170
+maintenant ce composant là et je peut
+
+164
+00:05:05,170 --> 00:05:09,690
+inspecter les différentes valeurs et je
+
+165
+00:05:07,690 --> 00:05:12,490
+peux aussi si je souhaite sauvegarder sa
+
+166
+00:05:09,490 --> 00:05:13,190
+dans une variable global donc ça peut
+
+167
+00:05:12,190 --> 00:05:15,300
+être intéressant si vous avez besoin
+
+168
+00:05:13,300 --> 00:05:16,250
+d'inspecter des choses particulières et
+
+169
+00:05:15,250 --> 00:05:18,569
+enfin le dernier onglet va vous
+
+170
+00:05:16,569 --> 00:05:20,550
+permettre d'inspecter dans le code
+
+171
+00:05:18,550 --> 00:05:22,230
+source donc ça vous montre où dans le
+
+172
+00:05:20,230 --> 00:05:24,930
+code ce composant a été défini donc ça
+
+173
+00:05:22,930 --> 00:05:24,370
+c'est un anglais qui super super
+
+174
+00:05:24,370 --> 00:05:27,850
+pratique
+
+175
+00:05:24,850 --> 00:05:28,610
+à ce niveau là l'anglais profilers est
+
+176
+00:05:27,610 --> 00:05:30,480
+en anglais qui va vous permettre
+
+177
+00:05:28,480 --> 00:05:31,459
+d'observer les performances un petit peu
+
+178
+00:05:30,459 --> 00:05:32,839
+comme l'anglais profilers de votre
+
+179
+00:05:31,839 --> 00:05:35,610
+navigateur
+
+180
+00:05:32,610 --> 00:05:37,199
+alors pour vous illustrer le problème on
+
+181
+00:05:35,199 --> 00:05:39,180
+va reproduire un petit peu la chose
+
+182
+00:05:37,180 --> 00:05:41,009
+qu'on avait vu la dernière fois avec la
+
+183
+00:05:39,009 --> 00:05:43,350
+fonction wake on va s'imaginer que pour
+
+184
+00:05:41,350 --> 00:05:46,690
+générer un produit je vais faire un
+
+185
+00:05:43,690 --> 00:05:47,360
+petit waits et attendre 400
+
+186
+00:05:46,360 --> 00:05:49,350
+millisecondes
+
+187
+00:05:47,350 --> 00:05:50,418
+mais on s'imagine qu'on a oublié qu'on a
+
+188
+00:05:49,418 --> 00:05:52,769
+laissé ça quelque part et on aimerait
+
+189
+00:05:50,769 --> 00:05:53,120
+bien comprendre maintenant pourquoi
+
+190
+00:05:52,120 --> 00:05:55,639
+notre interface est lente
+
+191
+00:05:53,639 --> 00:05:57,168
+donc ce que vous pouvez faire avec le
+
+192
+00:05:55,168 --> 00:06:00,240
+profilers c'est cliquez sur enregistrer
+
+193
+00:05:57,240 --> 00:06:02,120
+et ensuite vous faites vos actions donc
+
+194
+00:06:00,120 --> 00:06:05,579
+là c'est mais galan et ensuite je clique
+
+195
+00:06:02,579 --> 00:06:07,639
+sur stop profiling automatiquement ça va
+
+196
+00:06:05,639 --> 00:06:09,259
+me montrer cette représentation en
+
+197
+00:06:07,259 --> 00:06:11,598
+cascade qui me permet de voir quel est
+
+198
+00:06:09,598 --> 00:06:13,819
+le temps de rendu pour chaque élément et
+
+199
+00:06:11,819 --> 00:06:15,168
+on va avoir en eau les différents
+
+200
+00:06:13,168 --> 00:06:17,569
+moments où il a fait un comité et une
+
+201
+00:06:15,569 --> 00:06:19,550
+fois que dans ce cadre là on a une
+
+202
+00:06:17,550 --> 00:06:20,259
+grosse zone en jaune qui nous dit qu'il
+
+203
+00:06:19,259 --> 00:06:21,728
+ya une durée assez longue de 400
+
+204
+00:06:20,728 --> 00:06:23,389
+millisecondes
+
+205
+00:06:21,389 --> 00:06:26,788
+si on regarde ces flame graff on voit
+
+206
+00:06:23,788 --> 00:06:27,399
+que par défaut ce composant là il a été
+
+207
+00:06:26,399 --> 00:06:29,990
+rendue très rapidement celui là aussi
+
+208
+00:06:27,990 --> 00:06:31,490
+mais c'est celui là qui est tout en bas
+
+209
+00:06:29,490 --> 00:06:35,319
+le producteur au qui a mis 400
+
+210
+00:06:31,319 --> 00:06:36,339
+millisecondes à ceux à se rendre ici je
+
+211
+00:06:35,339 --> 00:06:37,658
+clique dessus on peut m'expliquer
+
+212
+00:06:36,658 --> 00:06:39,769
+pourquoi il a été rendu
+
+213
+00:06:37,769 --> 00:06:40,478
+donc ça c'est ce que l'on a activé quand
+
+214
+00:06:39,478 --> 00:06:42,889
+on a cliqué sur cette case là
+
+215
+00:06:40,889 --> 00:06:45,959
+donc là il me dit ce composant a été
+
+216
+00:06:42,959 --> 00:06:47,569
+rendu parce que l'un des parents parce
+
+217
+00:06:45,569 --> 00:06:48,430
+que le parent a été revendu ce qui est
+
+218
+00:06:47,430 --> 00:06:49,240
+effectivement le cas
+
+219
+00:06:48,240 --> 00:06:52,829
+c'est le producteur table qui a
+
+220
+00:06:49,829 --> 00:06:53,050
+déclenché un nouveau rendu est pourquoi
+
+221
+00:06:52,050 --> 00:06:55,819
+le producteur table a été rendu parce
+
+222
+00:06:53,819 --> 00:06:57,680
+qu'une de ses propriétés a changé vous
+
+223
+00:06:55,680 --> 00:06:59,598
+voyez ça vous donne beaucoup beaucoup
+
+224
+00:06:57,598 --> 00:07:02,579
+d'informations sur les raisons des
+
+225
+00:06:59,579 --> 00:07:05,189
+rendus et sur d éventuels problèmes de
+
+226
+00:07:02,189 --> 00:07:08,908
+performance juste si on regarde si je re
+
+227
+00:07:05,908 --> 00:07:13,250
+cliquer sur enregistrer et que je retire
+
+228
+00:07:08,250 --> 00:07:15,978
+ce filtre la voilà on voit que le graff
+
+229
+00:07:13,978 --> 00:07:19,839
+ici nous dit bogey pour rendre producto
+
+230
+00:07:15,839 --> 00:07:20,009
+table en vrai juste producto table sami
+
+231
+00:07:19,009 --> 00:07:24,848
+40.4 millisecondes
+
+232
+00:07:20,848 --> 00:07:25,209
+mais l'intérieur a mis deux secondes 4
+
+233
+00:07:24,209 --> 00:07:27,620
+et je vois effectivement que nos
+
+234
+00:07:25,620 --> 00:07:29,870
+producteurs aux sons trop trop lent donc
+
+235
+00:07:27,870 --> 00:07:31,519
+ça me donne une bonne indication sur ce
+
+236
+00:07:29,519 --> 00:07:32,168
+que je dois optimisé j'ai un problème de
+
+237
+00:07:31,168 --> 00:07:34,550
+rein d'heure au niveau de ses composants
+
+238
+00:07:32,550 --> 00:07:34,379
+là et donc c'est ce composant la qui est
+
+239
+00:07:34,379 --> 00:07:36,918
+fautif
+
+240
+00:07:34,918 --> 00:07:38,870
+vous pouvez aussi avoir un autre
+
+241
+00:07:36,870 --> 00:07:40,908
+affichage qui est en quête charte donc
+
+242
+00:07:38,908 --> 00:07:41,468
+là c'est tout simplement ingrate qui va
+
+243
+00:07:40,468 --> 00:07:43,610
+vous montrer les temps de rendu
+
+244
+00:07:41,610 --> 00:07:45,379
+organisée du plus long plus rapide donc
+
+245
+00:07:43,379 --> 00:07:47,779
+ça peut vous paraître aussi de respecter
+
+246
+00:07:45,779 --> 00:07:48,550
+et de voir très rapidement les éléments
+
+247
+00:07:47,550 --> 00:07:50,779
+qui sont problématiques
+
+248
+00:07:48,779 --> 00:07:54,639
+donc si je corrige mon problème en
+
+249
+00:07:50,639 --> 00:07:58,389
+retirant mon wade et que je relance hop
+
+250
+00:07:54,389 --> 00:08:00,740
+un petit enregistrements je tape foot je
+
+251
+00:07:58,740 --> 00:08:01,538
+stoppe je vois que maintenant c'est
+
+252
+00:08:00,538 --> 00:08:04,408
+beaucoup plus rapide
+
+253
+00:08:01,408 --> 00:08:05,228
+et effectivement on est sur du 0,2
+
+254
+00:08:04,228 --> 00:08:06,168
+millisecondes
+
+255
+00:08:05,168 --> 00:08:08,968
+voilà donc si jamais vous avez des
+
+256
+00:08:06,968 --> 00:08:10,468
+problèmes de performances étaient rendus
+
+257
+00:08:08,468 --> 00:08:11,449
+qui seront faits trop souvent n'hésitez
+
+258
+00:08:10,449 --> 00:08:13,918
+pas à utiliser se profile heures ça peut
+
+259
+00:08:11,918 --> 00:08:15,240
+vous permettre de comprendre pourquoi un
+
+260
+00:08:13,240 --> 00:08:17,009
+composant été rendu et ensuite
+
+261
+00:08:15,009 --> 00:08:20,079
+comprendre les éventuels composants qui
+
+262
+00:08:17,079 --> 00:08:22,740
+met trop de temps être rendue si vous
+
+263
+00:08:20,740 --> 00:08:23,209
+avez besoin d'inspecter l'état de vos
+
+264
+00:08:22,209 --> 00:08:25,680
+composants il faudra plutôt allez sur
+
+265
+00:08:23,680 --> 00:08:27,240
+l'onglet component et inspecter les
+
+266
+00:08:25,240 --> 00:08:28,699
+différentes composantes comme ceci et si
+
+267
+00:08:27,699 --> 00:08:30,689
+vous avez besoin de rechercher un
+
+268
+00:08:28,689 --> 00:08:32,430
+composant rapidement vous pouvez cliquer
+
+269
+00:08:30,430 --> 00:08:34,559
+sur ce petit élément là qui ressemble à
+
+270
+00:08:32,559 --> 00:08:36,269
+cette icône là ça vous permet
+
+271
+00:08:34,269 --> 00:08:37,429
+d'inspecter un élément mais pas respecté
+
+272
+00:08:36,429 --> 00:08:39,809
+un élément dans le dom mais plutôt de
+
+273
+00:08:37,809 --> 00:08:41,208
+trouver le composant qui est d'associer
+
+274
+00:08:39,208 --> 00:08:43,860
+donc voilà pour cette extension là elle
+
+275
+00:08:41,860 --> 00:08:45,479
+est indispensable dès lors que l'on
+
+276
+00:08:43,479 --> 00:08:47,519
+travaille avec react et elle continue de
+
+277
+00:08:45,519 --> 00:08:49,620
+s'améliorer au fil des mises à jour donc
+
+278
+00:08:47,620 --> 00:08:50,448
+n'hésitez pas à l'utiliser si vous avez
+
+279
+00:08:49,448 --> 00:08:52,649
+besoin d'inspecter votre application
+
+280
+00:08:50,649 --> 00:08:55,269
+react ou de comprendre les ponts
+
+281
+00:08:52,269 --> 00:08:55,000
+d'éventuels problèmes de performance
+Subtitles End: mo.dbxdb.com
+
